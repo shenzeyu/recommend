@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans classpath:/org/springframework/beans/factory/xml/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd ">
+	<security:http auto-config="true">
+		<security:intercept-url pattern="/login*" access="ROLE_USER,ROLE_GUEST"/>
+		<security:intercept-url pattern="/loginPost*" access="ROLE_USER"/>
+		<security:intercept-url pattern="/loginDelete" access="ROLE_ADMIN"/>
+		<security:anonymous username="guest" granted-authority="ROLE_GUEST"/>
+		<security:form-login authentication-failure-url="/login.jsp?error=true" default-target-url="/messageList" login-page="/login.jsp"/>
+		<security:logout logout-success-url="/login.jsp"/>
+		<security:remember-me/>
+	</security:http>
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:password-encoder hash="md5"></security:password-encoder>
+			<security:jdbc-user-service data-source-ref="dataSource" cache-ref="userCache"
+			users-by-username-query="
+				SELECT username,password
+				FROM user
+				WHERE username = ? and status = 1" 
+			authorities-by-username-query="
+				SELECT u.username,a.authorities as authorities
+				FROM user u,authorities a
+				WHERE u.username = ? and u.username=a.username"
+				/>
+		</security:authentication-provider>
+	</security:authentication-manager>
+	<bean id="userCache" class="org.springframework.security.core.userdetails.cache.EhCacheBasedUserCache">
+		<property name="cache" ref="userEhCache"/>
+	</bean>
+	<bean id="userEhCache" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager" ref="cacheManager"/>
+		<property name="cacheName" ref="userCache"/>
+	</bean>
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"></bean>
+</beans>
