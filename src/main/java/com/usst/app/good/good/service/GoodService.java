@@ -6,13 +6,14 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.lang.StringUtils;
+import org.springframework.stereotype.Service;
 
 import com.usst.app.component.file.service.FileUploadService;
 import com.usst.app.good.good.model.Good;
 import com.usst.app.good.ware.model.Ware;
 import com.usst.app.good.ware.service.WareService;
 import com.usst.code.service.BaseService;
-
+@Service
 public class GoodService extends BaseService<Good> {
 	private WareService wareService;
 	private FileUploadService fileUploadService;

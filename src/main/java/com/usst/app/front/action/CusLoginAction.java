@@ -38,6 +38,7 @@ import com.usst.app.good.goodType.model.GoodType;
 import com.usst.app.good.goodType.service.GoodTypeService;
 import com.usst.app.good.groupgood.model.Groupgood;
 import com.usst.app.good.groupgood.service.GroupgoodService;
+import com.usst.app.recommend.service.RecommendService;
 import com.usst.app.store.advertise.model.Advertise;
 import com.usst.app.store.advertise.service.AdvertiseService;
 import com.usst.app.store.information.model.Information;
@@ -60,6 +61,7 @@ public class CusLoginAction extends BaseAction {
 	private InformationService informationService;
 	private List<Promote> promoteList;
 	private PromoteService promoteService;
+	private RecommendService recommendService;
 	private List<Advertise> advertiseList;
 	private AdvertiseService advertiseService;
 	private PromotionActivity promotionActivity;
@@ -130,7 +132,7 @@ public class CusLoginAction extends BaseAction {
 		this.good.setSortVal("sort");
 		this.good.setEndhdTime(dateFormat.format(new Date()));
 		this.goodArrList1 = this.goodService.select("Good.Good_SY", this.good);
-
+		
 		this.good = new Good();
 		this.good.setIsInventory("2");
 		this.good.setIndexShow("1");
@@ -161,9 +163,10 @@ public class CusLoginAction extends BaseAction {
 		this.goodList1 = this.goodService.select("Good.Good_SY", this.good);
 		this.customer = getSessionCustomerInfo();
 		if (this.customer != null) {
+			this.goodList1 = this.recommendService.getRecommendItems(this.customer.getId());
 			this.good = new Good();
 			this.good.setCustomerId(this.customer.getId());
-			this.goodBrowseList = this.goodService.select("Good.Good_SY2", this.good);
+			this.goodBrowseList = this.goodService.select("Good.Good_SYgoodType", this.good);
 		}
 		Advertise advertise = new Advertise();
 		this.advertiseList = this.advertiseService.getByPlaceAdvertiseList(advertise);
@@ -1268,4 +1271,13 @@ public class CusLoginAction extends BaseAction {
 	public void setGoodBrowseList(List<Good> goodBrowseList) {
 		this.goodBrowseList = goodBrowseList;
 	}
+
+	public RecommendService getRecommendService() {
+		return recommendService;
+	}
+
+	public void setRecommendService(RecommendService recommendService) {
+		this.recommendService = recommendService;
+	}
+	
 }

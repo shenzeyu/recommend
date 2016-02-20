@@ -65,7 +65,7 @@ public class FrontFirstGoodAction extends BaseAction {
 			this.good.setSortVal("createTime");
 
 			this.goodList1 = this.goodService.select("Good.Good_SYfuleipindao", this.good);
-
+			
 			this.good = new Good();
 			this.good.setFzproperty("4");
 			this.good.setIsInventory("0");

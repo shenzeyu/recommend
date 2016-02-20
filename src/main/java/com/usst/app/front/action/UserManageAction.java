@@ -5,18 +5,17 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Properties;
+
 import javax.mail.Address;
 import javax.mail.Authenticator;
-import javax.mail.Message.RecipientType;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+
 import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 
@@ -47,6 +46,7 @@ import com.usst.app.order.sale.saleReturn.model.SaleReturn;
 import com.usst.app.order.sale.saleReturn.service.SaleReturnService;
 import com.usst.app.order.sale.saleWare.model.SaleWare;
 import com.usst.app.order.sale.saleWare.service.SaleWareService;
+import com.usst.app.recommend.service.RecommendService;
 import com.usst.app.store.advertise.model.Advertise;
 import com.usst.app.store.advertise.service.AdvertiseService;
 import com.usst.app.store.greetingCard.model.GreetingCard;
@@ -80,6 +80,7 @@ public class UserManageAction extends BaseAction {
 	private List<SaleWare> saleWareList;
 	private SaleWareService saleWareService;
 	private SaleWare saleWare;
+	private RecommendService recommendService;
 	private WareService wareService;
 	private GoodService goodService;
 	private List<Good> goodList;
@@ -300,7 +301,7 @@ public class UserManageAction extends BaseAction {
 				good.setAreasId(areasId);
 			}
 			this.goodList1 = this.goodService.select("Good.Good_SY", good);
-
+			this.goodList1 = this.recommendService.getRecommendItems(this.customer.getId());
 			statisticsOrder();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -2142,4 +2143,9 @@ public class UserManageAction extends BaseAction {
 	public void setWareComment(WareComment wareComment) {
 		this.wareComment = wareComment;
 	}
+
+	public void setRecommendService(RecommendService recommendService) {
+		this.recommendService = recommendService;
+	}
+	
 }

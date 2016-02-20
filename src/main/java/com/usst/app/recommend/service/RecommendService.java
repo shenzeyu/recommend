@@ -10,11 +10,14 @@ import org.springframework.orm.ibatis.SqlMapClientTemplate;
 import org.springframework.stereotype.Service;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
+import com.usst.app.good.good.model.Good;
+import com.usst.app.good.good.service.GoodService;
 import com.usst.app.recommend.RecommenderResult;
 import com.usst.app.recommend.model.Recommend;
 
 @Service
 public class RecommendService extends SqlMapClientTemplate{
+	private GoodService goodService;
 	public void insertRecommend(Recommend recommend){
 //		getSqlMapClientTemplate().insert("Recommend.Recommend_insert", recommend);
 		super.insert("Recommend.Recommend_insert", recommend);
@@ -28,12 +31,12 @@ public class RecommendService extends SqlMapClientTemplate{
 	public Long queryUidById(String id){
 		return Long.parseLong((String) super.queryForObject("Recommend.Recommend_selectById", id));
 	}
-	public List<String> getRecommendItems(String id){
-		List<String> list = new ArrayList<String>();
+	public List<Good> getRecommendItems(String id){
+		List<Good> list = new ArrayList<Good>();
 		try {
 			List<String> listIid = RecommenderResult.resultItem(queryUidById(id));
 			for(String iid:listIid){
-				list.add(queryIdByIid(iid));
+				list.add(this.goodService.getModel(queryIdByIid(iid)));
 			}
 		} catch (TasteException | IOException e) {
 			e.printStackTrace();
@@ -44,5 +47,9 @@ public class RecommendService extends SqlMapClientTemplate{
 	public void setSqlMapClientForAutowire(SqlMapClient sqlMapClient) {
         super.setSqlMapClient(sqlMapClient);
     }
+	@Autowired
+	public void setGoodService(GoodService goodService) {
+		this.goodService = goodService;
+	}
 	
 }
