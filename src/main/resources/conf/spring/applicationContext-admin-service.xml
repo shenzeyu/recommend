@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+				http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 后台action -->
+
+	<!-- 系统管理service -->
+	<bean name="sysUserService"
+		class="com.usst.app.system.user.service.SysUserService"
+		autowire="byName">
+	</bean>
+	<bean name="sysRoleService"
+		class="com.usst.app.system.role.service.SysRoleService"
+		autowire="byName">
+	</bean>
+	<bean name="sysPowerService"
+		class="com.usst.app.system.power.service.SysPowerService"
+		autowire="byName">
+	</bean>
+	<bean name="sysRolePowerService"
+		class="com.usst.app.system.rolePower.service.SysRolePowerService"
+		autowire="byName">
+	</bean>
+	<!-- 高级权限 -->
+	<bean name="sysAdvPowerService"
+		class="com.usst.app.system.advPower.service.SysAdvPowerService"
+		autowire="byName">
+	</bean>
+	<bean id="databaseBackupService"
+		class="com.usst.app.system.dbBackup.service.DatabaseBackupService"
+		autowire="byName">
+	</bean>
+	<!-- 部门 -->
+	<bean name="sysDeptService"
+		class="com.usst.app.system.dept.service.SysDeptService"
+		autowire="byName">
+	</bean>
+
+	<bean name="sysUserPowerService"
+		class="com.usst.app.system.user.service.SysUserPowerService"
+		autowire="byName">
+	</bean>
+
+	<!-- 公共组件 -->
+	<bean id="systemFilterService"
+		class="com.usst.app.filter.SystemFilterService" autowire="byName">
+	</bean>
+	<bean id="serialNumberService"
+		class="com.usst.app.component.serialNumber.service.SerialNumberService"
+		autowire="byName">
+	</bean>
+	<bean id="fileUploadService"
+		class="com.usst.app.component.file.service.FileUploadService"
+		autowire="byName">
+	</bean>
+	<!-- 基本信息 -->
+	<bean id="dictionaryService"
+		class="com.usst.app.baseInfo.dictionary.service.DictionaryService"
+		autowire="byName">
+	</bean>
+	<bean id="dictionaryItemService"
+		class="com.usst.app.baseInfo.dictionary.service.DictionaryItemService"
+		autowire="byName">
+	</bean>
+	<bean id="areaService"
+		class="com.usst.app.baseInfo.area.service.AreaService"
+		autowire="byName">
+	</bean>
+	<bean id="paymentService"
+		class="com.usst.app.baseInfo.payment.service.PaymentService"
+		autowire="byName">
+	</bean>
+	<bean id="deliveryService"
+		class="com.usst.app.baseInfo.delivery.service.DeliveryService"
+		autowire="byName">
+	</bean>
+	<bean id="bankAccountService"
+		class="com.usst.app.baseInfo.bankAccount.service.BankAccountService"
+		autowire="byName">
+	</bean>
+	<bean id="supplierService"
+		class="com.usst.app.baseInfo.supplier.service.SupplierService"
+		autowire="byName">
+	</bean>
+
+	<!-- 客户信息 -->
+	<bean id="customerService"
+		class="com.usst.app.customer.service.CustomerService"
+		autowire="byName">
+	</bean>
+	<!-- 商品类别 -->
+	<bean id="goodTypeService"
+		class="com.usst.app.good.goodType.service.GoodTypeService"
+		autowire="byName">
+	</bean>
+	<!-- 商品品牌 -->
+	<bean id="goodBrandService"
+		class="com.usst.app.good.goodBrand.service.GoodBrandService"
+		autowire="byName">
+	</bean>
+	<!-- 商品信息 -->
+	<bean id="goodService"
+		class="com.usst.app.good.good.service.GoodService"
+		autowire="byName">
+	</bean>
+	<!-- 团购商品信息 -->
+	<bean id="groupgoodService"
+		class="com.usst.app.good.groupgood.service.GroupgoodService"
+		autowire="byName">
+	</bean>
+	<bean id="goodExtendService"
+		class="com.usst.app.good.goodExtend.service.GoodExtendService"
+		autowire="byName">
+	</bean>
+	<!-- 商品种类 -->
+	<bean id="goodKindService"
+		class="com.usst.app.good.goodKind.service.GoodKindService"
+		autowire="byName">
+	</bean>
+	<!-- 商品种类属性值 -->
+	<bean id="goodKingValService"
+		class="com.usst.app.good.goodKind.service.GoodKingValService"
+		autowire="byName">
+	</bean>
+	<!-- 商品价格 -->
+	<bean id="goodPriceService"
+		class="com.usst.app.good.goodPrice.service.GoodPriceService"
+		autowire="byName">
+	</bean>
+	<!-- 商品属性 -->
+	<bean id="goodAttrService"
+		class="com.usst.app.good.goodAttr.service.GoodAttrService"
+		autowire="byName">
+	</bean>
+	<bean id="goodAttrValueService"
+		class="com.usst.app.good.goodAttr.service.GoodAttrValueService"
+		autowire="byName">
+	</bean>
+	<!-- 商品规格 -->
+	<bean id="goodSpecificationService"
+		class="com.usst.app.good.goodSpecification.service.GoodSpecificationService"
+		autowire="byName">
+	</bean>
+	<bean id="goodSpecificationValService"
+		class="com.usst.app.good.goodSpecification.service.GoodSpecificationValService"
+		autowire="byName">
+	</bean>
+	<!-- 货品 -->
+	<bean id="wareService"
+		class="com.usst.app.good.ware.service.WareService"
+		autowire="byName">
+	</bean>
+	<bean id="wareSpecificationValService"
+		class="com.usst.app.good.ware.service.WareSpecificationValService"
+		autowire="byName">
+	</bean>
+	<!-- 相关商品 -->
+	<bean id="goodRelateService"
+		class="com.usst.app.good.goodRelate.service.GoodRelateService"
+		autowire="byName">
+	</bean>
+	<!-- 组合商品 -->
+	<bean id="goodComposeService"
+		class="com.usst.app.good.goodCompose.service.GoodComposeService"
+		autowire="byName">
+	</bean>
+	<!-- 商品收藏 -->
+	<bean id="favoriteService"
+		class="com.usst.app.good.favorite.service.FavoriteService"
+		autowire="byName">
+	</bean>
+
+	<!-- 销售订单 -->
+	<bean id="saleOrderService"
+		class="com.usst.app.order.sale.saleOrder.service.SaleOrderService"
+		autowire="byName">
+	</bean>
+	<!-- 销售收款单 -->
+	<bean id="saleCollectionService"
+		class="com.usst.app.order.sale.saleCollection.service.SaleCollectionService"
+		autowire="byName">
+	</bean>
+	<!-- 销售收款单子项 -->
+	<bean id="saleCollectionItemService"
+		class="com.usst.app.order.sale.saleCollection.service.SaleCollectionItemService"
+		autowire="byName">
+	</bean>
+	<!-- 销售出货单 -->
+	<bean id="saleDeliveryService"
+		class="com.usst.app.order.sale.saleDelivery.service.SaleDeliveryService"
+		autowire="byName">
+	</bean>
+	<!-- 销售退货单 -->
+	<bean id="saleReturnService"
+		class="com.usst.app.order.sale.saleReturn.service.SaleReturnService"
+		autowire="byName">
+	</bean>
+	<!-- 销售货品 -->
+	<bean id="saleWareService"
+		class="com.usst.app.order.sale.saleWare.service.SaleWareService"
+		autowire="byName">
+	</bean>
+
+	
+
+	<!-- 仓库 -->
+	<bean id="warehouseService"
+		class="com.usst.app.warehouse.warehouse.service.WarehouseService"
+		autowire="byName">
+	</bean>
+	<!-- 仓库货品 -->
+	<bean id="warehouseWareService"
+		class="com.usst.app.warehouse.warehouse.service.WarehouseWareService"
+		autowire="byName">
+	</bean>
+	<!-- 组合拆分单 -->
+	<bean id="combinedService"
+		class="com.usst.app.warehouse.combined.service.CombinedService"
+		autowire="byName">
+	</bean>
+	<!-- 组合拆分货品 -->
+	<bean id="combinedWareService"
+		class="com.usst.app.warehouse.combined.service.CombinedWareService"
+		autowire="byName">
+	</bean>
+	<!-- 仓位 -->
+	<bean id="warehousePositionService"
+		class="com.usst.app.warehouse.warehousePosition.service.WarehousePositionService"
+		autowire="byName">
+	</bean>
+	<!-- 仓位货品 -->
+	<bean id="warehousePositionWareService"
+		class="com.usst.app.warehouse.warehousePosition.service.WarehousePositionWareService"
+		autowire="byName">
+	</bean>
+	<!-- 入库单 -->
+	<bean id="warehouseIntoService"
+		class="com.usst.app.warehouse.warehouseInto.service.WarehouseIntoService"
+		autowire="byName">
+	</bean>
+	<!-- 入库货品 -->
+	<bean id="warehouseIntoWareService"
+		class="com.usst.app.warehouse.warehouseInto.service.WarehouseIntoWareService"
+		autowire="byName">
+	</bean>
+	<!-- 调度货物 -->
+	<bean id="warehouseMoveWareService"
+		class="com.usst.app.warehouse.warehouseMove.service.WarehouseMoveWareService"
+		autowire="byName">
+	</bean>
+	<!-- 调度单 -->
+	<bean id="warehouseMoveService"
+		class="com.usst.app.warehouse.warehouseMove.service.WarehouseMoveService"
+		autowire="byName">
+	</bean>
+	<!-- 成本调整单 -->
+	<bean id="costAdjustService"
+		class="com.usst.app.warehouse.costAdjust.service.CostAdjustService"
+		autowire="byName">
+	</bean>
+	<!-- 成本调整单货物 -->
+	<bean id="costAdjustWareService"
+		class="com.usst.app.warehouse.costAdjust.service.CostAdjustWareService"
+		autowire="byName">
+	</bean>
+
+	<!-- 收付管理 start -->
+	<!--  费用单   -->
+	<bean id="feeService"
+		class="com.usst.app.order.cashBasis.fee.service.FeeService"
+		autowire="byName">
+	</bean>
+	<bean id="feeItemService"
+		class="com.usst.app.order.cashBasis.fee.service.FeeItemService"
+		autowire="byName">
+	</bean>
+	<bean id="payService"
+		class="com.usst.app.order.cashBasis.pay.service.PayService"
+		autowire="byName">
+	</bean>
+	<bean id="cashItemService"
+		class="com.usst.app.order.cashBasis.pay.service.CashItemService"
+		autowire="byName">
+	</bean>
+	<bean id="collectionService"
+		class="com.usst.app.order.cashBasis.collection.service.CollectionService"
+		autowire="byName">
+	</bean>
+	<!-- 收付管理 end -->
+
+	<!-- 广告管理 -->
+	<bean id="advertiseService"
+		class="com.usst.app.store.advertise.service.AdvertiseService"
+		autowire="byName">
+	</bean>
+
+	<!--杂志管理 -->
+	<bean id="magazineService"
+		class="com.usst.app.store.magazine.service.MagazineService"
+		autowire="byName">
+	</bean>
+
+	<!--返利管理 -->
+	<bean id="rebateService"
+		class="com.usst.app.order.buy.rebate.service.RebateService"
+		autowire="byName">
+	</bean>
+	<bean id="rebateItemService"
+		class="com.usst.app.order.buy.rebate.service.RebateItemService"
+		autowire="byName">
+	</bean>
+
+	<!-- 会员管理 -->
+	<bean id="prepaidService"
+		class="com.usst.app.vip.prepaid.service.PrepaidService"
+		autowire="byName">
+	</bean>
+	<bean id="vipCouponService"
+		class="com.usst.app.vip.coupon.service.VipCouponService"
+		autowire="byName">
+	</bean>
+	<bean id="vipCouponWareService"
+		class="com.usst.app.vip.coupon.service.VipCouponWareService"
+		autowire="byName">
+	</bean>
+	<bean id="messageService"
+		class="com.usst.app.vip.message.service.MessageService"
+		autowire="byName">
+	</bean>
+	<bean id="vipLevelService"
+		class="com.usst.app.vip.level.service.VipLevelService"
+		autowire="byName">
+	</bean>
+	<bean id="applyToCashService"
+		class="com.usst.app.vip.applyCash.service.ApplyToCashService"
+		autowire="byName">
+	</bean>
+	<!-- 会员评论 -->
+	<bean id="wareCommentService"
+		class="com.usst.app.front.service.WareCommentService"
+		autowire="byName">
+	</bean>
+
+	<!--新闻公告管理 -->
+	<bean id="informationService"
+		class="com.usst.app.store.information.service.InformationService"
+		autowire="byName">
+	</bean>
+
+	<!--商品包装 -->
+	<bean id="packagingService"
+		class="com.usst.app.store.packaging.service.PackagingService"
+		autowire="byName">
+	</bean>
+	<!--祝福贺卡 -->
+	<bean id="greetingCardService"
+		class="com.usst.app.store.greetingCard.service.GreetingCardService"
+		autowire="byName">
+	</bean>
+	<!--促销专题 -->
+	<bean id="promoteService"
+		class="com.usst.app.store.promote.service.PromoteService"
+		autowire="byName">
+	</bean>
+	<bean id="promotecolumnService"
+		class="com.usst.app.store.promotecolumn.service.PromotecolumnService"
+		autowire="byName">
+	</bean>
+	<bean id="promoteGoodService"
+		class="com.usst.app.store.promote.service.PromoteGoodService"
+		autowire="byName">
+	</bean>
+	<!--优惠活动 -->
+	<bean id="promotionActivityService"
+		class="com.usst.app.store.promotionActivity.service.PromotionActivityService"
+		autowire="byName">
+	</bean>
+	<bean id="promotionActivityGoodService"
+		class="com.usst.app.store.promotionActivity.service.PromotionActivityGoodService"
+		autowire="byName">
+	</bean>
+	<!--学院设置 -->
+	<bean id="storeSetService"
+		class="com.usst.app.store.storeSet.service.StoreSetService"
+		autowire="byName">
+	</bean>
+	<!--礼品包赠送 -->
+	<bean id="giftService"
+		class="com.usst.app.store.gift.service.GiftService"
+		autowire="byName">
+	</bean>
+	<bean id="giftGoodService"
+		class="com.usst.app.store.gift.service.GiftGoodService"
+		autowire="byName">
+	</bean>
+	<!-- 用户行为(浏览过的商品) -->
+	<bean id="browseService"
+		class="com.usst.app.front.browse.service.BrowseService"
+		autowire="byName">
+	</bean>
+	<bean id="browseOthersService"
+		class="com.usst.app.front.browse.service.BrowseOthersService"
+		autowire="byName">
+	</bean>
+	
+	
+</beans>
