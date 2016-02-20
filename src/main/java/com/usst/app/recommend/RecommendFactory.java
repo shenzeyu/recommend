@@ -54,11 +54,6 @@ import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import com.usst.code.util.ConfigUtil;
 
 
-/**
- * 
- * @author bsspirit@gmail.com
- * @link http://blog.fens.me/mahout-recommendation-api/
- */
 public final class RecommendFactory {
 
 	/**
