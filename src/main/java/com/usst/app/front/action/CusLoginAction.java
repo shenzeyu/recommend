@@ -162,11 +162,14 @@ public class CusLoginAction extends BaseAction {
 		this.good.setIsInventory("0");
 		this.goodList1 = this.goodService.select("Good.Good_SY", this.good);
 		this.customer = getSessionCustomerInfo();
+		this.goodList2 = this.recommendService.getNewItems();
 		if (this.customer != null) {
 			this.goodList1 = this.recommendService.getRecommendItems(this.customer.getId());
 			this.good = new Good();
 			this.good.setCustomerId(this.customer.getId());
 			this.goodBrowseList = this.goodService.select("Good.Good_SYgoodType", this.good);
+		}else{
+			this.goodList1 = this.recommendService.getRecommendItems("");
 		}
 		Advertise advertise = new Advertise();
 		this.advertiseList = this.advertiseService.getByPlaceAdvertiseList(advertise);

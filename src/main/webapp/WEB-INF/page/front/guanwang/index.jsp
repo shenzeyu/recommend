@@ -186,34 +186,26 @@
       <!--[if !IE]>end<![endif]-->
     </div>
     <!--[if !IE]>为你推荐结束<![endif]-->
-    <!--[if !IE]>课程分类<![endif]-->
-   <div class="BrandManagement">
-      <div class="BrandManagement01"><samp>课程分类</samp> <span><a href="#"><imgb src="${ctx}/Images/images/a15.jpg" /></a></span></div>
-      <div class="BrandManagement02">
-      <div class="BrandManagement0201">
-      <div class="BManange">
-      <div class="new_ppg2">
-	     <c:forEach items="${goodBrandList1}" begin="0" end="15" var="goodBrand" >
-	         <a  href="${ctx }/shoptype.do?good.brandId=${goodBrand.id }"><img src="${ctx}${goodBrand.pic }" /></a>
-	      </c:forEach> 
-      </div>
-      <div class="new_ppg">
-      <c:forEach items="${goodBrandList1}" begin="0" end="15" var="goodBrand" >
-      		<div class="black_1"><a class="" href="${ctx }/shoptype.do?good.brandId=${goodBrand.id }" onmouseover="this.className='bla'" onmouseout="this.className=''"></a></div>
-	      </c:forEach>
-	      </div>
-      </div>
-      </div>
-      <div class="BrandManagement0202">
-      <ul>
-	      <c:forEach items="${goodBrandList3}" var="goodBrand" begin="0" end="29">
-		      <li><a href="${ctx }/shoptype.do?good.brandId=${goodBrand.id }">${goodBrand.name }</a></li>
-		  </c:forEach>
-      </ul>
-      </div>
-      
-      
-      </div>
+    <!--[if !IE]>最新课程<![endif]-->
+    <div class="Interest">
+    <div class="Interest01"><samp>最新课程</samp></div>
+    <div class="Interest02">
+    <ul>
+    
+    <!--[if !IE]>第一个产品循环<![endif]-->
+   
+	    <c:forEach items="${goodList2}" var="good" begin="0" end="4">
+	    <li><a href="${ctx }/cpxq.do?good.id=${good.id }"><img src="${ctx}${good.pic }" /></a>
+	      <p><a href="${ctx }/cpxq.do?good.id=${good.id }">${good.name }<samp>${good.introBrief }</samp></a></p>
+	    <span>¥${good.price }</span></li>
+	    </c:forEach>
+  
+    
+   
+    <!--[if !IE]>第一个产品结束<![endif]-->
+		
+    </ul>
+    </div>
     </div>
   </div>
  <%@ include file="/WEB-INF/page/front/guanwang/bottom.jsp"%> 

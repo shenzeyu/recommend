@@ -24,6 +24,10 @@ public class RecommendController {
 	}
 	@RequestMapping("saveRecommend")
 	public void saveRecommend(Recommend recommend){
+		System.out.println(recommend.getGoodId());
+		if("test".equals(recommend.getGoodId())){
+			recommend.setGoodId(recommendService.queryIdByIid(Long.toString(recommend.getIid())));
+		}
 		recommendService.insertRecommend(recommend);
 	}
 	@Autowired

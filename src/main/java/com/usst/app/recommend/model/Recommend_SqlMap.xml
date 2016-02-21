@@ -28,4 +28,8 @@
 		select id from good
 		where iid = #iid#
 	</select>
+	<select id="Recommend_selectByTime" resultClass="java.lang.String" parameterClass="java.lang.String">
+		select id from good
+		order by create_time desc
+	</select>
 </sqlMap>

@@ -45,7 +45,6 @@ public class RecommendService extends SqlMapClientTemplate {
 				id = queryIdByUid("1");
 			}
 			List<String> listIid = RecommenderResult.resultItem(queryUidById(id));
-			System.out.println("recommendIid" + listIid);
 			if (listIid.size() == 0) {
 				for (String iid : new String[] { "1", "2", "3" }) {
 					listIid.add(iid);
@@ -58,10 +57,19 @@ public class RecommendService extends SqlMapClientTemplate {
 		} catch (TasteException | IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("reocmmendIds" + list);
 		return list;
 	}
-
+	public List<Good> getNewItems() {
+		List<Good> list = new ArrayList<Good>();
+		List<String> ids = super.queryForList("Recommend.Recommend_selectByTime");
+		int i = 0;
+		for(String id : ids){
+			list.add(this.goodService.getModel(queryIdByIid(id)));
+			if(i>=10)break;
+			i++;
+		}
+		return list;
+	}
 	@Autowired
 	public void setSqlMapClientForAutowire(SqlMapClient sqlMapClient) {
 		super.setSqlMapClient(sqlMapClient);
