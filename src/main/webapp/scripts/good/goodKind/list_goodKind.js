@@ -57,7 +57,7 @@ $(document).ready(function(){
 	        text:'保存',
 	        iconCls:'icon-save',
 	        handler:function(){
-	            editDataPage.submitForm('save');
+	            editDataPage.submitForm();
 	        }
 	    }]
 	});

@@ -63,8 +63,9 @@ public class RecommendService extends SqlMapClientTemplate {
 		List<Good> list = new ArrayList<Good>();
 		List<String> ids = super.queryForList("Recommend.Recommend_selectByTime");
 		int i = 0;
+		System.out.println(ids.size());
 		for(String id : ids){
-			list.add(this.goodService.getModel(queryIdByIid(id)));
+			list.add(this.goodService.getModel(id));
 			if(i>=10)break;
 			i++;
 		}
