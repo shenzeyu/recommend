@@ -155,7 +155,7 @@
 	            <div class="tg01_text2"><a href="${ctx }/cpxq.do?good.id=${good.id }"><img src="${ctx}${good.pic }" border="0" /></a></div>
 	            <div class="tg01_text3">
 	            <div class="tg01_text301">
-	             <div class="tg01_text301_title"><a href="${ctx }/cpxq.do?good.id=${groupgood.id }">${groupgood.name }<span>${good.introBrief }</span></a></div>
+	             <div class="tg01_text301_title"><a href="${ctx }/cpxq.do?good.id=${good.id }">${good.name }<span>${good.introBrief }</span></a></div>
 	              <div class="tg01_text301_title1"><span>¥${good.price }</span></div>
 	              </div>
 	            </div>

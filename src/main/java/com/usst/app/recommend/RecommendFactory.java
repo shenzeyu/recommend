@@ -89,7 +89,7 @@ public final class RecommendFactory {
         dataSource.setUser(ConfigUtil.getDatabaseUsername());
         dataSource.setPassword(ConfigUtil.getDatabasePassword());
         dataSource.setDatabaseName(ConfigUtil.getDatabaseName());
-        JDBCDataModel dataModel = new MySQLJDBCDataModel(dataSource, "recommend", "uid", "iid", "val", "time");
+        JDBCDataModel dataModel = new MySQLJDBCDataModel(dataSource, "recommend", "uid", "iid", "value", "time");
         DataModel model = dataModel;
 		return model;
 	}
