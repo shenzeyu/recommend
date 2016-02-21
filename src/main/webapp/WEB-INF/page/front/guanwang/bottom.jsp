@@ -14,11 +14,11 @@
     <div class="foot_text">
       <div class="foot_text01">
         <ul>
-          <li><a href="#"><img src="${ctx}/Images/images/a40.jpg" /></a></li>
-          <li><a href="#"><img src="${ctx}/Images/images/a41.jpg" /></a></li>
-          <li><a href="#"><img src="${ctx}/Images/images/a42.jpg" /></a></li>
-          <li><a href="#"><img src="${ctx}/Images/images/a43.jpg" /></a></li>
-          <li><a href="#"><img src="${ctx}/Images/images/a44.jpg" /></a></li>
+          <li><a href="#"><img src="${ctx}/Images/bottomShow/bottom1.jpg" /></a></li>
+          <li><a href="#"><img src="${ctx}/Images/bottomShow/bottom2.jpg" /></a></li>
+          <li><a href="#"><img src="${ctx}/Images/bottomShow/bottom3.jpg" /></a></li>
+          <li><a href="#"><img src="${ctx}/Images/bottomShow/bottom4.jpg" /></a></li>
+          <li><a href="#"><img src="${ctx}/Images/bottomShow/bottom5.jpg" /></a></li>
         </ul>
       </div>
       <div class="foot_text02">
