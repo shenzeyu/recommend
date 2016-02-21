@@ -23,70 +23,54 @@
       </div>
       <div class="foot_text02">
         <div class="foot_text0201">
-          <div class="foot_text0201_text"> <span>客服中心</span> </div>
+          <div class="foot_text0201_text"> <span>服务中心</span> </div>
           <div class="foot_text0201_text1">
             <h1><img src="${ctx}/Images/images/oneshop16.jpg" /></h1>
             <h3>工作时间：08:00-21:00</h3>
           </div>
           <div class="foot_text0201_text1">
             <h1><img src="${ctx}/Images/images/oneshop17.jpg" /></h1>
-            <h3>联系方式：020-8557-2293</h3>
+            <h3>联系方式：021-55277040</h3>
           </div>
           <div class="foot_text0201_text1">
             <h1><img src="${ctx}/Images/images/oneshop18.jpg" /></h1>
-            <h2>邮箱： <a href="#">kuqusw@126.com </a> 
+            <h2>邮箱： <a href="#">2460448129@qq.com </a> 
             <!--	<a href="mailto:service@1wandian.com?cc=service@1wandian.com">service@1wandian.com</a>  -->
             </h2>
           </div>
         </div>
         <div class="foot_text0202">
           <ul>
-            <li id="ftpy">购物指南</li>
-            <c:forEach items="${informationList}" var="information">
-              <c:if test="${information.type=='3'}">
-                <li><a href="${ctx}/infor.do?information.id=${information.id }">${information.title }</a></li>
-              </c:if>
-            </c:forEach>
-          </ul>
-        </div>
-        <div class="foot_text0202">
-          <ul>
-            <li id="ftpy">商品配送</li>
-             <c:forEach items="${informationList}" var="information">
-              <c:if test="${information.type=='4'}">
-                <li><a href="${ctx}/infor.do?information.id=${information.id }">${information.title }</a></li>
-              </c:if>
-            </c:forEach>
+            <li id="ftpy">选课指南</li>
+                <li><a href="">职业课程图</a></li>
+                <li><a href="">知识体系图</a></li>
+                <li><a href="">职业路径图</a></li>
+                <li><a href="">资源下载</a></li>
+                <li><a href="">企业课程</a></li>
           </ul>
         </div>
         <div class="foot_text0202">
           <ul>
             <li id="ftpy">支付方式</li>
-             <c:forEach items="${informationList}" var="information">
-              <c:if test="${information.type=='5'}">
-                <li><a href="${ctx}/infor.do?information.id=${information.id }">${information.title }</a></li>
-              </c:if>
-            </c:forEach>
+              <li><a href="">银行卡支付</a></li>
+              <li><a href="">支付宝支付</a></li>
+              <li><a href="">微信支付</a></li>
           </ul>
         </div>
         <div class="foot_text0202">
           <ul>
-            <li id="ftpy">售后服务</li>
-             <c:forEach items="${informationList}" var="information">
-              <c:if test="${information.type=='6'}">
-                <li><a href="${ctx}/infor.do?information.id=${information.id }">${information.title }</a></li>
-              </c:if>
-            </c:forEach>
+            <li id="ftpy">网站服务</li>
+              <li><a href="">课程需求</a></li>
+              <li><a href="">免费体验</a></li>
+              <li><a href="">网站地图</a></li>
           </ul>
         </div>
-        <div class="foot_text0203">
+        <div class="foot_text0202">
           <ul>
-            <li id="ftpy">关于我们</li>
-             <c:forEach items="${informationList}" var="information">
-              <c:if test="${information.type=='7'}">
-                <li><a href="${ctx}/infor.do?information.id=${information.id }">${information.title }</a></li>
-              </c:if>
-            </c:forEach>
+            <li id="ftpy">交流中心</li>
+              <li><a href="">关于我们</a></li>
+              <li><a href="">联系我们</a></li>
+              <li><a href="">讲师招募</a></li>
           </ul>
         </div>
       </div>
@@ -96,8 +80,8 @@
 <div class="foot1">
 <div class="foot1_bottom">
 <div class="foot1_bottext">
-版权所有：广州酷趣信息科技有限公司   经营许可证：<span>粤ICP备09080636</span><br />
-技术支持：<a href="http://www.kuquo.com"><span>酷趣科技</span></a> 
+版权所有：<a href="http://www.usst.edu.cn/"><span>上海理工大学</span></a><br />
+技术支持：<a href="http://www.usst.edu.cn/"><span>上海理工大学</span></a> 
 </div>
 </div>
 </div>

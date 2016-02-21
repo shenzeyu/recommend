@@ -3,7 +3,11 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>上理在线学院</title>
+<!-- <div class="logo01">
+  <a href="">
+    <font size="4" style="color:blue;">上理在线学院</font>
+  </a>
+</div> -->
 <link href="${ctx }/styles/front/style/header_page.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="${ctx }/styles/front/style/base.css" type="text/css"></link>
 <link rel="stylesheet" type="text/css" href="${ctx}/styles/front/pro_dropdown_2/pro_dropdown_2.css" />
@@ -86,19 +90,19 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
       		<a href="javascript:void(0);" onclick="checkUsers()">我的在线学院</a> |
        	</c:if>
       	</span>
-      	<span class="ys2"><img src="${ctx}/Images/images/a1.jpg" /></span><span class="ys3"><a href="${ctx}/ShoppingCar.do">购物车<c:if test="${shoppingCarSize==null}">0</c:if>${shoppingCarSize }件</a> 
+      	<span class="ys2"><img src="${ctx}/Images/images/a1.jpg" /></span><span class="ys3"><a href="${ctx}/ShoppingCar.do">已选课程<c:if test="${shoppingCarSize==null}">0</c:if>${shoppingCarSize }</a> 
       	
-        | <a href="${ctx}/infor.do?information.type=6" >售后服务</a>
-        | <a href="${ctx}/infor.do?information.type=7">企业采购</a>
-      	| <a href="${ctx}/infor.do?information.type=3">购物指南</a>
+        | <a href="${ctx}/infor.do?information.type=6" >课程服务</a>
+        | <a href="${ctx}/infor.do?information.type=7">合作院校</a>
+      	| <a href="${ctx}/infor.do?information.type=3">选课指南</a>
       	</span>
       	</div>
     </div>
     <!--[if !IE]>logo和搜索框<![endif]-->
     <div class="top_logo">
-      <div class="topf" >
-        <div class="logo" >
-          <div class="logo01"><a href="${ctx }/index.do"><img src="${ctx}/Images/images/logo.png" width="455" height="97"/></a></div>
+      <div class="topf">
+        <div class="logo">
+          <div class="logo04"><h1 class="t0">上理在线学院</h1></div>
 		  <div class="logo03"  onmouseout="changeDiv('layer1','none')" onmouseover="changeDiv('layer1','block')">
 		<!-- 
 			  <span id="tys"><c:if test="${areasId==null}">全国站</c:if><c:if test="${areasId!=null}">${areasName}站</c:if></span>
@@ -125,7 +129,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
           <div class="seacher01">
             <div class="input01">
             	<!-- onblur="if(this.value=='') {this.value='搜索商品';}" onfocus="if(this.value=='搜索商品') {this.value='';}" -->
-              <input name=""  id="shoptypeName" type="text" class="input" onblur="if(this.value=='') {this.value='搜索商品';}" onfocus="if(this.value=='搜索商品') {this.value='';}"/>
+              <input name=""  id="shoptypeName" type="text" class="input" />
             </div>
             <div class="btn01">
               <input name="" type="button" class="btn02"  onclick="selectType()"/>
@@ -136,10 +140,10 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 			</form>
             
             <div class="sys">热门搜索： 
-	            <a href="javascript:void(0);" onclick="SearchWhereSubmit('工作服')">工作服</a> 
-	            <a href="javascript:void(0);" onclick="SearchWhereSubmit('安全鞋')">安全鞋</a> 
-	            <a href="javascript:void(0);" onclick="SearchWhereSubmit('口罩')">口罩</a> 
-	            <a href="javascript:void(0);" onclick="SearchWhereSubmit('手套')">手套</a> 
+	            <a href="javascript:void(0);" onclick="SearchWhereSubmit('Java')">Java</a> 
+	            <a href="javascript:void(0);" onclick="SearchWhereSubmit('Python')">Python</a> 
+	            <a href="javascript:void(0);" onclick="SearchWhereSubmit('移动开发')">移动开发</a> 
+	            <a href="javascript:void(0);" onclick="SearchWhereSubmit('PHP')">PHP</a> 
             </div>
           </div>
         </div>
@@ -153,10 +157,424 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
         <div class="subMenu1_title" >
           <div class="topnav" >
             <div class="MNav"><!--  onmouseout="changeDiv('layer','none')" onmouseover="changeDiv('layer','block')" -->
-              <h1 class="t1" ><a href="#" target="_parent">全部商品分类</a></h1>
+              <h1 class="t1" ><a href="#" target="_parent">全部课程分类</a></h1>
               <h1 class="t2">
                 <input name="" type="button" class="tnav_btn" />
               </h1>
+              <!--[if !IE]>点击全部商品出现的弹出层<![endif]-->
+              <div  id="layer" style="z-index:9999; display:none;">
+                  <div id="warp1000">
+                  <div id="allsort">
+                    <div id="allsortlist">
+                      <!--[if !IE]>大家电<![endif]-->
+                      <div class="navlist icon01" >
+                        <h3>
+                          <div id="t_text" >
+                            <div id="t_text01"><span><img src="${ctx}/Images/images/m1.jpg" /></span><a href="#">大家电</a></div>
+                            <div id="t_text02">
+                            <a href="#" id="ta">空调</a> 
+                            <a href="#" id="ta">冰箱</a> 
+                            <a href="#" id="ta">洗衣机</a> 
+                            <a href="#" id="ta">电视机</a> 
+                            <a href="#" id="ta">空调</a></div>
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门导师</span>
+                                <ul>
+                                  <li><a href="#">数据库优化大师</a></li>
+                                  <li><a href="#"></a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>推荐课程</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                      <!--[if !IE]>end<![endif]-->
+                      <!--[if !IE]>厨卫电器-<![endif]-->
+                      <div class="navlist icon02">
+                        <h3>
+                          <div id="t_text" >
+                            <div id="t_text01"><span style="padding-top:7px;"><img src="${ctx}/Images/images/d1.gif" /></span><a href="#">厨卫电器</a></div>
+                            <div id="t_text02"><a href="#" id="ta">热水器</a> <a href="#" id="ta">抽烟机</a> <a href="#" id="ta">消毒柜</a> <a href="#" id="ta">洗碗机</a></div>
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门品牌</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>促销活动</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                      <!--[if !IE]>生活电器<![endif]-->
+                      <div class="navlist icon03">
+                        <h3>
+                          <div id="t_text" >
+                            <div id="t_text01"><span style="padding-top:7px;"><img src="${ctx}/Images/images/d2.gif" /></span><a href="#">生活电器</a></div>
+                            <div id="t_text02"><a href="#" id="ta">电饭煲</a> <a href="#" id="ta">电炖锅</a> <a href="#" id="ta">电饼铛</a> <a href="#" id="ta">电水壶</a></div>
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门品牌</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>促销活动</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                      <!--[if !IE]>end<![endif]-->
+                      <!--[if !IE]>手机数码<![endif]-->
+                      <div class="navlist icon04">
+                        <h3>
+                          <div id="t_text" >
+                            <div id="t_text01"><span style=" padding-top:5px;"><img src="${ctx}/Images/images/c4.png" /></span><a href="#">手机数码</a></div>
+                            <div id="t_text02"><a href="#" id="ta">手机</a> <a href="#" id="ta">数码相机</a> <a href="#" id="ta">MP3</a> <a href="#" id="ta">MP4</a><a href="#" id="ta">单反相机</a></div>
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门品牌</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>促销活动</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                      <!--[if !IE]>电脑办公<![endif]-->
+                      <div class="navlist  icon05">
+                        <h3>
+                          <div id="t_text" >
+                            <div id="t_text01"><span style=" padding-top:5px;"><img src="${ctx}/Images/images/d3.gif" /></span><a href="#">电脑办公</a></div>
+                            <div id="t_text02"><a href="#" id="ta">电脑</a> <a href="#" id="ta">笔记本</a> <a href="#" id="ta">鼠标</a> <a href="#" id="ta">键盘</a> <a href="#" id="ta">硬盘</a></div>
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门品牌</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>促销活动</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                      <!--[if !IE]>运营商<![endif]-->
+                      <div class="navlist icon06">
+                        <h3>
+                          <div id="t_text" >
+                            <div id="t_text01"><span style=" padding-top:5px;"><img src="${ctx}/Images/images/a9.jpg" /></span><a href="#">运营商</a></div>
+                            <div id="t_text02"><a href="#" id="ta">电子词典</a> <a href="#" id="ta">电子书</a> <a href="#" id="ta">复读机</a> <a href="#" id="ta">录音笔 </a></div>
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门品牌</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>促销活动</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                      <!--[if !IE]>电子教育<![endif]-->
+                      <div class="navlist icon07">
+                        <h3>
+                          <div id="t_text" >
+                            <div id="t_text01"><span><img src="${ctx}/Images/images/m1.jpg" /></span><a href="#">电子教育</a></div>
+                            <div id="t_text02"><a href="#" id="ta">空调</a> <a href="#" id="ta">冰箱</a> <a href="#" id="ta">洗衣机</a> <a href="#" id="ta">电视机</a> <a href="#" id="ta">空调</a></div>
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门品牌</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>促销活动</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                      <!--[if !IE]>五金电器<![endif]-->
+                      <div class="navlist icon08">
+                        <h3>
+                          <div id="t_text" >
+                            <div id="t_text01"><span><img src="${ctx}/Images/images/m1.jpg" /></span><a href="#">五金电器</a></div>
+                            <div id="t_text02"><a href="#" id="ta">空调</a> <a href="#" id="ta">冰箱</a> <a href="#" id="ta">洗衣机</a> <a href="#" id="ta">电视机</a> <a href="#" id="ta">空调</a></div>
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门品牌</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>促销活动</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                      <!--[if !IE]>汽车用品<![endif]-->
+                      <div class="navlist icon09">
+                        <h3 class="ys">
+                          <div id="t_text" >
+                            <div id="t_text01"><span><img src="${ctx}/Images/images/m1.jpg" /></span><a href="#">汽车用品</a></div>
+                            <div id="t_text02"><a href="#" id="ta" >空调</a> <a href="#" id="ta">冰箱</a> <a href="#" id="ta">洗衣机</a> <a href="#" id="ta">电视机</a> <a href="#" id="ta">空调</a></div>
+
+                          </div>
+                        </h3>
+                        <div class="navmore">
+                          <div class="iframeyaer1">
+                            <div class="tv">
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                              <div class="tv01"><span>电视</span><a href="#">液晶电视</a> <a href="#">LED电视</a> <a href="#">3D电视</a> <a href="#">等离子电视</a></div>
+                            </div>
+                            <div class="tv1">
+                              <div class="tv101"> <span>热门品牌</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                              <div class="tv102"> <span>促销活动</span>
+                                <ul>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                  <li><a href="#">TCL</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <!--[if !IE]>解决在IE6下拉菜单挡住弹出层<![endif]-->
+                          <iframe frameborder="0" class="iframeyaer"></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+                <!--[if !IE]>点击全部商品出现的弹出层结束<![endif]-->
             </div>
           </div>
         
@@ -164,10 +582,9 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
         <div id="nav1">
           <ul>
             <li><a href="${ctx }/index.do">首页</a></li>
-            <li><a href="${ctx }/miaosha.do">秒杀</a></li>
-            <li><a href="${ctx }/qianggou.do">抢购</a></li>
-       <!--      <li><a href="${ctx }/tuangou.do">团购</a></li>   --> 
-            <li><a href="${ctx }/brand.do">品牌馆</a></li>
+            <li><a href="${ctx }/miaosha.do">职业课程</a></li>
+            <li><a href="${ctx }/qianggou.do">就业学习</a></li>
+            <li><a href="${ctx }/brand.do">交流社区</a></li>
             <li><a href="${ctx }/newnews.do">资讯中心</a></li>
           </ul>
         </div>
@@ -209,7 +626,8 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div class="Popuplogin0202_text2">
 <h1>
 <span>还不是上理在线学院用户？ </span><br />
-现在免费注册上理在线学院会员，便能立即享受自由又高效的学习乐趣! <samp><a href="javascript:void(0);" onclick="zhuce()">会员注册</a></samp></h1>
+现在免费注册上理在线学院会员，便能立即享受便宜又放心的<br />
+购物乐趣! <samp><a href="javascript:void(0);" onclick="zhuce()">会员注册</a></samp></h1>
 </div>
 </div>
 </div>

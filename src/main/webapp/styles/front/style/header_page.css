@@ -19,6 +19,7 @@ body{ margin:0 auto;}
 .logo{ width:670px; float:left;   padding-top:23px;}
 .logo01{ width:230px;  float:left; padding-left:30px; padding-top:2px;}
 .logo03{ width:84px; float:left; position:relative; padding-left:10px; z-index:1000;}
+.logo04{ width:280px;  float:left; padding-left:30px; padding-top:2px;}
 #tys{width:84px; height:18px; line-height:18px; font-size:14px;  color:#2c91e1; font-family:'宋体'; text-align:center;  margin-top:18px; float:left; height:18px;}
 #tys1{  display:block; font-weight:normal;  width:84px; line-height:20px; font-size:14px; color:#bbbdbf; font-family:"宋体"; text-align:center; cursor:pointer;}
 .logo02{ width:150px; padding-left:14px; float:left;  line-height:55px; padding-top:12px; }

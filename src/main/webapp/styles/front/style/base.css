@@ -5,7 +5,34 @@ body{ background:#fff; font-size:12px; font-family:"宋体"; color:#666666;}
 a{ color:#666666; font-size:12px; font-family:"宋体"; text-decoration:none;}
 a:hover{ color:#0a7cd4; font-size:12px; font-family:"宋体"; text-decoration:underline;}
 ul,li,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p{ list-style:none; margin:0px; padding:0px;}
+#box ul {
+ list-style-type: none;
+ margin:0px;
+ padding:0px;
+}
+#box  li {
+ margin:0px;
+ padding:0px;
+ float:left;
+ width:20%;
+ height:40px;
+ text-align:center;
+}
+#box  li a {
+ font-size:16px;
+ line-height:22px;
+ color:#0a7cd4;
+ font-family:"微软雅黑";
+}
+#con div{
+ margin:0px;
+ padding:0px;
+ height:54px;
+ border:1px solid blne;
+}
+
 h1,h2,p{ font-weight:normal; font-size:12px; margin:0px; padding:0px;}
+h1.t0{float:left;  color:#0a7cd4; font-family:"楷体"; font-size:40px; line-height:60px;  text-align:center; padding-left:10px; letter-spacing: normal;font-weight:bold;}
 input:focus{outline:none}
 select:focus{outline:none;}
 textarea:focus{outline:none;}
