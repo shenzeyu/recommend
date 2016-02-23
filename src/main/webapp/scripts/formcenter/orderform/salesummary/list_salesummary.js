@@ -55,13 +55,13 @@ function getTableHeadOpt(){
 //获取列头参数
 function getColumnsOpt(){
 	var opt = [
-		{field:'goodCode',title:'商品编号',width:15,align:'left'},
-		{field:'goodTypeName',title:'商品类别',width:10,align:'left'},
-		{field:'goodName',title:'商品名',width:30,align:'left'},
+		{field:'goodCode',title:'资料编号',width:15,align:'left'},
+		{field:'goodTypeName',title:'资料类别',width:10,align:'left'},
+		{field:'goodName',title:'资料名',width:30,align:'left'},
 		{field:'unit',title:'单位',width:10,align:'left'},
 		{field:'purchasePrice',title:'进货价',width:15,align:'left'},
 		{field:'goodPrice',title:'销售单价',width:15,align:'left'},
-		{field:'taxRate',title:'商品税率',width:15,align:'left'},
+		{field:'taxRate',title:'资料税率',width:15,align:'left'},
 		{field:'orderNumber',title:'销售数量',width:20,align:'left'},
 		{field:'taxDueSum',title:'销售税金',width:15,align:'left',formatter:taxDueSumFormat},
 		{field:'salesmoney',title:'不含税销售金额',width:20,align:'left'},
@@ -145,7 +145,7 @@ function WarehousePosition(){
 		$('#warehousePositionName').val(warehousePosition.name);
 	}
 }
-//选择商品品牌
+//选择资料品牌
 function selectBrand(obj){
 	var obj = $(obj);
 	var dataArr = window.showModalDialog(ctx+"/goodBrand!list.do?todo=show", '',"status:no;left:yes;scroll:yes;resizable:no;help:no;dialogWidth:800px;dialogHeight:600px");
@@ -155,7 +155,7 @@ function selectBrand(obj){
 		$(obj).focus();
 	}
 }
-//选择商品类别弹出窗
+//选择资料类别弹出窗
 function selectType(obj){
 	var obj = $(obj);
 	var dataArr = window.showModalDialog(ctx+"/goodType!list.do?todo=show", '',"status:no;left:yes;scroll:yes;resizable:no;help:no;dialogWidth:800px;dialogHeight:600px");

@@ -156,9 +156,9 @@ function getToolBarOpt(){
 //获取列头参数
 function getColumnsOpt(){
 	var opt = [
-		{field:'goodId',title:'商品编号',width:10,align:'left'},
+		{field:'goodId',title:'资料编号',width:10,align:'left'},
 		{field:'id',title:'',width:0,align:'left'},
-		{field:'goodName',title:'商品名称',width:15,align:'left',editor:'goodName'},
+		{field:'goodName',title:'资料名称',width:15,align:'left',editor:'goodName'},
 		{field:'priceMarket',title:'市场价',width:10,align:'left',editor:'priceMarket'},
 		{field:'pricePromote',title:'优惠活动价',width:10,align:'left',editor:'pricePromote'}	
 	];
@@ -220,7 +220,7 @@ function submitSaveForm(){
 				htmlAll += '<tr>' + goodIdHtml + goodNameHtml + priceMarketHtml + pricePromoteHtml +'</tr>'; 
 			}
 		}
-		var giftGoodTable = $('#giftGoodTable');//订单商品项数据区
+		var giftGoodTable = $('#giftGoodTable');//订单资料项数据区
 		giftGoodTable.html(htmlAll);
 		var options = {
 			url : ctx+'/gift!save.do',
@@ -254,14 +254,14 @@ function checkForm(){
 
 //获取一个新的
 function buildPriceAdjustWare(){
-	var costAdjustWare = {};//商品
+	var costAdjustWare = {};//资料
 	return costAdjustWare;
 }
 
-//添加商品空行
+//添加资料空行
 function addGoodRow(more){
 	var lastEditRowIndex;
-	var costAdjustWare = buildPriceAdjustWare();//获取一个新的空商品项
+	var costAdjustWare = buildPriceAdjustWare();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',costAdjustWare);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;
@@ -288,10 +288,10 @@ function addGiftGood(more){
 		var dataLen = dataArr.length;
 		for(var i=0;i<dataLen;i++){
 			var data = dataArr[i];	
-			var code = data.code;//商品编码
-			var isExist = isGoodExist(code);//商品是否已存在	
+			var code = data.code;//资料编码
+			var isExist = isGoodExist(code);//资料是否已存在	
 			if(isExist){
-				alert('商品已存在，商品编号:'+data.code);
+				alert('资料已存在，资料编号:'+data.code);
 			}else{
 				var rowData = {};		//增加的行对象数组
 				var row;				//行对象
@@ -324,15 +324,15 @@ function addGiftGood(more){
 				var row = rowData.row;
 				var rowIndex = rowData.rowIndex;
 				if(row){	//设置页面显示的值
-					var id = data.id;		//商品Id
+					var id = data.id;		//资料Id
 					if(id){
 						row.id = id;
 					}
-					var goodName = data.name;    //商品名称
+					var goodName = data.name;    //资料名称
 					if(goodName){
 						row.goodName = goodName;
 					}
-					var goodId = data.code;		//商品Id
+					var goodId = data.code;		//资料Id
 					if(goodId){
 						row.goodId = goodId;
 					}
@@ -415,7 +415,7 @@ function getEditingRow(){
 	
 	return editingRow;
 }
-//商品是否已存在
+//资料是否已存在
 function isGoodExist(code){
 	var isExist = false;
 	var rows = $(gId).datagrid('getRows');//末行的下标

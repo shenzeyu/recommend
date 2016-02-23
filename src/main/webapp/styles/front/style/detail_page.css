@@ -3,7 +3,7 @@
 
 .box{ width:100%; margin:0 auto;}
 
-/*============================商品详细评价上半部分===================================*/
+/*============================资料详细评价上半部分===================================*/
 
 .details{ width:1200px; margin:0 auto; overflow:hidden;}
 .details01{ width:1200px; float:left; overflow:hidden;}
@@ -92,7 +92,7 @@
 
 
 
-/*============================商品分类===================================*/
+/*============================资料分类===================================*/
 
 .content{ width:1200px; margin:0 auto; z-index:-100; overflow:hidden;}
 .instructions{ width:1197px; float:left; height:26px; line-height:26px; color:#2791e3; font-family:"宋体"; font-size:12px; padding-left:3px; }
@@ -109,7 +109,7 @@
 
 
 
-/*============================浏览本商品的客户买了===================================*/
+/*============================浏览本资料的客户买了===================================*/
 
 
 .seenProduct{ width:262px;  float:left; }
@@ -143,7 +143,7 @@
 
 
 
-/*============================商品评价选项卡===================================*/
+/*============================资料评价选项卡===================================*/
 .Switch{ width:905px;  float:left; padding-left:33px; overflow:hidden;}
 #Tab2{
 width:905px;
@@ -189,7 +189,7 @@ clear:both;
 }
 
 
-/*============================商品评价===================================*/
+/*============================资料评价===================================*/
 .evaluation{ width:903px;  float:left; margin-top:18px; border:#e0e0e0 solid 1px; height:120px; overflow:hidden;}
 .evaluation01{ width:145px;  float:left; padding-top:31px; padding-left:18px;}
 .evaluation01 h1{ width:145px; float:left; line-height:19px;}
@@ -288,7 +288,7 @@ float:left;
 
 
 
-/*============================商品咨询===================================*/
+/*============================资料咨询===================================*/
 .consulting{ width:905px; float:left; padding-top:12px; line-height:22px; color:#333333; overflow:hidden;}
 
 #Tab4{
@@ -388,7 +388,7 @@ float:left;
 
 
 		
-/*============================商品详情===================================*/	
+/*============================资料详情===================================*/	
 .itemDetails{ padding-left:10px; float:left; padding-right:10px; padding-top:12px; line-height:24px;}
 	
     .itemDetails{ padding-left:10px; float:left; padding-right:10px; padding-top:12px; line-height:24px;}

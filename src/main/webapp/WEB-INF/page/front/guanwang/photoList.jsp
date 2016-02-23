@@ -139,7 +139,7 @@ $('#button1 ').show();
         </div>
         <!--[if !IE]>最新降价<![endif]-->
         <div class="hotComments">
-          <div class="seenProduct01">最新浏览过的商品</div>
+          <div class="seenProduct01">最新浏览过的资料</div>
           <div class="hotCom_text1">
             <div class="Latestprices">
               <!--[if !IE]>第一个产品<![endif]-->
@@ -315,7 +315,7 @@ $('#button1 ').show();
                 </div>
               </div>
               <div class="Contentbox">
-                <!-- 商品以图片形式展示 -->
+                <!-- 资料以图片形式展示 -->
                 <div id="con_one_1" >
                   <!--[if !IE]>产品图片开始<![endif]-->
                   <div class="photolist02">
@@ -332,7 +332,7 @@ $('#button1 ').show();
                     </ul>
                   </div>
                 </div>
-                 <!-- 商品以列表形式展示 -->
+                 <!-- 资料以列表形式展示 -->
                  <div id="con_one_2" style="display:none">
                   <!--[if !IE]>纵向产品列表第一个产品<![endif]-->
 	                 
@@ -398,7 +398,7 @@ $('#button1 ').show();
 	<!--[if !IE]>进入收藏夹的弹出层<![endif]
 	<div class="Popuplogin">
 <div class="Popuplogin01">
-<h1>壹万店会员登录</h1>
+<h1>壹万店学员登录</h1>
 <h2><span><a href="#">关闭</a></span><samp><input name="" type="button"  class="Popuplogin01btn"/></samp></h2>
 </div>
 <div class="Popuplogin02">
@@ -427,8 +427,8 @@ $('#button1 ').show();
 <div class="Popuplogin0202_text2">
 <h1>
 <span>还不是壹万店用户？ </span><br />
-现在免费注册壹万店会员，便能立即享受便宜又放心的<br />
-购物乐趣! <samp><a href="#">会员注册</a></samp></h1>
+现在免费注册壹万店学员，便能立即享受便宜又放心的<br />
+购物乐趣! <samp><a href="#">学员注册</a></samp></h1>
 </div>
 </div>
 </div>

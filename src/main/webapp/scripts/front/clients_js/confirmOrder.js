@@ -322,7 +322,7 @@ function sumbitOrder(){
 					if(returnData=='true'){
 						window.location.href = ctx+"/successOrder.do";
 					}else{
-						alert('您的订单中还没有数据，请先去购买商品！');
+						alert('您的订单中还没有数据，请先去购买资料！');
 						return;
 					}
 					

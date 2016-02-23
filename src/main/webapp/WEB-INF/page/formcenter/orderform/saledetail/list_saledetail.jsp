@@ -24,9 +24,9 @@
 	<div style="margin-top: 10px; margin-bottom: 5px;">
 		<table border="0" cellpadding="0"  cellspacing="1" class="gdcn-table-bgcolor" width="100%" style="font-size: 12px;">
 			<tr>
-				<td class='gridtitle'>商品编号：</td>
+				<td class='gridtitle'>资料编号：</td>
 				<td class='gridbody'><input type="text" id="goodCode" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>商品名称：</td>
+				<td class='gridtitle'>资料名称：</td>
 				<td class='gridbody'><input type="text" id="goodName" onkeydown="checkKey()"/></td>
 				<td class='gridtitle'>日期 从：</td>
 				<td class='gridbody'><input type="text" id="begin" readonly="readonly" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" /></td>

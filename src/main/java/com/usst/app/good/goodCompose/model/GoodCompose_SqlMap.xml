@@ -21,7 +21,7 @@
 	</resultMap>
 	
 	<!--ly 开始 -->
-	<!--根据商品id获取组合商品 -->
+	<!--根据资料id获取组合资料 -->
 		<select id="GoodCompose_goodId_select" resultMap="GoodComposeExtendResult">
 			select a.*,b.code as code,b.name as name,b.good_type_name as good_type_name,b.brand_name as brand_name,b.price as price,b.pic as pic 
 				from good_compose a left join good  b on a.compose_good_id = b.id

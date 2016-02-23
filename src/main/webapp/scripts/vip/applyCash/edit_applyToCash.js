@@ -52,14 +52,14 @@ function checkForm(){
 		$('#toCashAmount').focus();
 		return false;
 	}else if(parseFloat(toCashAmount)>parseFloat(money)){
-		alert('提现金额大于会员余额，会员余额为:'+money);
+		alert('提现金额大于学员余额，学员余额为:'+money);
 		$('#toCashAmount').focus();
 		return false;
 	}
 	return true;
 }
 
-//选择会员
+//选择学员
 function selectCustomer(){
 	var data = common.getCustomer();
 	if(data){

@@ -52,7 +52,7 @@ function dateValid1(){
 	setTimeout("dateValid1()",1000);
 }
 
-//商品分类中的热门品牌
+//资料分类中的热门品牌
 //function PromotionBrand(typeId,ctx){
 function PromotionBrand(typeId,url){
 		

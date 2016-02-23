@@ -88,7 +88,7 @@ function saveGoodsType(){
 function checkForm(){
 	var nameObj = $("#brandName");
 	if(''==nameObj.val()){
-		alert('请输入商品品牌名称！');
+		alert('请输入资料品牌名称！');
 		nameObj.focus();
 		return false;
 	}

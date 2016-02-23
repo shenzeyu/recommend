@@ -1,5 +1,5 @@
 <%--
-	会员充值编辑页面  <增加和修改>
+	学员充值编辑页面  <增加和修改>
 	@author 广州酷趣信息科技有限公司,lp
 	@since Oct 21, 2011 3:12:10 PM
  --%>
@@ -7,7 +7,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-	<title>编辑会员充值</title>
+	<title>编辑学员充值</title>
 	<%@ include file="/commons/taglibs.jsp" %>
 	<%@ include file="/commons/meta.jsp" %>
 	
@@ -76,7 +76,7 @@
 						    <td class='gridbody'>
 						    	<s:textfield id="prepaidMoney" name="prepaid.prepaidMoney" cssClass="inputTextBorder" onchange="common.checkNumber(this);"/>&nbsp;<font color="red">*</font>
 						    </td>
-						    <td class='gridtitle'>会员名称</td>
+						    <td class='gridtitle'>学员名称</td>
 							  <td class='gridbody'>
 							   	<s:hidden id="customerId" name="prepaid.customerId"/>
 							    <s:textfield id="customerName" name="prepaid.customerName"  cssClass="inputTextBorder" readonly="true" onclick="selectCustomer()"/>&nbsp;<font color="red">*</font>

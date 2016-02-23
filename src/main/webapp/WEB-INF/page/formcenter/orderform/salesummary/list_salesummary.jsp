@@ -26,9 +26,9 @@
 		<s:hidden name="warehouseId"  id="warehouseId" />
 		<table border="0" cellpadding="0"  cellspacing="1" class="gdcn-table-bgcolor" width="100%" style="font-size: 12px;">
 			<tr>
-				<td class='gridtitle'>商品类别：</td>
+				<td class='gridtitle'>资料类别：</td>
 				<td class='gridbody'><input type="text" id="goodTypeName" onclick="selectType(this)" readonly="readonly" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>商品名称：</td>
+				<td class='gridtitle'>资料名称：</td>
 				<td class='gridbody'><input type="text" id="goodName" onkeydown="checkKey()"/></td>
 				<td class='gridtitle'>日期 从：</td>
 				<td class='gridbody'><input type="text" id="begin" readonly="readonly" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'})" /></td>
@@ -40,11 +40,11 @@
 				</td>
 			</tr>
 			<tr>
-				<td class='gridtitle'>商品品牌：</td>
+				<td class='gridtitle'>资料品牌：</td>
 				<td class='gridbody'><input type="text" id="brandName" readonly="readonly" onclick="selectBrand(this)" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>商品仓库：</td>
+				<td class='gridtitle'>资料仓库：</td>
 				<td class='gridbody' ><input type="text" id="warehouseName" readonly="readonly" onclick="selectWarehouse()" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>商品仓位：</td>
+				<td class='gridtitle'>资料仓位：</td>
 				<td class='gridbody' colspan="5"><input type="text" id="warehousePositionName" readonly="readonly" onclick="selectWarehousePosition()" onkeydown="checkKey()"/></td>
 			</tr>
 		</table>

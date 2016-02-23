@@ -320,7 +320,7 @@ public class GroupgoodAction extends BaseAction {
 				}
 				getRequest().setAttribute("goodAttrIdStr", goodAttrIdStr);
 			} catch (Exception e) {
-				logger.error("获取商品属性出错", e);
+				logger.error("获取资料属性出错", e);
 			}
 			try {
 				this.goodPicList = this.fileUploadService.getFileUploadByGoodId(this.groupgood.getId());
@@ -330,7 +330,7 @@ public class GroupgoodAction extends BaseAction {
 			try {
 				this.goodRelateList = this.goodRelateService.getGoodRelateByGoodId(this.groupgood.getId());
 			} catch (Exception e) {
-				logger.error("获取关联商品出错", e);
+				logger.error("获取关联资料出错", e);
 			}
 			String goodRelateIdStr = "";
 			if (this.goodRelateList != null) {
@@ -969,7 +969,7 @@ public class GroupgoodAction extends BaseAction {
 	}
 
 	public String AllTypeGoodjson() {
-		logger.info("开始根据类别和类别等级查询商品!");
+		logger.info("开始根据类别和类别等级查询资料!");
 		List<Groupgood> resultList = null;
 		if (this.groupgood == null) {
 			this.groupgood = new Groupgood();
@@ -982,14 +982,14 @@ public class GroupgoodAction extends BaseAction {
 			this.groupgood.setBeginSaleTime(new Date());
 			resultList = this.groupgoodService.select("Good.Good_sel", this.groupgood);
 		} catch (Exception e) {
-			logger.error("根据类别和类别等级查询商品出错", e);
+			logger.error("根据类别和类别等级查询资料出错", e);
 		}
 		if (resultList == null) {
 			resultList = new ArrayList();
 		}
 		this.jsonMap = new HashMap();
 		this.jsonMap.put("rows", resultList);
-		logger.info("根据类别和类别等级查询商品成功!");
+		logger.info("根据类别和类别等级查询资料成功!");
 		return "success";
 	}
 
@@ -1002,7 +1002,7 @@ public class GroupgoodAction extends BaseAction {
 			resultList = this.goodTypeService.select("GoodType.GoodType", this.goodType);
 			this.goodType = ((GoodType) this.goodTypeService.getModel(this.goodType.getParentId()));
 		} catch (Exception e) {
-			logger.error("根据类别和类别等级查询商品出错", e);
+			logger.error("根据类别和类别等级查询资料出错", e);
 		}
 		if (resultList == null) {
 			resultList = new ArrayList();

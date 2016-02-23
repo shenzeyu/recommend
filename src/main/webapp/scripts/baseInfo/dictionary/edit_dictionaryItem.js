@@ -30,7 +30,7 @@ function submitForm(){
 		return false;
 }
 
-//删除商品类别
+//删除资料类别
 function deleteDictionary(id){
 	if(confirm('您确定要删除吗？')){
 		$.ajax({
@@ -90,7 +90,7 @@ function checkForm(){
 	return true;
 }
 
-//根据编号，判断商品类别是否已存在
+//根据编号，判断资料类别是否已存在
 function isCodeExisted(){
 	var flag = true;
 

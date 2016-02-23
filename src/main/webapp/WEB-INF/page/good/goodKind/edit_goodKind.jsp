@@ -48,7 +48,7 @@
 								<td class='gridtitle'>匹配系列：</td>
 								<td class='gridbody'>
 									<s:select id="goodtypeId" name="goodKind.goodtypeId" list="goodTypeList" listKey="id"  listValue="name" 
-										headerKey="0" headerValue="--请为此种类匹配商品类型--"/>
+										headerKey="0" headerValue="--请为此种类匹配资料类型--"/>
 								</td>
 							</tr>
 							<s:hidden id="sort" name="goodKind.sort"/>

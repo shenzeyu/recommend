@@ -140,7 +140,7 @@ public class GoodAttrAction extends BaseAction {
 				if ("0".equals(this.goodAttr.getInputType())) {
 					returnText = returnText + "<select name='attrValueArr' id='" + this.goodAttr.getId()
 							+ "' onchange='selectattrValueArr(this.value)'> ";
-					returnText = returnText + "<option value='0'>--请选择商品属性值--</option>";
+					returnText = returnText + "<option value='0'>--请选择资料属性值--</option>";
 					for (int j = 0; j < this.kindvalList.size(); j++) {
 						returnText = returnText + "<option value='"
 								+ ((GoodKingVal) this.kindvalList.get(j)).getValue();

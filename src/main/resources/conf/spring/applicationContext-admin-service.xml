@@ -94,22 +94,22 @@
 		class="com.usst.app.customer.service.CustomerService"
 		autowire="byName">
 	</bean>
-	<!-- 商品类别 -->
+	<!-- 资料类别 -->
 	<bean id="goodTypeService"
 		class="com.usst.app.good.goodType.service.GoodTypeService"
 		autowire="byName">
 	</bean>
-	<!-- 商品品牌 -->
+	<!-- 资料品牌 -->
 	<bean id="goodBrandService"
 		class="com.usst.app.good.goodBrand.service.GoodBrandService"
 		autowire="byName">
 	</bean>
-	<!-- 商品信息 -->
+	<!-- 资料信息 -->
 	<bean id="goodService"
 		class="com.usst.app.good.good.service.GoodService"
 		autowire="byName">
 	</bean>
-	<!-- 团购商品信息 -->
+	<!-- 团购资料信息 -->
 	<bean id="groupgoodService"
 		class="com.usst.app.good.groupgood.service.GroupgoodService"
 		autowire="byName">
@@ -118,22 +118,22 @@
 		class="com.usst.app.good.goodExtend.service.GoodExtendService"
 		autowire="byName">
 	</bean>
-	<!-- 商品种类 -->
+	<!-- 资料种类 -->
 	<bean id="goodKindService"
 		class="com.usst.app.good.goodKind.service.GoodKindService"
 		autowire="byName">
 	</bean>
-	<!-- 商品种类属性值 -->
+	<!-- 资料种类属性值 -->
 	<bean id="goodKingValService"
 		class="com.usst.app.good.goodKind.service.GoodKingValService"
 		autowire="byName">
 	</bean>
-	<!-- 商品价格 -->
+	<!-- 资料价格 -->
 	<bean id="goodPriceService"
 		class="com.usst.app.good.goodPrice.service.GoodPriceService"
 		autowire="byName">
 	</bean>
-	<!-- 商品属性 -->
+	<!-- 资料属性 -->
 	<bean id="goodAttrService"
 		class="com.usst.app.good.goodAttr.service.GoodAttrService"
 		autowire="byName">
@@ -142,7 +142,7 @@
 		class="com.usst.app.good.goodAttr.service.GoodAttrValueService"
 		autowire="byName">
 	</bean>
-	<!-- 商品规格 -->
+	<!-- 资料规格 -->
 	<bean id="goodSpecificationService"
 		class="com.usst.app.good.goodSpecification.service.GoodSpecificationService"
 		autowire="byName">
@@ -160,17 +160,17 @@
 		class="com.usst.app.good.ware.service.WareSpecificationValService"
 		autowire="byName">
 	</bean>
-	<!-- 相关商品 -->
+	<!-- 相关资料 -->
 	<bean id="goodRelateService"
 		class="com.usst.app.good.goodRelate.service.GoodRelateService"
 		autowire="byName">
 	</bean>
-	<!-- 组合商品 -->
+	<!-- 组合资料 -->
 	<bean id="goodComposeService"
 		class="com.usst.app.good.goodCompose.service.GoodComposeService"
 		autowire="byName">
 	</bean>
-	<!-- 商品收藏 -->
+	<!-- 资料收藏 -->
 	<bean id="favoriteService"
 		class="com.usst.app.good.favorite.service.FavoriteService"
 		autowire="byName">
@@ -316,7 +316,7 @@
 		autowire="byName">
 	</bean>
 
-	<!-- 会员管理 -->
+	<!-- 学员管理 -->
 	<bean id="prepaidService"
 		class="com.usst.app.vip.prepaid.service.PrepaidService"
 		autowire="byName">
@@ -341,7 +341,7 @@
 		class="com.usst.app.vip.applyCash.service.ApplyToCashService"
 		autowire="byName">
 	</bean>
-	<!-- 会员评论 -->
+	<!-- 学员评论 -->
 	<bean id="wareCommentService"
 		class="com.usst.app.front.service.WareCommentService"
 		autowire="byName">
@@ -353,7 +353,7 @@
 		autowire="byName">
 	</bean>
 
-	<!--商品包装 -->
+	<!--资料包装 -->
 	<bean id="packagingService"
 		class="com.usst.app.store.packaging.service.PackagingService"
 		autowire="byName">
@@ -399,7 +399,7 @@
 		class="com.usst.app.store.gift.service.GiftGoodService"
 		autowire="byName">
 	</bean>
-	<!-- 用户行为(浏览过的商品) -->
+	<!-- 用户行为(浏览过的资料) -->
 	<bean id="browseService"
 		class="com.usst.app.front.browse.service.BrowseService"
 		autowire="byName">

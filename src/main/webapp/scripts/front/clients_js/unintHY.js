@@ -1,11 +1,11 @@
 
 $(document).ready(function(){
-  //回调查询商品的方法
+  //回调查询资料的方法
   saleUnionOrderJson();
 });
 
 
-//显示退货商品数据
+//显示退货资料数据
 function saleUnionOrderJson(){ 
 	var time=$('#createTime').val()
 	var begin=$('#createTime1').val()

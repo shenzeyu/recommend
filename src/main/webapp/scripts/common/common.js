@@ -99,7 +99,7 @@ var common = {
 	},
 	
 	
-	//选择商品  ,more表示能否选择多个
+	//选择资料  ,more表示能否选择多个
 	getGoods:function(more){
 		var data;
 		var url = ctx+"/good!list.do?todo=show";
@@ -200,7 +200,7 @@ var common = {
 		return data;		
 	},
 	
-	//根据商品编码，获取一个商品的json对象
+	//根据资料编码，获取一个资料的json对象
 	getOneGoodByCode:function(code){
 		var goodJson;
 		if(code && ''!=code){
@@ -217,7 +217,7 @@ var common = {
 						}
 					},
 					error : function(){
-						alert('根据商品编码，获取一个商品的json对象失败!');
+						alert('根据资料编码，获取一个资料的json对象失败!');
 				 	} 
 			});			
 		}

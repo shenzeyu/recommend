@@ -95,7 +95,7 @@
 		order by code desc
 	</select>	
 
-	<!--  增加会员充值  -->
+	<!--  增加学员充值  -->
 	<insert id="Prepaid_insert">
 		insert into Prepaid 
 			(id,code,prepaid_money,remark,handler_id,handler_name,dept_id,
@@ -107,7 +107,7 @@
 			#customerId#,#customerName#)
 	</insert>
 	
-	<!--  修改会员充值 根据id -->
+	<!--  修改学员充值 根据id -->
 	<update id="Prepaid_update">
 		update Prepaid set
 			prepaid_money = #prepaidMoney#,
@@ -125,7 +125,7 @@
 		where id = #id#
 	</update>
 	
-	<!-- 删除会员充值 根据id-->
+	<!-- 删除学员充值 根据id-->
 	<delete id="Prepaid_delete">
 		delete from Prepaid where id = #id#
 	</delete>

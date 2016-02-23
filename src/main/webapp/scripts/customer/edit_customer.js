@@ -132,7 +132,7 @@ function checkForm(){
 	}
 	var warehouseNameObj = $("#warehouseName");
 	if(''==warehouseNameObj.val()){
-		alert('请选择会员所属社区');
+		alert('请选择学员所属社区');
 		warehouseNameObj.focus();
 		return false;
 	}

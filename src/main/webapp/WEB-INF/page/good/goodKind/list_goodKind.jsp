@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-	<title>商品种类</title>
+	<title>资料种类</title>
 	<%@ include file="/commons/taglibs.jsp" %>
 	<%@ include file="/commons/meta.jsp" %>
 	

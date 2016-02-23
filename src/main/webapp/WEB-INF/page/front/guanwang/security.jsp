@@ -66,9 +66,9 @@ function ShowFLT(i) {
 <li><a href="${ctx }/orderManage.do">我的订单<span>(<samp>${total }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款订单<span>(<samp>${payment }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消订单<span>(<samp>${cancelOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货商品<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货商品<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
-<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价商品<span>(<samp>${commentOrder}</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货资料<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货资料<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
+<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价资料<span>(<samp>${commentOrder}</samp>)</span></a></li>
 </ul>
           </div>
         </div>

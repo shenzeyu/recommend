@@ -180,7 +180,7 @@ public class AdverAction extends BaseAction {
 				}
 			}
 		} catch (Exception e) {
-			logger.error("获取特惠抢购商品出错", e);
+			logger.error("获取特惠抢购资料出错", e);
 		}
 		if ((pageInfo.getCount() > 0) && (pageInfo.getCount() % pageSize != 0)) {
 			pageInfo.setPageCount(pageInfo.getCount() / pageSize + 1);

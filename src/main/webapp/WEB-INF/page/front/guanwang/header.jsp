@@ -84,14 +84,11 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
     </c:if>     
     <div class="top_ctext2"><span class="ys1">
       	<c:if test="${loginCustomer!=null }">
-      		<a href="${ctx }/customersManage.do">我的在线学院</a> |
+      		<a href="${ctx }/customersManage.do">我的在线学院</a> 
       	</c:if>
       	<c:if test="${loginCustomer==null }">
-      		<a href="javascript:void(0);" onclick="checkUsers()">我的在线学院</a> |
+      		<a href="javascript:void(0);" onclick="checkUsers()">我的在线学院</a>  
        	</c:if>
-      	</span>
-      	<span class="ys2"><img src="${ctx}/Images/images/a1.jpg" /></span><span class="ys3"><a href="${ctx}/ShoppingCar.do">已选课程<c:if test="${shoppingCarSize==null}">0</c:if>${shoppingCarSize }</a> 
-      	
         | <a href="${ctx}/infor.do?information.type=6" >课程服务</a>
         | <a href="${ctx}/infor.do?information.type=7">合作院校</a>
       	| <a href="${ctx}/infor.do?information.type=3">选课指南</a>
@@ -128,7 +125,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
         <div class="seacher">
           <div class="seacher01">
             <div class="input01">
-            	<!-- onblur="if(this.value=='') {this.value='搜索商品';}" onfocus="if(this.value=='搜索商品') {this.value='';}" -->
+            	<!-- onblur="if(this.value=='') {this.value='搜索资料';}" onfocus="if(this.value=='搜索资料') {this.value='';}" -->
               <input name=""  id="shoptypeName" type="text" class="input" />
             </div>
             <div class="btn01">
@@ -161,7 +158,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
               <h1 class="t2">
                 <input name="" type="button" class="tnav_btn" />
               </h1>
-              <!--[if !IE]>点击全部商品出现的弹出层<![endif]-->
+              <!--[if !IE]>点击全部资料出现的弹出层<![endif]-->
               <div  id="layer" style="z-index:9999; display:none;">
                   <div id="warp1000">
                   <div id="allsort">
@@ -574,7 +571,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
                   </div>
                 </div>
               </div>  
-                <!--[if !IE]>点击全部商品出现的弹出层结束<![endif]-->
+                <!--[if !IE]>点击全部资料出现的弹出层结束<![endif]-->
             </div>
           </div>
         
@@ -596,7 +593,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div id="fade" class="black_overlay"></div>
 	<div id="MyDiv" class="Popuplogin" style="display: none;">
 <div class="Popuplogin01">
-<h1>上理在线学院会员登录</h1>
+<h1>上理在线学院学员登录</h1>
 <h2 onclick="CloseDiv('MyDiv','fade')" ><span><a onclick="CloseDiv('MyDiv','fade')" href="javascript:void(0)">关闭</a></span><samp><input name="" type="button"  class="Popuplogin01btn"/></samp></h2>
 </div>
 <div class="Popuplogin02">
@@ -626,8 +623,8 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div class="Popuplogin0202_text2">
 <h1>
 <span>还不是上理在线学院用户？ </span><br />
-现在免费注册上理在线学院会员，便能立即享受便宜又放心的<br />
-购物乐趣! <samp><a href="javascript:void(0);" onclick="zhuce()">会员注册</a></samp></h1>
+现在免费注册上理在线学院学员，便能立即享受便宜又放心的<br />
+购物乐趣! <samp><a href="javascript:void(0);" onclick="zhuce()">学员注册</a></samp></h1>
 </div>
 </div>
 </div>

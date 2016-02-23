@@ -74,7 +74,7 @@
 		order by code desc
 	</select>
 
-	<!--  增加会员等级  -->
+	<!--  增加学员等级  -->
 	<insert id="VipLevel_insert">
 		insert into Vip_Level 
 			(id,code,remark,name,creator_id,creator_name,
@@ -86,7 +86,7 @@
 			 )
 	</insert>
 	
-	<!--  修改会员等级 根据id -->
+	<!--  修改学员等级 根据id -->
 	<update id="VipLevel_update">
 		update Vip_Level set
 			required_consumption_amount = #requiredConsumptionAmount#,
@@ -100,7 +100,7 @@
 		where id = #id#
 	</update>
 	
-	<!-- 删除会员等级 根据id-->
+	<!-- 删除学员等级 根据id-->
 	<delete id="VipLevel_delete">
 		delete from Vip_Level where id = #id#
 	</delete>

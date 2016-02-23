@@ -190,7 +190,7 @@ function dateFormat(date){
 	return dateStr;
 }
 
-//选择商品类别弹出窗
+//选择资料类别弹出窗
 function selectType(){
     var url = ctx+'/goodType!list.do?todo=show';
 	var dataArr = window.showModalDialog(url, '',"status:no;left:yes;scroll:yes;resizable:no;help:no;dialogWidth:800px;dialogHeight:600px");
@@ -200,7 +200,7 @@ function selectType(){
 			$("#goodTypeId").val(dataArr.typeId);
 			$(obj).focus();
 		}else{
-			alert("请选择商品大类");
+			alert("请选择资料大类");
 		}
 	}
 }

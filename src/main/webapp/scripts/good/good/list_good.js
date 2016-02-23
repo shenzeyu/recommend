@@ -47,7 +47,7 @@ $(document).ready(function(){
 //获取表头参数
 function getTableHeadOpt(){
 	var opt = [];
-	opt.push({title:'基本信息',colspan:7});
+	opt.push({title:'基本信息',colspan:3});
 	if('' == todo){
 		opt.push(
 			{field:'opt',title:'操作',width:20,align:'center', rowspan:2,
@@ -79,13 +79,8 @@ function getTableHeadOpt(){
 function getColumnsOpt(){
 	var opt = [
 		{field:'code',title:'编号',width:15,align:'left'},
-		{field:'name',title:'品名',width:40,align:'left'},
+		{field:'name',title:'资料名称',width:40,align:'left'},
 		{field:'goodTypeName',title:'类别',width:15,align:'left'},
-		{field:'brandName',title:'品牌',width:15,align:'left'},
-		{field:'price',title:'价格',width:15,align:'left'},
-		{field:'priceMarket',title:'市场价',width:15,align:'left'},
-		{field:'isInventory',title:'商品类型',width:15,align:'left',formatter:isInventoryFormat}
-//		{field:'beginSaleTime',title:'上架时间',width:15,align:'left',formatter:beginSaleTimeFormat}
 	];
 	return opt;
 }
@@ -95,7 +90,7 @@ function getToolBarOpt(){
 	if('' == todo && $(goodInserts).val()=='1'){
 		opt =[
 			{	
-				text:'添加商品',
+				text:'添加资料',
 			    iconCls:'icon-add',
 			    handler:function(){
 					editData('');
@@ -168,19 +163,19 @@ function isInventoryFormat(value,rowData,rowIndex){
 	var result = '';
 	var isInventory = rowData.isInventory;
 	if('0' == isInventory){
-		result = '普通商品';
+		result = '普通资料';
 	}
 	if('1' == isInventory){
-		result = '团购商品';
+		result = '团购资料';
 	}
 	if('2' == isInventory){
-		result = '抢购商品';
+		result = '抢购资料';
 	}
 	if('3' == isInventory){
-		result = '秒杀商品';
+		result = '秒杀资料';
 	}
 	if('4' == isInventory){
-		result = '特殊商品';
+		result = '特殊资料';
 	}
 	return result;
 }
@@ -189,10 +184,10 @@ function isInventoryFormat(value,rowData,rowIndex){
 function editData(id){
 	var url = ctx+'/good!edit.do?1=1';
 	 var isInventory=$('#isInventory').val(); 
-	var title = '添加商品';
+	var title = '添加资料';
 	if(id){
 		url += '&good.id='+id;
-		var title = '编辑商品';
+		var title = '编辑资料';
 	}
 	if(isInventory!=''||isInventory!=null){
 		url+='&good.isInventory='+isInventory;
@@ -258,7 +253,7 @@ function deleteGood(id){
 						alert('删除成功!');
 						reloadDataGrid();
 					}else if(returnData == 'orderGood'){
-						alert('该商品已被订购，不能删除，您可以下架该商品!');
+						alert('该资料已被订购，不能删除，您可以下架该资料!');
 					}
 				},
 				error : function(){
@@ -268,20 +263,20 @@ function deleteGood(id){
 	  }
 	}
 }
-//冻结、激活商品
+//冻结、激活资料
 function updateState(id,state){
 	var optInfo = '';
 	var succInfo = '';
 	var errorInfo = '';
 	
 	if('c'==state){
-		optInfo = '你要下架这个商品吗?';
-		succInfo = '商品已下架';
-		errorInfo = '商品下架失败';
+		optInfo = '你要下架这个资料吗?';
+		succInfo = '资料已下架';
+		errorInfo = '资料下架失败';
 	}else if('s'==state){
-		optInfo = '你要上架这个商品吗?';
-		succInfo = '商品已上架';
-		errorInfo = '商品上架失败';
+		optInfo = '你要上架这个资料吗?';
+		succInfo = '资料已上架';
+		errorInfo = '资料上架失败';
 	}
 	if(confirm(optInfo)){
 		$.ajax({
@@ -304,7 +299,7 @@ function updateState(id,state){
 		});
 	}
 }
-//选择商品类别弹出窗
+//选择资料类别弹出窗
 function selectType(obj){
 	var obj = $(obj);
 	var dataArr = window.showModalDialog(ctx+"/goodType!list.do?todo=show", '',"status:no;left:yes;scroll:yes;resizable:no;help:no;dialogWidth:800px;dialogHeight:600px");

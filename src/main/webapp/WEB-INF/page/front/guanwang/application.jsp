@@ -86,9 +86,9 @@ function ShowFLT(i) {
 <li><a href="${ctx }/orderManage.do">我的订单<span>(<samp>2</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款订单<span>(<samp>2</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消订单<span>(<samp>2</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货商品<span>(<samp>2</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货商品<span>(<samp>2</samp>)</span></a></li>
-<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价商品<span>(<samp>2</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货资料<span>(<samp>2</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货资料<span>(<samp>2</samp>)</span></a></li>
+<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价资料<span>(<samp>2</samp>)</span></a></li>
 </ul>
           </div>
         </div>
@@ -161,10 +161,10 @@ function ShowFLT(i) {
 <table width="962" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td width="94" height="32" align="center" valign="middle">订单</td>
-    <td width="320" align="center" valign="middle">商品</td>
+    <td width="320" align="center" valign="middle">资料</td>
     <td width="137" align="center" valign="middle">退换数量</td>
-    <td width="137" align="center" valign="middle">商品价格</td>
-    <td width="174" align="center" valign="middle">商品优惠</td>
+    <td width="137" align="center" valign="middle">资料价格</td>
+    <td width="174" align="center" valign="middle">资料优惠</td>
     <td width="100"  align="center" valign="middle">赠送清单</td>
   </tr>
 </table>
@@ -214,7 +214,7 @@ function ShowFLT(i) {
 <div class="applyReturn1_title">
 <span>*</span>问题描述：
 </div>
-<div class="applyReturn1_text"><textarea name="returnContent" id="returnContent" cols="" rows="" class="applyReturn1textera">请填写详细的商品问题信息，以使我们的售后人员及时判断并处理您的商品</textarea></div>
+<div class="applyReturn1_text"><textarea name="returnContent" id="returnContent" cols="" rows="" class="applyReturn1textera">请填写详细的资料问题信息，以使我们的售后人员及时判断并处理您的资料</textarea></div>
 </div>
 <div class="applyReturn2">
 <h1>为了帮助我们更好的解决问题，欢迎您！</h1>
@@ -234,7 +234,7 @@ function ShowFLT(i) {
 </div>
 <div class="applyReturn1">
 <div class="applyReturn1_title">
-<span>*</span>商品附件：
+<span>*</span>资料附件：
 </div>
 <div class="applyReturn1_text">
 <h4><input name="introDelivery" type="radio" value="0" checked="checked"/></h4><h2>有</h2>
@@ -243,7 +243,7 @@ function ShowFLT(i) {
 </div>
 <div class="applyReturn1">
 <div class="applyReturn1_title">
-<span>*</span>期望商品返回方式：
+<span>*</span>期望资料返回方式：
 </div>
 <div class="applyReturn1_text1">
 <h1><input name="returngoodtype" type="radio" value="0" checked="checked"/></h1>
@@ -257,7 +257,7 @@ function ShowFLT(i) {
 </div>
 <div class="applyReturn1_text1">
 <h1><input name="returngoodtype" type="radio" value="1" /></h1>
-<h2>客户邮寄商品</h2>
+<h2>客户邮寄资料</h2>
 <h3><a href="#">查询售后地址</a></h3>
 </div>
 </div>

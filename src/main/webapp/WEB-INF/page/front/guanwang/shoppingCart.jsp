@@ -168,7 +168,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
    <!--[if !IE]>end<![endif]-->
    <div class="shopcart2">
    <div class="shopcart2_text">
-   <h1>您选购了不同城市的商品将会产生运费：</h1>
+   <h1>您选购了不同城市的资料将会产生运费：</h1>
    <h2>1、一起结算，满100元免运费；</h2>
    </div>
    <div class="shopcart2_text101">
@@ -192,9 +192,9 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
    <div class="shopcart302_text1"><input name="" type="button" class="shopcartbtn"  onclick="jiesuanJ()"/></div>
    </div>
    </div>
-    <!--[if !IE]>浏览本商品的客户还买了<![endif]-->
+    <!--[if !IE]>浏览本资料的客户还买了<![endif]-->
 	<div class="lookproduct">
-	<samp>浏览本商品的客户还买了</samp>
+	<samp>浏览本资料的客户还买了</samp>
 	</div>
 	<!--[if !IE]>列表<![endif]-->
 	<div class="lookproduct1">
@@ -228,7 +228,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div id="fade" class="black_overlay"></div>
 	<div id="MyDiv" class="Popuplogin" style="display: none;">
 <div class="Popuplogin01">
-<h1>e购商城会员登录</h1>
+<h1>e购商城学员登录</h1>
 <h2 onclick="CloseDiv('MyDiv','fade')" ><span><a onclick="CloseDiv('MyDiv','fade')" href="javascript:void(0)">关闭</a></span><samp><input name="" type="button"  class="Popuplogin01btn"/></samp></h2>
 </div>
 <div class="Popuplogin02">
@@ -258,8 +258,8 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div class="Popuplogin0202_text2">
 <h1>
 <span>还不是e购商城用户？ </span><br />
-现在免费注册e购商城会员，便能立即享受便宜又放心的<br />
-购物乐趣! <samp><a href="javascript:void(0);" onclick="zhuce()">会员注册</a></samp></h1>
+现在免费注册e购商城学员，便能立即享受便宜又放心的<br />
+购物乐趣! <samp><a href="javascript:void(0);" onclick="zhuce()">学员注册</a></samp></h1>
 </div>
 </div>
 </div>

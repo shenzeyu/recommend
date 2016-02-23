@@ -81,9 +81,9 @@ function ShowFLT(i) {
 <li><a href="${ctx }/orderManage.do">我的订单<span>(<samp>${total }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款订单<span>(<samp>${payment }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消订单<span>(<samp>${cancelOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货商品<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货商品<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
-<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价商品<span>(<samp>${commentOrder}</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货资料<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货资料<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
+<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价资料<span>(<samp>${commentOrder}</samp>)</span></a></li>
 </ul>
           </div>
         </div>
@@ -150,7 +150,7 @@ function ShowFLT(i) {
 <div id="Tab2">
 <div class="Menubox">
 <ul>
-<li id="two1" onclick="secBoard('two',1,2)"  class="hover">可评论商品</li>
+<li id="two1" onclick="secBoard('two',1,2)"  class="hover">可评论资料</li>
 <li id="two2" onclick="secBoard('two',2,2)" >已发表的评论</li>
 </ul>
 </div>
@@ -163,7 +163,7 @@ function ShowFLT(i) {
   <tr>
     <td width="142" height="32" align="center" valign="middle">订单号</td>
 	<td width="20" align="center" valign="middle"></td>
-    <td width="345" align="center" valign="middle">商品</td>
+    <td width="345" align="center" valign="middle">资料</td>
     <td width="58" align="center" valign="middle"></td>
     <td width="90" align="center" valign="middle">购买时间</td>
 	<td width="115" align="center" valign="middle"></td>
@@ -220,7 +220,7 @@ function ShowFLT(i) {
   <tr>
     <td width="142" height="32" align="center" valign="middle">订单号</td>
 	<td width="20" align="center" valign="middle"></td>
-    <td width="345" align="center" valign="middle">商品</td>
+    <td width="345" align="center" valign="middle">资料</td>
 	<td width="58" align="center" valign="middle"></td>
     <td width="90" align="center" valign="middle">购买时间</td>
 	 <td width="87" align="center" valign="middle"></td>  

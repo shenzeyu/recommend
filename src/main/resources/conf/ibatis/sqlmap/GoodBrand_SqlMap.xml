@@ -115,18 +115,18 @@
 		</dynamic>		
 	</sql>
 	
-	<!-- 根据类别查询商品品牌 -->
+	<!-- 根据类别查询资料品牌 -->
 	<select id="GoodBrandByType_select" resultMap="GoodBrandInfoResult" cacheModel="GoodBrand_cache">
 		select * from good_brand where id in(
 			select brand_id from good <include refid="GoodBrand_sel_select_where_clause"/>)
 	</select>
-	<!-- 根据类别查询商品品牌 -->
+	<!-- 根据类别查询资料品牌 -->
 	<select id="GoodBrandByType2_select" resultMap="GoodBrandInfoResult" cacheModel="GoodBrand_cache">
 		select * from good_brand where brand=#brand# and parent_id in (select id from good_brand where id=#goodTypeId#)
 	</select>
 		
 	
-	<!-- 根据等级查询商品品牌 -->
+	<!-- 根据等级查询资料品牌 -->
 	<select id="GoodBrandBylevel_select" resultMap="GoodBrandInfoResult" cacheModel="GoodBrand_cache">
 		select * from good_brand where level=#level# 
 		<isNotEmpty prepend="and" property="id">
@@ -134,7 +134,7 @@
 		</isNotEmpty>
 	</select>	
 	
-	<!-- 根据等级查询商品品牌 -->
+	<!-- 根据等级查询资料品牌 -->
 	<select id="GoodBrandByleve2_select" resultMap="GoodBrandInfoResult" cacheModel="GoodBrand_cache">
 	select * from(
 		select * from good_brand where id=#idStr#
@@ -159,7 +159,7 @@
 	
 	
 	
-	<!-- 查询商品品牌数目 -->
+	<!-- 查询资料品牌数目 -->
 	<select id="GoodBrand_count_select" resultClass="java.lang.Integer" cacheModel="GoodBrand_cache">
 		select count(id) from good_brand
 	</select>

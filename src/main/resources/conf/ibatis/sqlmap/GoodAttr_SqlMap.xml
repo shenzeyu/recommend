@@ -67,7 +67,7 @@
 		select a.id as attr_value_id,a.attr_value,b.* from good_attr_value a inner join good_attr b on a.good_attr_id = b.id 
 		where a.good_id = #goodId# order by sort asc
 	</select>
-	<!-- 根据商品类别来查询商品的一级种类属性 -->
+	<!-- 根据资料类别来查询资料的一级种类属性 -->
 	<select id="GoodAttr_goodtype_select" resultMap="GoodAttrResult" cacheModel="GoodAttr_cache">
 		select * from good_attr where good_kind_id in (select id from good_kind where good_type_id=#goodtypeId#)
 	</select>

@@ -147,7 +147,7 @@ function submitSaveForm(){
 				htmlAll += '<tr>' + nameHtml + moneyHtml + codeHtml + remarkHtml +'</tr>'; 
 			}
 		}
-		var feeItemTable = $('#feeItemTable');//订单商品项数据区
+		var feeItemTable = $('#feeItemTable');//订单资料项数据区
 		feeItemTable.html(htmlAll);
 		var options = {
 			url : ctx+'/fee!save.do',
@@ -198,10 +198,10 @@ function buildFeeItem(){
 	return feeItem;
 }
 
-//添加商品空行
+//添加资料空行
 function addFeeRow(more){
 	var lastEditRowIndex;
-	var feeItem = buildFeeItem();//获取一个新的空商品项
+	var feeItem = buildFeeItem();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',feeItem);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;
@@ -265,7 +265,7 @@ function addFeeItem(more){
 				var rowIndex = rowData.rowIndex;
 				if(row){	//设置页面显示的值
 					row.code = data.code;
-					var name = data.name;//商品名称
+					var name = data.name;//资料名称
 					if(name){
 						row.name = name;
 					}
@@ -400,7 +400,7 @@ function selectSupplier(){
 	}
 }
 
-//刷新商品总金额、订单总金额
+//刷新资料总金额、订单总金额
 function flushMoney(){
 	var orderMoney = 0;
 	var rows = $(gId).datagrid('getRows');//末行的下标

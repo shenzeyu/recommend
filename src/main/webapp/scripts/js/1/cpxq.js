@@ -1,12 +1,12 @@
  $(document).ready(function(){
 
-   //根据商品查  类别和品牌
+   //根据资料查  类别和品牌
    getGoodTypeOrGoodBrand($('#goodTypeId').val(),'');   
    getGoodTypeOrGoodBrand('',$('#brandId').val());
    
-   //热卖商品
+   //热卖资料
     Rxgood();
-    //商品的相关商品,组合商品
+    //资料的相关资料,组合资料
    xgsp($('#goodid').val());
    
    //获取仓库
@@ -15,10 +15,10 @@
    //获取评论
    getWareComment('comment-00','','qbpjTotal','Pagination-0');  //参数1  评论数据显示id名称   参数2  区分好评 中评 差评   参数3 数据总数显示id名称   参数4分页id名称
    
-   showPic('spxqgg');    //商品详情广告图片
+   showPic('spxqgg');    //资料详情广告图片
 });
 
-//根据商品类别ID获取相关类别
+//根据资料类别ID获取相关类别
 function getGoodTypeOrGoodBrand(goodTypeId,brandId){
    
   
@@ -77,7 +77,7 @@ function getGoodTypeOrGoodBrand(goodTypeId,brandId){
 
 }
 
-function Rxgood(){   //热卖商品
+function Rxgood(){   //热卖资料
  
  var num =1;
  $.ajax({
@@ -126,7 +126,7 @@ if(goodid!=""){
 
 		      if(num <=20){
 	         
-	          if(good.priceDiscount==null){  //等于空就是相关商品	   
+	          if(good.priceDiscount==null){  //等于空就是相关资料	   
 	          if(number==1){     
 	          $('#xgspHtml').empty();  
 	          number++;
@@ -140,7 +140,7 @@ if(goodid!=""){
 		      +good.name+"</a> </div> <div class='p-comm'> <span class='star sa5'></span><br /> <a href='' >(已有104人评价)</a> </div><div class='p-price'><strong>￥"
 		      +good.price.toFixed(2)+"</strong> </div></li>";
 		       $('#xgspHtml').append(textHtml);
-		      }else{//组合商品
+		      }else{//组合资料
 		        //alert( good.priceDiscount.toFixed(2));
 		        if(good.rangeStr != ""){		        
 		        var textHtml= "<li data-cat='1049' class=''> <div class='p-img'> <a  href='"
@@ -217,7 +217,7 @@ var id = $('#goodid').val();
 
 		      for(i=0;i< data.rows.length;i++){
 	           var wareComment = data.rows[i];
-		      var textHtml= "<li><div class='item'><div class='user'><div class='u-icon'> <a target='_blank' href='#'> <img width='50' height='50' src='http://misc.360buyimg.com/lib/img/u/60.gif' upin='非与非寻-非也' /> </a> </div><div class='u-name'> <a target='_blank' href='#'></a></div><span class='u-level'><span style='color:#000000'> 铜牌会员 </span></span><div class='u-address'> (浙江) </div><div class='date-buy'>购买日期<br />"
+		      var textHtml= "<li><div class='item'><div class='user'><div class='u-icon'> <a target='_blank' href='#'> <img width='50' height='50' src='http://misc.360buyimg.com/lib/img/u/60.gif' upin='非与非寻-非也' /> </a> </div><div class='u-name'> <a target='_blank' href='#'></a></div><span class='u-level'><span style='color:#000000'> 铜牌学员 </span></span><div class='u-address'> (浙江) </div><div class='date-buy'>购买日期<br />"
 		      +beginSaleTimeFormat(wareComment.createTime)+"</div></div>        <div class='i-item'><div class='o-topic'> <strong class='topic'><a target='_blank' href='#'>喜爱这个产品</a></strong> <span class='star sa5'></span> <span class='date-comment'>"
 		      +beginSaleTimeFormat(wareComment.createTime)+"</span> </div><div class='comment-content'><dl><dt>优点：</dt><dd> 小巧轻便,清晰度挺高.</dd></dl><dl><dt>不足：</dt><dd> 缺点是少盖,有就更完美了</dd></dl><dl><dt>使用心得：</dt><dd> 体积小重量轻亮度够,使用方便，效果还可以！</dd></dl></div><div class='btns'><div id='97e6b9d2-da03-4e20-a4a8-0c63ca0f0608' class='useful'> <span>此评价对我</span> <a href='#' name='agree' class='btn-agree' id='agree'>有用(0)</a> <a href='#' name='oppose' class='btn-oppose' id='oppose'>没用(0)</a> </div><a target='_blank' href='#' class='btn-reply'>回复</a> </div></div><div class='corner tl'> </div></div></li>";              
 		       $('#Searchresult').append(textHtml);
@@ -280,7 +280,7 @@ function showPic(parameter){
 
 // 加入收藏
 function addGoodToFavorite(){
-    // 商品Id
+    // 资料Id
 	var goodId = $("#goodid").val();
 	if(goodId != ''){
 		var url = ctx +"/addGoodToFavorite.do?favorite.goodId="+goodid;
@@ -304,7 +304,7 @@ function addGoodToFavorite(){
 		 	}
 		});
 	}else{
-		alert('你选择的商品不存在 ');
+		alert('你选择的资料不存在 ');
 	}
 }
 

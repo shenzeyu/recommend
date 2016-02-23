@@ -40,7 +40,7 @@ function selectSpecification(){
 						'<table width="90%"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor">	' +
 						'<input type="hidden" id="'+id+'" value="'+id+'"/>' +
 						'<tr>' +
-						'<td class="gridtitle" style="text-align: left;">请点击下面的值,添加本商品需要的'+name+'</td>' +
+						'<td class="gridtitle" style="text-align: left;">请点击下面的值,添加本资料需要的'+name+'</td>' +
 						'</tr>' +
 						'<tr><td class="gridbody">';
 			

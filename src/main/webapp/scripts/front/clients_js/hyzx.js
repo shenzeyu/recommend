@@ -1,12 +1,12 @@
 
 $(document).ready(function(){
-  vipCountJson();//回调查询商品的方法
+  vipCountJson();//回调查询资料的方法
   saleReturnJson();
 });
 
 
 
-//删除收藏商品
+//删除收藏资料
 function deletefavorites(id){
 	if(id!=''){
 		if (confirm("您确定要删除吗?")){
@@ -115,10 +115,10 @@ function vipCountJson(){
 					htmlText+="<td width='220' align='center' valign='middle'>"+vipCount.endTime+"</td>";
 //					htmlText+="<td width='282' align='left' valign='middle'>";
 //					if(vipCount.types=='1'){
-//						htmlText+="限部分商品";
+//						htmlText+="限部分资料";
 //					}
 //					if(vipCount.types=='2'){
-//						htmlText+="不限商品";
+//						htmlText+="不限资料";
 //					}
 //					htmlText+="</td>";
 				}
@@ -413,7 +413,7 @@ function personlayer1(){
 	$('#add_personlayer2').hide();
 }
 
-//会员中心客户增加联系地址
+//学员中心客户增加联系地址
 function addAddress(){
 	var nameObj=$('#name').val();
 	var zipCodeObj=$('#zipCode').val();
@@ -686,11 +686,11 @@ function saveApplication(){
 		var returnContent=$('#returnContent').val();
 		//期望处理方式
 		var returntype=getRedio("returntype");
-		//期望商品返回方式
+		//期望资料返回方式
  		var returngoodtype=getRedio("returngoodtype");
  		//收货地址
  		var returnAddress=getRedio("returnAddress");
- 		//附件，商品清单
+ 		//附件，资料清单
  		var introDelivery=getRedio("introDelivery");
  		
  		if(returnContent==null){
@@ -739,7 +739,7 @@ function saveApplication(){
  		var wareId='';
  		var number='';  
  		for(i=0;i<size;i++){  
- 			var goodId = $("#id"+i).val();			// 获取商品Id
+ 			var goodId = $("#id"+i).val();			// 获取资料Id
  			var count = $("#count"+i).html();
  			if(goodId!=''){
  				wareId += goodId+',';
@@ -788,7 +788,7 @@ function saveApplication(){
 	}
 }
 
-//修改返退商品数量
+//修改返退资料数量
 function changeNum(obj,i){
 	//订单id
 	var saleorderid=$('#saleorderid').val();
@@ -800,7 +800,7 @@ function changeNum(obj,i){
 		count=Number(count)+1;
 	}
 	if(checkNumber(count)){
-		goodId = $("#id"+i).val();			// 获取商品Id
+		goodId = $("#id"+i).val();			// 获取资料Id
 		$.ajax({
 		  type: "POST",
 		  async: false,

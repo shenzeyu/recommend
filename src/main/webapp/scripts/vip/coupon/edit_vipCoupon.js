@@ -88,8 +88,8 @@ function getToolBarOpt(){
 //获取列头参数
 function getColumnsOpt(){
 	var opt = [
-		{field:'wareId',title:'商品编号',width:5,align:'left'},
-		{field:'wareName',title:'商品名称',width:15,align:'left'}
+		{field:'wareId',title:'资料编号',width:5,align:'left'},
+		{field:'wareName',title:'资料名称',width:15,align:'left'}
 	];
 	return opt;
 }
@@ -130,7 +130,7 @@ function submitSaveForm(){
 				htmlAll += '<tr>' + wareIdHtml + wareNameHtml +'</tr>'; 
 			}
 		}
-		var vipCouponWareTable = $('#vipCouponWareTable');//订单商品项数据区
+		var vipCouponWareTable = $('#vipCouponWareTable');//订单资料项数据区
 		vipCouponWareTable.html(htmlAll);
 		var options = {
 			url : ctx+'/vipCoupon!save.do',
@@ -139,7 +139,7 @@ function submitSaveForm(){
 			success : function(returnData){
 				if(returnData=='true'){
 					alert('保存成功!');
-					window.parent.addTab('会员优惠劵',ctx+'/vipCoupon!list.do');
+					window.parent.addTab('学员优惠劵',ctx+'/vipCoupon!list.do');
 				}else{
 					alert('保存失败');
 				}
@@ -155,7 +155,7 @@ function submitSaveForm(){
 function checkForm(){
 	var vipLevelId = $('#vipLevelId').val();
 	if(vipLevelId == ''){
-		alert('请选择会员等级');
+		alert('请选择学员等级');
 		return false;
 	}
 	
@@ -205,7 +205,7 @@ function buildVipCouponWare(){
 //添加货物空行
 function addVipCouponRow(more){
 	var lastEditRowIndex;
-	var VipCouponWare = buildVipCouponWare();//获取一个新的空商品项
+	var VipCouponWare = buildVipCouponWare();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',VipCouponWare);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;

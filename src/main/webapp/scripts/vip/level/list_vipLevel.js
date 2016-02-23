@@ -100,7 +100,7 @@ function showData(id){
 	}
 	 //弹出框
 	$('#edit').dialog({
-		title:"查看会员等级",
+		title:"查看学员等级",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,
@@ -128,7 +128,7 @@ function editData(id){
 	}
 	 //弹出框
 	$('#edit').dialog({
-		title:"新增会员等级",
+		title:"新增学员等级",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,
@@ -157,7 +157,7 @@ function auditData(id){
 	}
 	 //弹出框
 	$('#edit').dialog({
-		title:"审核会员等级",
+		title:"审核学员等级",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,

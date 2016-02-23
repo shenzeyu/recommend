@@ -14,9 +14,9 @@ $(document).ready(function(){
 		loadGood('5',goodtypeId5);
 		loadGood('6',goodtypeId6);
 		loadGood('7',goodtypeId7);     
-		loadcurrGood('fkqgShow','1');	  //疯狂抢购商品加载	
+		loadcurrGood('fkqgShow','1');	  //疯狂抢购资料加载	
 		
-		loadXSQGgood();   //限时抢购商品加载	
+		loadXSQGgood();   //限时抢购资料加载	
 
 		
 		
@@ -53,7 +53,7 @@ function curr(identifying,showContent,selfObj){
 
 	
 }
-//电脑数码 特价商品
+//电脑数码 特价资料
 function tjsp(tags,identifying,showContent,selfObj){
 	// 操作标签
 	var tag = document.getElementById("tjsp").getElementsByTagName("dl");
@@ -65,11 +65,11 @@ function tjsp(tags,identifying,showContent,selfObj){
 	
 	if(tags == 'aa'){
 	
-	CommonGood(identifying,showContent);       //切换商品  带图片
+	CommonGood(identifying,showContent);       //切换资料  带图片
 	
 	}else{
 	
-	ChangeCommonGood(identifying,showContent);      //切换商品  不带图片
+	ChangeCommonGood(identifying,showContent);      //切换资料  不带图片
 	
 	}
 	$('#Show'+identifying).hide();
@@ -90,11 +90,11 @@ function jdtx(tags,identifying,showContent,selfObj){
 	
 		if(tags == 'aa'){
 	
-	CommonGood(identifying,showContent);       //切换商品  带图片
+	CommonGood(identifying,showContent);       //切换资料  带图片
 	
 	}else{
 	
-	ChangeCommonGood(identifying,showContent);      //切换商品  不带图片
+	ChangeCommonGood(identifying,showContent);      //切换资料  不带图片
 	
 	}
 	
@@ -112,11 +112,11 @@ function lr(tags,identifying,showContent,selfObj){
 	
 			if(tags == 'aa'){
 	
-	CommonGood(identifying,showContent);       //切换商品  带图片
+	CommonGood(identifying,showContent);       //切换资料  带图片
 	
 	}else{
 	
-	ChangeCommonGood(identifying,showContent);      //切换商品  不带图片
+	ChangeCommonGood(identifying,showContent);      //切换资料  不带图片
 	
 	}
 }
@@ -132,11 +132,11 @@ function ms(tags,identifying,showContent,selfObj){
 	
 	if(tags == 'aa'){
 	
-	CommonGood(identifying,showContent);       //切换商品  带图片
+	CommonGood(identifying,showContent);       //切换资料  带图片
 	
 	}else{
 	
-	ChangeCommonGood(identifying,showContent);      //切换商品  不带图片
+	ChangeCommonGood(identifying,showContent);      //切换资料  不带图片
 	
 	}
 }
@@ -152,11 +152,11 @@ function sh(tags,identifying,showContent,selfObj){
 	
 		if(tags == 'aa'){
 	
-	CommonGood(identifying,showContent);       //切换商品  带图片
+	CommonGood(identifying,showContent);       //切换资料  带图片
 	
 	}else{
 	
-	ChangeCommonGood(identifying,showContent);      //切换商品  不带图片
+	ChangeCommonGood(identifying,showContent);      //切换资料  不带图片
 	
 	}
 	
@@ -173,11 +173,11 @@ function spmy(tags,identifying,showContent,selfObj){
 	
 			if(tags == 'aa'){
 	
-	CommonGood(identifying,showContent);       //切换商品  带图片
+	CommonGood(identifying,showContent);       //切换资料  带图片
 	
 	}else{
 	
-	ChangeCommonGood(identifying,showContent);      //切换商品  不带图片
+	ChangeCommonGood(identifying,showContent);      //切换资料  不带图片
 	
 	}
 }
@@ -193,11 +193,11 @@ function tsyx(tags,identifying,showContent,selfObj){
 	
 				if(tags == 'aa'){
 	
-	CommonGood(identifying,showContent);       //切换商品  带图片
+	CommonGood(identifying,showContent);       //切换资料  带图片
 	
 	}else{
 	
-	ChangeCommonGood(identifying,showContent);      //切换商品  不带图片
+	ChangeCommonGood(identifying,showContent);      //切换资料  不带图片
 	
 	}
 }
@@ -212,7 +212,7 @@ function bd(showContent,selfObj){
 	selfObj.parentNode.className = "curr";
 }
 
-function loadGood(number,id){   //加载商品
+function loadGood(number,id){   //加载资料
  
  var num =1;
 
@@ -248,7 +248,7 @@ function loadGood(number,id){   //加载商品
 }
 }
 
-function CommonGood(identifying,showContent){    //切换商品   带图片
+function CommonGood(identifying,showContent){    //切换资料   带图片
 		if(showContent !=""){
 	  var num= 1;
 	
@@ -285,7 +285,7 @@ function CommonGood(identifying,showContent){    //切换商品   带图片
 
 }
 
-function ChangeCommonGood(identifying,showContent){    //切换商品   不带图片  
+function ChangeCommonGood(identifying,showContent){    //切换资料   不带图片  
 
 		if(showContent !=""){
 		
@@ -323,7 +323,7 @@ function ChangeCommonGood(identifying,showContent){    //切换商品   不带�
 
 
 }
-function loadcurrGood(identifying,property){   //加载疯狂抢购，热卖商品，热评商品，新品上架，猜您喜欢
+function loadcurrGood(identifying,property){   //加载疯狂抢购，热卖资料，热评资料，新品上架，猜您喜欢
  
  var num =1;
 

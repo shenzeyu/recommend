@@ -28,22 +28,12 @@
 	<div style="margin-top: 10px; margin-bottom: 5px;">
 		<table border="0" cellpadding="0"  cellspacing="1" class="gdcn-table-bgcolor" width="100%" style="font-size: 12px;">
 			<tr>
-				<td class='gridtitle'>商品编号：</td>
+				<td class='gridtitle'>资料编号：</td>
 				<td class='gridbody'><input type="text" id="goodCode" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>商品名称：</td>
+				<td class='gridtitle'>资料名称：</td>
 				<td class='gridbody'><input type="text" id="goodName" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>商品类别：</td>
+				<td class='gridtitle'>资料类别：</td>
 				<td class='gridbody'><input type="text" id="goodTypeName" onclick="selectType(this)"/></td>
-				<td class='gridtitle'>商品类型：</td>
-				<td class='gridbody'>
-					<select name="goodState" id="goodState">
-		                <option value="" <c:if test="${good.isInventory == ''}">selected</c:if> >商品类型</option>
-		               	<option value="0" <c:if test="${good.isInventory == 0}">selected</c:if> >普通商品</option>
-						<option value="1" <c:if test="${good.isInventory == 1}">selected</c:if> >团购商品</option>
-						<option value="2" <c:if test="${good.isInventory == 1}">selected</c:if> >抢购商品</option>
-						<option value="3" <c:if test="${good.isInventory == 1}">selected</c:if> >秒杀商品</option>
-		            </select>
-				</td>
 				<td class='gridtitle'>
 					<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-search" onclick="searchData()">搜索</a>&nbsp;&nbsp;&nbsp;
 	  				<a id="btnAudit" href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-reload" onclick="cancelSearch()">清空</a>

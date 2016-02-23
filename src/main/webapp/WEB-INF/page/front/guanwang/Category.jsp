@@ -26,7 +26,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
    <!--[if !IE]>分类导航<![endif]-->
   <div class="category">
   <h1><img src="images/core.jpg" /></h1>
-  <h2>全部商品分类</h2>
+  <h2>全部资料分类</h2>
   </div>
   
   <div class="category1">

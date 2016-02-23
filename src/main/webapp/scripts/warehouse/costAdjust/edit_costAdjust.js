@@ -58,7 +58,7 @@ function getToolBarOpt(){
 	if(state == 'c'){
 		opt = [
 		{	
-			text:'添加商品',
+			text:'添加资料',
 	 		iconCls:'icon-add',
 	 		handler:function(){
 				addWare(true);
@@ -90,8 +90,8 @@ function getColumnsOpt(){
 	var type = $('#type').val();
 	var opt = [
 		{field:'wareId',width:0,align:'left'},
-		{field:'warecode',title:'商品编号',width:20,align:'left'},
-		{field:'wareName',title:'商品名称',width:25,align:'left'},
+		{field:'warecode',title:'资料编号',width:20,align:'left'},
+		{field:'wareName',title:'资料名称',width:25,align:'left'},
 		{field:'stock',title:'库存',width:25,align:'left'},
 		{field:'costCurrent',title:'调整前成本 ',width:20,formatter:costCurrentFormat},
 		{field:'costAdjust',title:'调整后成本',width:20,formatter:costAdjustFormat,editor:{type:'costAdjust',options:{precision:'2'}}},
@@ -149,9 +149,9 @@ function submitSaveForm(){
 				var ware = wareArr[i];
 				var wareId = ware.wareId;
 				if(wareId && '' != wareId){
-					var wareIdHtml = '<input type="hidden" name="wareIdArr" value="'+wareId+'" />'; 							//商品id
+					var wareIdHtml = '<input type="hidden" name="wareIdArr" value="'+wareId+'" />'; 							//资料id
 					var wareCodeHtml = '<input type="hidden" name="wareCodeArr" value="'+ware.wareCode+'" />';
-					var wareNameHtml = '<input type="hidden" name="wareNameArr" value="'+ware.wareName+'" />'; 					//商品名
+					var wareNameHtml = '<input type="hidden" name="wareNameArr" value="'+ware.wareName+'" />'; 					//资料名
 					var costCurrentHtml = '<input type="hidden" name="costCurrentArr" value="'+ware.costCurrent+'" />'; 		//调整前价格
 					var costAdjustHtml = '<input type="hidden" name="costAdjustArr" value="'+ware.costAdjust+'" />'; 		//调整后价格
 					var stockHtml = '<input type="hidden" name="stockArr" value="'+ware.stock+'" />'; 		//调整后价格
@@ -160,7 +160,7 @@ function submitSaveForm(){
 					htmlAll += '<tr>'+ wareCodeHtml+ wareIdHtml + wareNameHtml + costCurrentHtml + costAdjustHtml + stockHtml+ remarkHtml+'</tr>'; 
 				}
 			}
-			var wareTable = $('#wareTable');//订单商品项数据区
+			var wareTable = $('#wareTable');//订单资料项数据区
 			wareTable.html(htmlAll);
 		}
 		var title = '成本调价单';
@@ -187,16 +187,16 @@ function submitSaveForm(){
 function checkForm(){
 	return true;
 }
-//获取一个新的空订单商品项
+//获取一个新的空订单资料项
 function buildCostAdjustWare(){
-	var costAdjustWare = {};//商品
+	var costAdjustWare = {};//资料
 	return costAdjustWare;
 }
 
-//添加商品空行
+//添加资料空行
 function addGoodRow(more){
 	var lastEditRowIndex;
-	var costAdjustWare = buildCostAdjustWare();//获取一个新的空商品项
+	var costAdjustWare = buildCostAdjustWare();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',costAdjustWare);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;
@@ -214,7 +214,7 @@ function addGoodRow(more){
 	return rowData;
 }
 
-//订单商品
+//订单资料
 function addWare(more){
 	var dataArr = new Array();
 	var warehouseId = $('#warehouseId').val();
@@ -227,10 +227,10 @@ function addWare(more){
 			var dataLen = dataArr.length;
 			for(var i=0;i<dataLen;i++){
 				var data = dataArr[i];
-				var goodCode = data.wareCode;//商品编码
-				var isExist = isGoodExist(goodCode);//商品是否已存在
+				var goodCode = data.wareCode;//资料编码
+				var isExist = isGoodExist(goodCode);//资料是否已存在
 				if(isExist){
-					alert('商品已存在，商品编号:'+data.wareCode);
+					alert('资料已存在，资料编号:'+data.wareCode);
 				}else{
 					var rowData = {};		//增加的行对象数组
 					var row;				//行对象
@@ -263,9 +263,9 @@ function addWare(more){
 					var row = rowData.row;
 					var rowIndex = rowData.rowIndex;
 					if(row){	//设置页面显示的值
-						row.wareId = data.id;//商品id
+						row.wareId = data.id;//资料id
 						row.warecode = data.wareCode;
-						var wareName = data.wareName;//商品名称
+						var wareName = data.wareName;//资料名称
 						if(wareName){
 							row.wareName = wareName;
 						}
@@ -375,7 +375,7 @@ function getEditingRow(){
 	
 	return editingRow;
 }
-//商品是否已存在
+//资料是否已存在
 function isGoodExist(goodCode){
 	var isExist = false;
 	var rows = $(gId).datagrid('getRows');//末行的下标

@@ -30,25 +30,25 @@ Config 2.0/" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
 	<!-- 客户信息 -->
 	<sqlMap resource="conf/ibatis/sqlmap/Customer_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/CustomerAddress_SqlMap.xml" />
-	<!-- 商品信息 -->
+	<!-- 资料信息 -->
 	<sqlMap resource="conf/ibatis/sqlmap/GoodType_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/Good_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/GoodExtend_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/GoodPrice_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/GoodRelate_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/Favorite_SqlMap.xml"/>
-	<!--团购商品信息 -->
+	<!--团购资料信息 -->
 	<sqlMap resource="conf/ibatis/sqlmap/Groupgood_SqlMap.xml" />
-	<!-- 商品种类 -->
+	<!-- 资料种类 -->
 	<sqlMap resource="conf/ibatis/sqlmap/GoodKind_SqlMap.xml" />
-	<!-- 商品种类属性 -->
+	<!-- 资料种类属性 -->
 	<sqlMap resource="conf/ibatis/sqlmap/GoodKingVal_SqlMap.xml" />
-	<!-- 商品品牌 -->
+	<!-- 资料品牌 -->
 	<sqlMap resource="conf/ibatis/sqlmap/GoodBrand_SqlMap.xml" />
-	<!-- 商品属性 -->
+	<!-- 资料属性 -->
 	<sqlMap resource="conf/ibatis/sqlmap/GoodAttr_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/GoodAttrValue_SqlMap.xml" />
-	<!-- 商品规格 -->
+	<!-- 资料规格 -->
 	<sqlMap resource="conf/ibatis/sqlmap/GoodSpecification_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/GoodSpecificationVal_SqlMap.xml" />
 	<!-- 仓库 -->
@@ -75,7 +75,7 @@ Config 2.0/" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
 	<!-- 货品 -->
 	<sqlMap resource="conf/ibatis/sqlmap/Ware_SqlMap.xml" />
 	<sqlMap resource="conf/ibatis/sqlmap/WareSpecificationVal_SqlMap.xml" />
-	<!-- 组合销售商品 -->
+	<!-- 组合销售资料 -->
 	<sqlMap resource="conf/ibatis/sqlmap/GoodCompose_SqlMap.xml" />
 	
 	<!-- 销售模块 -->
@@ -110,7 +110,7 @@ Config 2.0/" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
 	<sqlMap resource="conf/ibatis/sqlmap/Rebate_SqlMap.xml"/>
 	<sqlMap resource="conf/ibatis/sqlmap/RebateItem_SqlMap.xml"/>	
 	
-	<!-- 会员管理 -->
+	<!-- 学员管理 -->
 	<sqlMap resource="conf/ibatis/sqlmap/Prepaid_SqlMap.xml"/>
 	<sqlMap resource="conf/ibatis/sqlmap/VipCoupon_SqlMap.xml"/>
 	<sqlMap resource="conf/ibatis/sqlmap/VipCouponWare_SqlMap.xml"/>
@@ -121,7 +121,7 @@ Config 2.0/" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
 	<!-- 新闻公告管理 -->
 	<sqlMap resource="conf/ibatis/sqlmap/Information_SqlMap.xml"/>
 	
-	<!-- 商品包装 -->
+	<!-- 资料包装 -->
 	<sqlMap resource="conf/ibatis/sqlmap/Packaging_SqlMap.xml"/>
 	<!-- 祝福贺卡 -->
 	<sqlMap resource="conf/ibatis/sqlmap/GreetingCard_SqlMap.xml"/>
@@ -137,7 +137,7 @@ Config 2.0/" "http://www.ibatis.com/dtd/sql-map-config-2.dtd">
 	<!--礼品包赠送 -->
 	<sqlMap resource="conf/ibatis/sqlmap/Gift_SqlMap.xml"/>
 	<sqlMap resource="conf/ibatis/sqlmap/GiftGood_SqlMap.xml"/>
-	<!-- 商品评论 -->
+	<!-- 资料评论 -->
 	<sqlMap resource="conf/ibatis/sqlmap/WareComment_SqlMap.xml"/>
 	<sqlMap resource="conf/ibatis/sqlmap/Recommend_SqlMap.xml"/>
 	<!-- 用户行为(浏览/购买) -->

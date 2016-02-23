@@ -152,7 +152,7 @@ function submitSaveForm(){
 
 //选择广告类型
 function selectAdvertise(values){
-	if(values=='商品父类频道广告'){
+	if(values=='资料父类频道广告'){
 		$('#ad').show();
 	}else{
 		$('#ad').hide();

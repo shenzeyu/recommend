@@ -113,7 +113,7 @@ function submitSaveForm(){
 		}else if(type == '4'){
 			title = '付款方式';
 		}else if(type == '5'){
-			title = '会员服务';
+			title = '学员服务';
 		}else if(type == '6'){
 			title = '帮助中心';
 		}else if(type == '7'){

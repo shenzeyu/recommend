@@ -27,9 +27,9 @@
 	<div style="margin-top: 10px; margin-bottom: 5px;">
 		<table border="0" cellpadding="0"  cellspacing="1" class="gdcn-table-bgcolor" width="100%" style="font-size: 12px;">
 			<tr>
-				<td class='gridtitle'>会员编号：</td>
+				<td class='gridtitle'>学员编号：</td>
 				<td class='gridbody'><input type="text" id="customerCode" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>会员名称：</td>
+				<td class='gridtitle'>学员名称：</td>
 				<td class='gridbody'><input type="text" id="customerName" onkeydown="checkKey()"/></td>
 				<td class='gridtitle'>联系人：</td>
 				<td class='gridbody'><input type="text" id="linkman" onkeydown="checkKey()"/></td>

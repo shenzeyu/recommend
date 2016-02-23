@@ -71,7 +71,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div class="orderDetails302">
 	<h1>提交订单</h1>
 	<h2>等待付款</h2>
-	<h3>商品出库</h3>
+	<h3>资料出库</h3>
 	<h4>等待收货</h4>
 	<h5>完成</h5>
 </div>
@@ -146,7 +146,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div class="orderDetails7">
 <ul>
 <li>付款方式：${saleOrder.paymentName }</li>
-<li>商品金额：<span class="font">¥</span>${saleOrder.orderMoney }<span class="spanys">运费金额：<span class="font">¥</span>${saleOrder.deliveryCost }</span></li>
+<li>资料金额：<span class="font">¥</span>${saleOrder.orderMoney }<span class="spanys">运费金额：<span class="font">¥</span>${saleOrder.deliveryCost }</span></li>
 <li>优惠金额：<span class="font">¥</span>${saleOrder.priceDiscount }</li>
 <li>应支付金额：<span class="font">¥</span>${saleOrder.orderMoney+saleOrder.deliveryCost }</li>
 </ul>
@@ -172,18 +172,18 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 </ul>
 </div>
 <div class="orderDetails4">
-<span>商品清单</span>
+<span>资料清单</span>
 </div>
 <div class="orderDetails8">
 <table width="1198" border="0" cellspacing="0" cellpadding="0">
   <tr bgcolor="fff5f4">
-    <td width="120" height="39" align="center" valign="middle" class="orderDetails8border">商品编号</td> 
-    <td width="448" align="center" valign="middle" class="orderDetails8border">商品名称</td> 
+    <td width="120" height="39" align="center" valign="middle" class="orderDetails8border">资料编号</td> 
+    <td width="448" align="center" valign="middle" class="orderDetails8border">资料名称</td> 
 	 <td width="110" align="center" valign="middle" class="orderDetails8border"></td>
     <td width="120" align="center" valign="middle" class="orderDetails8border">购买价</td>
     <!-- <td width="100" align="center" valign="middle" class="orderDetails8border">已优惠</td> -->
    <td width="100" align="center" valign="middle" class="orderDetails8border">规格</td>
-    <td width="100" align="center" valign="middle" class="orderDetails8border">商品数量</td>
+    <td width="100" align="center" valign="middle" class="orderDetails8border">资料数量</td>
     <td width="100" align="center" valign="middle" class="orderDetails8border">库存状态</td>
   </tr>
   <c:forEach items="${saleWareList}" var="good">
@@ -205,7 +205,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div class="orderDetails9">
 <div class="orderDetails901">
 <div class="orderDetails901_con">
-<div class="orderDetails901_text"><h1>商品总金额：</h1><h2><span class="font">¥</span>${saleOrder.orderMoney}</h2></div>
+<div class="orderDetails901_text"><h1>资料总金额：</h1><h2><span class="font">¥</span>${saleOrder.orderMoney}</h2></div>
 <div class="orderDetails901_text"><h1>+运费：</h1><h2><span class="font">¥</span>${saleOrder.deliveryCost }</h2></div>
 <div class="orderDetails901_text"><h1>-优惠：</h1><h2><span class="font">¥</span>${saleOrder.priceDiscount }</h2></div>
 </div>

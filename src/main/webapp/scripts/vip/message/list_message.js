@@ -60,8 +60,8 @@ function getTableHeadOpt(){
 function getColumnsOpt(){
 	var opt = [
 		{field:'goodId',width:0,align:'left'},
-		{field:'goodName',title:'咨询商品',width:25,align:'left'},
-		{field:'goodCode',title:'商品编号',width:25,align:'left'},
+		{field:'goodName',title:'咨询资料',width:25,align:'left'},
+		{field:'goodCode',title:'资料编号',width:25,align:'left'},
 		{field:'creatorName',title:'咨询人',width:25,align:'left'},
 		{field:'content',title:'咨询内容',width:25,align:'left'},
 		{field:'type',title:'咨询类型',width:20,align:'left',formatter:typeFormat},
@@ -255,7 +255,7 @@ function typeFormat(value,rowData,rowIndex){
 	var result = '';
 	var type = rowData.type;  
 	if('0' == type){
-		result = '商品咨询';
+		result = '资料咨询';
 	}else if('1' == type){
 		result = '配送/支付';
 	}else if('2' == type){

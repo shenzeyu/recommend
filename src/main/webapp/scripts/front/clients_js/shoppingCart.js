@@ -1,6 +1,6 @@
 //加入收藏
 function addGoodToFavorite(wareId){
-    // 商品Id
+    // 资料Id
 //	var goodId = $("#goodId").val();
 	if(wareId != ''){
 		var url = ctx +"/addGoodToFavorite.do?favorite.wareId="+wareId;
@@ -16,7 +16,7 @@ function addGoodToFavorite(wareId){
 					alert("请先登录");
 					window.location.href = ctx+'/frontLogin.do';
 				}else if(returnData=='error'){
-					alert("您已经收藏过该商品，不用再收藏了！");
+					alert("您已经收藏过该资料，不用再收藏了！");
 					return;
 				}else{
 					alert('加入收藏失败!');
@@ -27,7 +27,7 @@ function addGoodToFavorite(wareId){
 		 	}
 		});
 	}else{
-		alert('你选择的商品不存在 ');
+		alert('你选择的资料不存在 ');
 	}
 }
 
@@ -38,7 +38,7 @@ function loginOut(){
 	}
 }
 
-// 删除购物车中的商品
+// 删除购物车中的资料
 function deleteGood(wareId){
 	if (confirm("您确定要删除吗?")){
 		$.ajax({
@@ -104,9 +104,9 @@ function changeNum(obj,i){
 	}
 	
 	if(checkNumber(count)){
-		var price = $("#price"+i).html();	// 获取商品单价
-		var newMoney = price * $("#count"+i).val();		// 计算单个商品的总金额
-		goodId = $("#id"+i).val();			// 获取商品Id
+		var price = $("#price"+i).html();	// 获取资料单价
+		var newMoney = price * $("#count"+i).val();		// 计算单个资料的总金额
+		goodId = $("#id"+i).val();			// 获取资料Id
 		$.ajax({
 		  type: "POST",
 		  async: false,
@@ -191,7 +191,7 @@ function jiesuanJ(){
 	}
 }
 
-// 商品结算
+// 资料结算
 function jiesuan(){
 	
 		var isOk = true;
@@ -226,7 +226,7 @@ function jiesuan(){
 											
 					window.location.href = ctx+"/jiesuan.do?checked="+arrChk+"";
 				}else{
-					alert('您的购物车是空的，请购买商品！');
+					alert('您的购物车是空的，请购买资料！');
 				}
 				},
 				error : function(){
@@ -234,20 +234,20 @@ function jiesuan(){
 		 		} 
 			});
 		}else{
-			alert('请输入订购商品的数量');
+			alert('请输入订购资料的数量');
 			$('#count'+index).focus();
 		}
 		
 }
 
-//“加入购物车”跳到商品详情页面
+//“加入购物车”跳到资料详情页面
 function Todetail(goodId){
 	window.location.href=ctx+"/cpxq.do?good.id="+goodId;
 }
 
 //加入收藏
 function addGoodToFavorite(goodId){
-    // 商品Id
+    // 资料Id
 	if(goodId != ''){
 		var url = ctx +"/addGoodToFavorite.do?favorite.goodId="+goodId;
 		$.ajax({
@@ -262,7 +262,7 @@ function addGoodToFavorite(goodId){
 					alert("请先登录");
 					window.location.href = ctx+'/frontLogin.do';
 				}else if(returnData=='error'){
-					alert("您已经收藏过该商品，不用再收藏了！");
+					alert("您已经收藏过该资料，不用再收藏了！");
 					return;
 				}else{
 					alert('加入收藏失败!');
@@ -273,7 +273,7 @@ function addGoodToFavorite(goodId){
 		 	}
 		});
 	}else{
-		alert('你选择的商品不存在 ');
+		alert('你选择的资料不存在 ');
 	}
 }
 

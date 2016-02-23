@@ -10,9 +10,9 @@
 
 	<!-- 前台service -->
 	
-	<!-- 前台商品展示 -->
+	<!-- 前台资料展示 -->
 	<bean name="frontGoodService" class="com.usst.app.front.service.FrontGoodService" autowire="byName"></bean>
-	<!-- 商品评论 -->
+	<!-- 资料评论 -->
 	<bean name="wareCommentService" class="com.usst.app.front.service.WareCommentService" scope="prototype" autowire="byName"></bean>
 	<bean name="zfbService" class="com.usst.app.component.alipay.service.ZfbService" autowire="byName"></bean>
 	<bean name="chinaBankService" class="com.usst.app.component.chinaBank.service.ChinaBankService" autowire="byName"></bean>

@@ -193,9 +193,9 @@ function secBoard(name,cursel,n){
   <div class="details01_text0203">
   <h1><a id="254035" class="listcart" href="javascript:;"><input name="" type="button" class="details01_text0203btn" onclick="selectWareId('1')"/></a></h1>
     <h1><input name="" type="button" class="details01_text0203btn1" onclick="selectWareId('2')"/></h1>
-  <h2><span><img src="${ctx}/Images/images/img3.jpg" /></span><samp><a href="javascript:addGoodToFavorite('${good.id }')">收藏该商品</a></samp></h2>
+  <h2><span><img src="${ctx}/Images/images/img3.jpg" /></span><samp><a href="javascript:addGoodToFavorite('${good.id }')">收藏该资料</a></samp></h2>
   </div>
-  </div><!-- 1.此款商品可以使用<a href="javascript:void(0)">分期付款</a>进行支付&nbsp;&nbsp;&nbsp;2.此商品支持<a href="javascript:void(0)">上门安装</a>服务 -->
+  </div><!-- 1.此款资料可以使用<a href="javascript:void(0)">分期付款</a>进行支付&nbsp;&nbsp;&nbsp;2.此资料支持<a href="javascript:void(0)">上门安装</a>服务 -->
   <div class="details01_text0204">提示：${good.remark } </div>
   </div>
   </div>
@@ -240,7 +240,7 @@ function secBoard(name,cursel,n){
     <div class="categories">
       <!--[if !IE]>左侧<![endif]-->
       <div class="Categories_left"> 
-        <!--[if !IE]>买了本商品的客户买了<![endif]-->
+        <!--[if !IE]>买了本资料的客户买了<![endif]-->
         <div class="seenProduct">
           <div class="seenProduct01">最近浏览</div>
           <div class="seenProduct02">
@@ -267,20 +267,20 @@ function secBoard(name,cursel,n){
 	   <div id="Tab2">
 <div class="Menubox">
 <ul>
-<li id="one1" onclick="secBoard('one',1,6),hiddenDiv()" class="hover">商品详情</li>
+<li id="one1" onclick="secBoard('one',1,6),hiddenDiv()" class="hover">资料详情</li>
 <li id="one2" onclick="secBoard('one',2,6),hiddenDiv()" >规格参数</li>
 <li id="one3" onclick="secBoard('one',3,6),hiddenDiv()">包装清单</li>
-<li id="one4" onclick="secBoard('one',4,6),goodEvaluation(0,1)">商品评价</li>
-<li id="one5" onclick="secBoard('one',5,6),goodmession('all',1)">商品咨询</li>
+<li id="one4" onclick="secBoard('one',4,6),goodEvaluation(0,1)">资料评价</li>
+<li id="one5" onclick="secBoard('one',5,6),goodmession('all',1)">资料咨询</li>
 <li id="one6" onclick="secBoard('one',6,6),hiddenDiv()">售后服务</li>
 </ul>
 </div>
 <div class="Contentbox">
-<!--[if !IE]>商品详情<![endif]-->
+<!--[if !IE]>资料详情<![endif]-->
 <div id="con_one_1">
 <div class="itemDetails">${goodExtend.intro }</div>
 </div>
-<!--[if !IE]>商品详情结束<![endif]-->
+<!--[if !IE]>资料详情结束<![endif]-->
 <!--[if !IE]>规格参数单页<![endif]-->
 <div id="con_one_2" style="display:none">
 <div class="itemDetails">${goodExtend.introWholesale }</div>
@@ -291,7 +291,7 @@ function secBoard(name,cursel,n){
 <div class="itemDetails">${goodExtend.introDelivery }</div>
 </div>
 <!--[if !IE]>包装清单结束<![endif]-->
-<!--[if !IE]>商品平价<![endif]-->
+<!--[if !IE]>资料平价<![endif]-->
 <div id="con_one_4"  style="display:none">
 <div class="evaluation">
 <div class="evaluation01" id="eval1" style="display:none">
@@ -315,7 +315,7 @@ function secBoard(name,cursel,n){
 <h3>5分</h3>
 </div>
 </div>
-<!--[if !IE]>商品平价列表<![endif]-->
+<!--[if !IE]>资料平价列表<![endif]-->
 <div class="evaluation03">
 <h1>我在壹万店购买过</h1>
 <h2><input name="" type="button"  class="evaluation03btn" onclick="selTo('${ctx }/pingjia.do?good.id=${good.id }')"/></h2>
@@ -346,7 +346,7 @@ function secBoard(name,cursel,n){
 </div>
 <!--[if !IE]>评价循环结束<![endif]-->
 
-<!--[if !IE]>商品平价列表结束<![endif]-->
+<!--[if !IE]>资料平价列表结束<![endif]-->
 
 	
 
@@ -377,19 +377,19 @@ function secBoard(name,cursel,n){
           </div>
 		  <!--[if !IE]>分页结束<![endif]-->
 </div>
-<!--[if !IE]>商品咨询<![endif]-->
+<!--[if !IE]>资料咨询<![endif]-->
 <div id="con_one_5" style="display:none">
 <div class="consulting">
 提示:因厂家更改产品包装、产地或者更换随机附件等没有任何提前通知，且每位咨询者购买情况、提问时间等不同，为此以下回复信息仅供参考！
 若由此给您带来不便请多多谅解，谢谢！
 </div>
-<!--[if !IE]>商品咨询列表开始<![endif]-->
+<!--[if !IE]>资料咨询列表开始<![endif]-->
 <div class="consulting1">
 <div id="Tab4">
 <div class="Menubox4">
 <ul>
 <li id="four1" onclick="secBoard('four',1,4),goodmession('all',1)"  class="hover">全部咨询</li>
-<li id="four2" onclick="secBoard('four',2,4),goodmession(0,1)" >商品咨询</li>
+<li id="four2" onclick="secBoard('four',2,4),goodmession(0,1)" >资料咨询</li>
 <li id="four3" onclick="secBoard('four',3,4),goodmession(1,1)">配送/支付</li>
 <li id="four4" onclick="secBoard('four',4,4),goodmession(2,1)">发票/安装保修</li>
 </ul>
@@ -403,7 +403,7 @@ function secBoard(name,cursel,n){
 <div class="consulting1_text01">
 <span>咨询分类：</span>
 <ul>
-<li><h1><input name="type1" type="radio" value="商品咨询" checked="checked"/></h1><h2>商品咨询</h2></li>
+<li><h1><input name="type1" type="radio" value="资料咨询" checked="checked"/></h1><h2>资料咨询</h2></li>
 <li><h1><input name="type1" type="radio" value="配送/支付"/></h1><h2>配送/支付</h2></li>
 <li><h1><input name="type1" type="radio" value="发票/安装保修"/></h1><h2>发票/安装保修</h2></li>
 </ul>
@@ -418,13 +418,13 @@ function secBoard(name,cursel,n){
 <div class="consulting1_list" id="consultingall"></div>
 <!--[if !IE]>咨询列表结束<![endif]-->
 </div>
-<!--[if !IE]>商品咨询列表<![endif]-->
+<!--[if !IE]>资料咨询列表<![endif]-->
 <div id="con_four_2">
 <div class="consulting1_text" id="four_di_2" style="display:none">
 <div class="consulting1_text01">
 <span>咨询分类：</span>
 <ul>
-<li><h1><input name="type2" type="radio" value="商品咨询" checked="checked"/></h1><h2>商品咨询</h2></li>
+<li><h1><input name="type2" type="radio" value="资料咨询" checked="checked"/></h1><h2>资料咨询</h2></li>
 <li><h1><input name="type2" type="radio" value="配送/支付" /></h1><h2>配送/支付</h2></li>
 <li><h1><input name="type2" type="radio" value="发票/安装保修"/></h1><h2>发票/安装保修</h2></li>
 </ul>
@@ -445,7 +445,7 @@ function secBoard(name,cursel,n){
 <div class="consulting1_text01">
 <span>咨询分类：</span>
 <ul>
-<li><h1><input name="type3" type="radio" value="商品咨询" /></h1><h2>商品咨询</h2></li>
+<li><h1><input name="type3" type="radio" value="资料咨询" /></h1><h2>资料咨询</h2></li>
 <li><h1><input name="type3" type="radio" value="配送/支付" checked="checked"/></h1><h2>配送/支付</h2></li>
 <li><h1><input name="type3" type="radio" value="发票/安装保修" /></h1><h2>发票/安装保修</h2></li>
 </ul>
@@ -466,7 +466,7 @@ function secBoard(name,cursel,n){
 <div class="consulting1_text01">
 <span>咨询分类：</span>
 <ul>
-<li><h1><input name="type4" type="radio" value="商品咨询" checked="checked"/></h1><h2>商品咨询</h2></li>
+<li><h1><input name="type4" type="radio" value="资料咨询" checked="checked"/></h1><h2>资料咨询</h2></li>
 <li><h1><input name="type4" type="radio" value="配送/支付"/></h1><h2>配送/支付</h2></li>
 <li><h1><input name="type4" type="radio" value="发票/安装保修" checked="checked"/></h1><h2>发票/安装保修</h2></li>
 </ul>
@@ -514,7 +514,7 @@ function secBoard(name,cursel,n){
           </div>
 		  <!--[if !IE]>分页结束<![endif]-->
 </div>
-<!--[if !IE]>商品咨询结束<![endif]-->
+<!--[if !IE]>资料咨询结束<![endif]-->
 	<div id="pagerBot" style="margin-right: 0px;height: 30px; display: none" ></div><!--分页组件-->
 <!--[if !IE]>售后服务<![endif]-->
 <div id="con_one_6" style="display:none">

@@ -67,13 +67,13 @@ function submitSaveForm(){
 		
 		var price=$('#price').val();
 		if(price=='0'){
-			if (confirm("此商品未填写销售价格，是否要返回修改?")){
+			if (confirm("此资料未填写销售价格，是否要返回修改?")){
 				return false;
 			}
 		}
 		var price=$('#priceMarket').val();
 		if(price=='0' || price==''){
-			if (confirm("此商品未填写市场价格，是否要返回修改?")){
+			if (confirm("此资料未填写市场价格，是否要返回修改?")){
 				return false;
 			}
 		}
@@ -82,25 +82,25 @@ function submitSaveForm(){
 		var priceGroupBuy=$('#priceGroupBuy').val();  
 		if(isInventory!='0'){
 			if(priceGroupBuy=='' || priceGroupBuy=='0.00'){
-				if (confirm("此商品未填写团购/抢购/秒杀价格，是否要返回修改?")){
+				if (confirm("此资料未填写团购/抢购/秒杀价格，是否要返回修改?")){
 					return false;
 				}
 			}
 			var beginTime=$('#beginTime').val();
 			var endTime=$('#endTime').val();
 			if(beginTime==''){
-				if (confirm("此商品未填写此活动商品开始时间，是否要返回修改?")){
+				if (confirm("此资料未填写此活动资料开始时间，是否要返回修改?")){
 					return false;
 				}
 			}else if(endTime==''){
-				if (confirm("此商品未填写此活动商品结束时间，是否要返回修改?")){
+				if (confirm("此资料未填写此活动资料结束时间，是否要返回修改?")){
 					return false;
 				}
 			}
 		}
 		var codeVal = $("#code").val();
 		if(codeVal==''){
-			if (confirm("此商品编号未填写，是否要返回修改?")){
+			if (confirm("此资料编号未填写，是否要返回修改?")){
 				return false;
 			}
 		}
@@ -117,7 +117,7 @@ function submitSaveForm(){
 			success : function(returnData){
 				if(returnData == 'true'){
 					alert('保存成功!');
-					window.parent.addTab('商品列表',ctx+'/good!list.do');
+					window.parent.addTab('资料列表',ctx+'/good!list.do');
 				}else{
 					alert('保存失败!');
 				}
@@ -196,13 +196,13 @@ function WarehousePosition(){
 function checkForm(){
 	var nameVal = $("#name").val();
 	if(nameVal == ''){
-		alert('请输入商品名!');
+		alert('请输入资料名!');
 		$("#name").focus();
 		return false;
 	}
 	var goodTypeNameVal = $("#goodTypeName").val();
 	if(goodTypeNameVal == ''){
-		alert('请选择商品类别!');
+		alert('请选择资料类别!');
 		 $("#goodTypeName").click();
 		return false;
 	}
@@ -222,7 +222,7 @@ function checkForm(){
 	return true;
 }
 
-//选择商品类别弹出窗
+//选择资料类别弹出窗
 function selectType(obj){
     var url = ctx+'/goodType!list.do?todo=show';
 	var obj = $(obj);
@@ -233,7 +233,7 @@ function selectType(obj){
 		$(obj).focus();
 	}
 }
-//选择商品品牌
+//选择资料品牌
 function selectBrand(obj){
 	var goodTypeId=$('#goodTypeId').val();
 	if(goodTypeId != ''){
@@ -246,7 +246,7 @@ function selectBrand(obj){
 			$(obj).focus();
 		}
 	}else{
-		alert('请先选择商品类型！');
+		alert('请先选择资料类型！');
 		return;
 	}
 }
@@ -346,7 +346,7 @@ function showAttrValue(){
 		}
 	}
 }
-//选择商品属性值
+//选择资料属性值
 function selectattrValueArr(value){
 	var str='';
 	var a=$('#goodAttrValStr').val();
@@ -358,7 +358,7 @@ function selectattrValueArr(value){
 	$('#goodAttrValStr').val(str);
 }
 
-//清空商品属性值
+//清空资料属性值
 function removeProp(){
 	$('#goodAttrValStr').val('');
 	alert('清除成功！');
@@ -403,14 +403,14 @@ function deleteWare(obj){
 	var trObj = $(obj).parent().parent();
 	$(trObj).remove();
 }
-//相关商品
+//相关资料
 function addGoodRelate(){
 	var dataArr = new Array();
 	dataArr = common.getGoods(true);
 	if(dataArr){
 		var html = '';
 		var goodId = $('#id').val();
-		//已经存在商品的id
+		//已经存在资料的id
 		var goodRelateIdStr = $('#goodRelateIdStr').val();
 		var goodRelateIds = new Array(); 
 		goodRelateIds = goodRelateIdStr.split(',');
@@ -442,20 +442,20 @@ function addGoodRelate(){
 					alert("不能关联自己")
 				}
 			}else{
-				alert('商品已存在，商品编号：'+dataArr[i].code);
+				alert('资料已存在，资料编号：'+dataArr[i].code);
 			}
 		}
 		$('#goodRelateList').append(html);
 	}
 }
-//组合商品
+//组合资料
 function addGoodCompose(){
 	var dataArr = new Array();
 	dataArr = common.getGoods(true);
 	if(dataArr){
 		var html = '';
 		var goodId = $('#id').val();
-		//已经存在商品的id
+		//已经存在资料的id
 		var goodComposeIdStr = $('#goodComposeIdStr').val();
 		var goodComposeIds = new Array(); 
 		goodComposeIds = goodComposeIdStr.split(',');
@@ -488,35 +488,35 @@ function addGoodCompose(){
 					alert("不能组合自己")
 				}
 			}else{
-				alert('商品已存在，商品编号：'+dataArr[i].code);
+				alert('资料已存在，资料编号：'+dataArr[i].code);
 			}
 		}
 		$('#goodComposeList').append(html);
 	}
 }
-//删除商品
+//删除资料
 function deleteGoodRelate(obj){
 	//获取父级元素
 	var parentObj = $(obj).parent().parent();
-	//获取关联商品id
+	//获取关联资料id
 	var relateGoodId = $(parentObj).find("input[name='goodRelateIdArr']").val();
-	//已经存在商品的id
+	//已经存在资料的id
 	var goodRelateIdStr = $('#goodRelateIdStr').val();
-	//去掉关联商品的id
+	//去掉关联资料的id
 	goodRelateIdStr = goodRelateIdStr.replace(relateGoodId,'');
 	$('#goodRelateIdStr').val(goodRelateIdStr);
 	
 	$(parentObj).remove();
 }
-//删除组合商品
+//删除组合资料
 function deleteGoodCompose(obj){
 	//获取父级元素
 	var parentObj = $(obj).parent().parent();
-	//获取组合商品id
+	//获取组合资料id
 	var composeGoodId = $(parentObj).find("input[name='goodComposeIdArr']").val();
-	//已经存在商品的id
+	//已经存在资料的id
 	var goodComposeIdStr = $('#goodComposeIdStr').val();
-	//去掉组合商品的id
+	//去掉组合资料的id
 	goodComposeIdStr = goodComposeIdStr.replace(composeGoodId,'');
 	$('#goodComposeIdStr').val(goodComposeIdStr);
 	
@@ -533,7 +533,7 @@ function selectSupplier(){
 	}
 }
 
-//判断是否限时抢购商品
+//判断是否限时抢购资料
 function ChekeisQgGood(){
     
     var names= "'yyyy-MM-dd'";
@@ -560,14 +560,14 @@ function ChekeisQgGood(){
 //		htmlText+="<input type='text' name='priceArr'/></td>";
 //		htmlText+="<td class='gridtitle' width='10%'>属性</td>";
 //		htmlText+="<td class='gridbody'><select name='propertyArr'>"
-//		htmlText+="<option value=''>-- 请选择商品属性 --</option>";
+//		htmlText+="<option value=''>-- 请选择资料属性 --</option>";
 //		//htmlText+="<option value='1'>疯狂抢购</option>";
-//		htmlText+="<option value='2'>热卖商品</option>";
-//		htmlText+="<option value='3'>热评商品</option>";
+//		htmlText+="<option value='2'>热卖资料</option>";
+//		htmlText+="<option value='3'>热评资料</option>";
 //		htmlText+="<option value='4'>新品上架</option>";
 //		htmlText+="<option value='5'>猜您喜欢</option>";
 //		//htmlText+="<option value='6'>限时抢购</option>";
-//		htmlText+="<option value='7'>自定义商品</option>";
+//		htmlText+="<option value='7'>自定义资料</option>";
 //		htmlText+="<option value='8'>最新降价</option>";
 //		htmlText+="<option value='9'>今日推荐</option>";
 //		htmlText+="</select></td><td class='gridtitle' width='10%'>自定义标签</td>";
@@ -605,7 +605,7 @@ function selectArea(obj){
 //	}
 //}
 
-//改变活动商品的文本框状态
+//改变活动资料的文本框状态
 function changeValue(vals){ 
 	if(vals!=''){   
 		if(vals=='0' || vals=='4'){   //普通是则禁用
@@ -613,7 +613,7 @@ function changeValue(vals){
 			$('#totalNum').attr("disabled",true);
 			$('#beginTime').attr("disabled",true);
 			$('#endTime').attr("disabled",true);
-		}else {     //活动商品则启用
+		}else {     //活动资料则启用
 			 $('#priceGroupBuy').removeAttr("disabled");
 			 $('#totalNum').removeAttr("disabled");
 			 $('#beginTime').removeAttr("disabled");
@@ -637,7 +637,7 @@ function checkeCode(vals){
 				if(returnData == 'true'){
 					return;
 				}else{
-					alert('此商品编号已存在，请重新输入!');
+					alert('此资料编号已存在，请重新输入!');
 					$('#code').val('');
 					return false;
 				}

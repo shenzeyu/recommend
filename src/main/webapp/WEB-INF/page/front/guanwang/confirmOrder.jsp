@@ -423,7 +423,7 @@ function changeSelect(formV,toV){
           <h1><span>*</span>发票内容：</h1>
           <h2><span>
             <input id="con_invoiceContent" type="radio" checked="checked" value="0" />
-            </span><samp>商品明细</samp></h2>
+            </span><samp>资料明细</samp></h2>
         </div>
         <div class="Invoice03">
 		<!--[if !IE]>使用发票确认按钮<![endif]-->
@@ -431,9 +431,9 @@ function changeSelect(formV,toV){
         </div>
       </div>
     </div>
-    <!--[if !IE]>商品清单<![endif]-->
-    <div class="lookproduct5"><span>商品清单</span><samp><a href="${ctx }/ShoppingCar.do">返回购物车修改</a></samp></div>
-    <!--[if !IE]>商品清单列表<![endif]-->
+    <!--[if !IE]>资料清单<![endif]-->
+    <div class="lookproduct5"><span>资料清单</span><samp><a href="${ctx }/ShoppingCar.do">返回购物车修改</a></samp></div>
+    <!--[if !IE]>资料清单列表<![endif]-->
     <div class="itemList">
       <table width="1199" border="0" cellspacing="0" cellpadding="0">
         <tr>
@@ -463,7 +463,7 @@ function changeSelect(formV,toV){
         </c:forEach>
       </table>
     </div>
-    <!--[if !IE]>商品清单列表结束<![endif]-->
+    <!--[if !IE]>资料清单列表结束<![endif]-->
     <!--[if !IE]>运费<![endif]-->
     <div class="itemList1">
       <h1>

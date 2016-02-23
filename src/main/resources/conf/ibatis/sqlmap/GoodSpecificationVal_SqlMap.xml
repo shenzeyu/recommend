@@ -21,13 +21,13 @@
 		<property name="size" value="2000"/>
 	</cacheModel> 	
 	<!-- ly开始 -->
-	<!--普通商品根据goodId查询其所拥有的规格  -->
+	<!--普通资料根据goodId查询其所拥有的规格  -->
 		<select id="GoodSpecificationVal_good_query_select" resultMap="GoodSpecificationValResult">
 			select * from good_specification_val where id in (
 				select good_specification_val_id from ware_specification_val where ware_id in (
 					select id from ware where good_id = #goodId#));
 		</select>
-	<!--团购商品根据groupgoodId查询其所拥有的规格  -->
+	<!--团购资料根据groupgoodId查询其所拥有的规格  -->
 		<select id="GoodSpecificationVal_groupgood_query_select" resultMap="GoodSpecificationValResult" cacheModel="GoodSpecificationVal_cache">
 			select * from good_specification_val where id in (
 				select good_specification_val_id from ware_specification_val where ware_id in (

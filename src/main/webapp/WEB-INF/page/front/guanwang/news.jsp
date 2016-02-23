@@ -118,7 +118,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
   </div> 
   </div>
   </div>
-  <div class="news3"><samp>商品测评</samp><span><a href="#"><img src="images/a15.jpg" /></a></span></div>
+  <div class="news3"><samp>资料测评</samp><span><a href="#"><img src="images/a15.jpg" /></a></span></div>
   <div class="news2">
   <div class="news2_text2">
   <div class="news2_text201">最新测评</div>

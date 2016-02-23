@@ -182,7 +182,7 @@ function ShowFLT(i) {
         </div> 
        <!--[if !IE]>最新降价<![endif]-->
         <div class="hotComments">
-          <div class="seenProduct01">最近浏览过的商品</div>
+          <div class="seenProduct01">最近浏览过的资料</div>
           <div class="hotCom_text1">
             <div class="Latestprices">
               <!--[if !IE]>第一个产品<![endif]-->

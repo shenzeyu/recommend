@@ -134,7 +134,7 @@ function editData(id){
 			title = '编辑付款方式';
 		}else
 		if(type =='5'){
-			title = '编辑会员服务';
+			title = '编辑学员服务';
 		}else
 		if(type =='6'){
 			title = '编辑帮助中心';
@@ -166,7 +166,7 @@ function editData(id){
 			title = '新增付款方式';
 		}else
 		if(type =='5'){
-			title = '新增会员服务';
+			title = '新增学员服务';
 		}else
 		if(type =='6'){
 			title = '新增帮助中心';

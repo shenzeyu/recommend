@@ -13,7 +13,7 @@
 	<bean name="CusLoginAction" class="com.usst.app.front.action.CusLoginAction"
 		scope="prototype" autowire="byName"></bean>
 
-	<!-- 前台商品展示 -->
+	<!-- 前台资料展示 -->
 	<bean name="FrontGoodAction" class="com.usst.app.front.action.FrontGoodAction"
 		scope="prototype" autowire="byName"></bean>
 	<!-- 客户中心 -->

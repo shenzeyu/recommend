@@ -82,7 +82,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 》<a href="index.html">继续购物</a></h2>
 </div>
  </div>
- <!--[if !IE]>浏览本商品的客户还买了<![endif]-->
+ <!--[if !IE]>浏览本资料的客户还买了<![endif]-->
 	<div class="lookproduct">
 	<samp>你感兴趣的</samp>
 	</div>

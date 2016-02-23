@@ -153,7 +153,7 @@ function submitSaveForm(){
 				htmlAll += '<tr>' + bankHtml + accountHolderHtml + bankAccountCodeHtml + bankAccountNameHtml + bankAccountIdHtml + moneyHtml + accountHtml + remarkHtml +'</tr>';
 			}
 		}
-		var cashItemTable = $('#cashItemTable');//订单商品项数据区
+		var cashItemTable = $('#cashItemTable');//订单资料项数据区
 		cashItemTable.html(htmlAll);
 		var options = {
 			url : ctx+'/collection!save.do',
@@ -231,10 +231,10 @@ function buildCashItem(){
 	return cashItem;
 }
 
-//添加商品空行
+//添加资料空行
 function addCollectionRow(more){
 	var lastEditRowIndex;
-	var cashItem = buildCashItem();//获取一个新的空商品项
+	var cashItem = buildCashItem();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',cashItem);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;
@@ -450,7 +450,7 @@ function selectSupplier(){
 	}
 }
 
-//刷新商品总金额、订单总金额
+//刷新资料总金额、订单总金额
 function flushMoney(){
 	var orderMoney = 0;
 	var rows = $(gId).datagrid('getRows');//末行的下标

@@ -1,5 +1,5 @@
 <%--
-	会员优惠劵编辑页面  <增加和修改>
+	学员优惠劵编辑页面  <增加和修改>
 	@author 广州酷趣信息科技有限公司,lp
 	@since Oct 31, 2011 3:12:10 PM
  --%>
@@ -7,7 +7,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-	<title>编辑会员优惠劵</title>
+	<title>编辑学员优惠劵</title>
 	<%@ include file="/commons/taglibs.jsp" %>
 	<%@ include file="/commons/meta.jsp" %>
 	
@@ -84,10 +84,10 @@
 					    <td class='gridbody' >
 					    	<s:textfield name="vipCoupon.count" id="count" onchange="common.number(this);"/>&nbsp;<font color="red">*</font>
 					    </td>
-					    <td class='gridtitle' >会员等级</td>
+					    <td class='gridtitle' >学员等级</td>
 					    <td class='gridbody' >
 					    	<s:select list="vipLevelList"  listValue="name" listKey="id" name="vipCoupon.vipLevelId" id="vipLevelId"
-             							headerKey="" headerValue=" -- 请选择会员  -- " value="vipCoupon.vipLevelId"></s:select>&nbsp;<font color="red">*</font>
+             							headerKey="" headerValue=" -- 请选择学员  -- " value="vipCoupon.vipLevelId"></s:select>&nbsp;<font color="red">*</font>
 					    </td>
 					  </tr>
 					  <tr></tr>
@@ -104,7 +104,7 @@
 					  </tr>
 					  <c:if test="${vipCoupon.state != 'd'}">
 					  <tr>
-					  	<td class='gridtitle' >分配会员</td>
+					  	<td class='gridtitle' >分配学员</td>
 					    <td class='gridbody' colspan="5">
 				    		<s:hidden id="customerId" name="vipCoupon.customerId"/>
 						    <s:textfield id="customerName" name="vipCoupon.customerName"  cssClass="inputTextBorder" readonly="true" onclick="selectCustomer()"/>

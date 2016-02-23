@@ -101,7 +101,7 @@ function selectDeliveryFee(obj){
 
 // 计算总金额
 function flushMoney(){
-	var money = replaceStr($('#money').text());				// 商品金额
+	var money = replaceStr($('#money').text());				// 资料金额
 	var totalCost = $('#totalCost').text();		// 运费
 	var coupon = $('#coupon').text();			// 优惠券
 	

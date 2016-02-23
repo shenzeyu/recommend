@@ -80,15 +80,15 @@ function logout(){
   <div class="login01_text">
   <div class="login01_text01">
   <span>行货正品</span>
-  全部商品保证行货正品，您可放心购物
+  全部资料保证行货正品，您可放心购物
   </div>
   <div class="login01_text01">
   <span>正规发票</span>
-  全部商品均可提供正规商业发票
+  全部资料均可提供正规商业发票
   </div>
    <div class="login01_text01">
   <span>当日发货</span>
-  商品购买后当天发货，部分地区24小时内到货
+  资料购买后当天发货，部分地区24小时内到货
   </div>
    <div class="login01_text01">
   <span>七天包退</span>
@@ -101,7 +101,7 @@ function logout(){
   <div class="login0201"><img src="${ctx}/Images/images/y4.jpg" /></div>
   <div class="login0202">
      <form action="" id="loginForm" name="loginForm" method="post">
-	  <div class="login0202_text">e购商城会员登录</div>
+	  <div class="login0202_text">e购商城学员登录</div>
 	  <div class="login0202_text1" style="padding-top: 15px; height: 50px;">
 	  <h1>账号：</h1>
 	  	  <h2><input style="color:#CCC" name="customer.code" id="codesY" type="text"  class="login0202_text1input" onfocus="dlbh()" onblur="sqbh()"  value="昵称/邮箱/已注册手机"  /></h2>
@@ -121,8 +121,8 @@ function logout(){
   <div class="login0202_text301">
  <samp>还不是e购商城用户？</samp></div>
  <div class="login0202_text302">
-现在免费注册e购商城会员，便能立即享<br />受便宜又放心的购物乐趣!
-<span><a href="${ctx }/zhuce.do">会员注册</a></span>  
+现在免费注册e购商城学员，便能立即享<br />受便宜又放心的购物乐趣!
+<span><a href="${ctx }/zhuce.do">学员注册</a></span>  
 </div>
   </div>
   <div class="login0202_text4">

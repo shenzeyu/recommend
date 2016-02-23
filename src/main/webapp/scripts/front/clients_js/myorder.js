@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-  //回调查询商品的方法
+  //回调查询资料的方法
   saleOrderJson();
 });
 

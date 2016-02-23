@@ -43,7 +43,7 @@
 		<action name="zhuce" class="com.usst.app.front.action.CusLoginAction" method="zhuce">
 			<result name="zhuce">/WEB-INF/page/front/guanwang/register.jsp</result>
 		</action>
-		<!-- 会员注册 -->
+		<!-- 学员注册 -->
 		<action name="registers" class="com.usst.app.front.action.CusLoginAction" method="registerUser"></action>
 		<!-- 验证码图片 -->
 		<action name="changeImage" class="com.usst.app.front.action.CusLoginAction" method="changeImage"></action>
@@ -55,13 +55,13 @@
 		<!-- 验证帐号唯一 -->
 		<action name="checkCodes" class="com.usst.app.front.action.CusLoginAction" method="checkCodes"></action>
 		<action name="checkEmail" class="com.usst.app.front.action.CusLoginAction" method="checkEmail"></action>
-		<!-- 会员登录 -->
+		<!-- 学员登录 -->
 		<action name="login" class="com.usst.app.front.action.CusLoginAction" method="login"></action>
-		<!-- 会员退出 -->
+		<!-- 学员退出 -->
 		<action name="loginOut" class="com.usst.app.front.action.CusLoginAction" method="loginOut">
 			<result name="loginOut"  type="redirect">index.do</result>
 		</action>
-		<!-- 跳转到会员登录页面 -->
+		<!-- 跳转到学员登录页面 -->
 		<action name="frontLogin" class="com.usst.app.front.action.CusLoginAction" method="frontLogin">
 			<result name="frontLogin">/WEB-INF/page/front/guanwang/login.jsp</result>
 		</action>
@@ -75,15 +75,15 @@
 		<!-- 添加收藏 -->
 		<action name="addGoodToFavorite" class="com.usst.app.front.action.FrontGoodAction" method="addGoodToFavorite"></action>
 		
-		<!-- 跳转到商品父类频道【一级】页面 -->
+		<!-- 跳转到资料父类频道【一级】页面 -->
 		<action name="getFirstLevelPage" class="com.usst.app.front.action.FrontFirstGoodAction" method="getFirstLevel">
 			<result name="first">/WEB-INF/page/front/guanwang/classifiedGoods.jsp</result>
 		</action>
-		<!--商品详细信息 
+		<!--资料详细信息 
 		<action name="cpxq" class="com.usst.app.front.action.FrontGoodAction" method="getGoodsById">
 			<result name="index">/WEB-INF/page/front/guanwang/detail.jsp</result>
 		</action>-->
-		<!-- 跳转到会员中心个人信息页面 -->
+		<!-- 跳转到学员中心个人信息页面 -->
 		<action name="customersManage" class="com.usst.app.front.action.UserManageAction" method="customersManage">
 			<result name="customersManage">/WEB-INF/page/front/guanwang/myshop.jsp</result>
 		</action>
@@ -96,15 +96,15 @@
 		<action name="pingjia" class="com.usst.app.front.action.FrontGoodAction" method="pingjia">
 			<result name="pingjia">/WEB-INF/page/front/guanwang/pingjia.jsp</result>
 		</action>
-		<!-- 保存会员评论 -->
+		<!-- 保存学员评论 -->
 		<action name="wareCommentSave" class="com.usst.app.front.action.FrontGoodAction" method="wareCommentSave"></action>
-		<!-- 保存会员咨询 -->	
+		<!-- 保存学员咨询 -->	
 		<action name="messageSave" class="com.usst.app.front.action.FrontGoodAction" method="saveMessage"></action>
-		<!--添加普通商品到购物车 -->
+		<!--添加普通资料到购物车 -->
 		<action name="addGoodToCart" class="com.usst.app.front.action.FrontGoodAction" method="addGoodToCart"></action>
-		<!--添加团购商品到购物车 -->
+		<!--添加团购资料到购物车 -->
 		<action name="addGroupGoodToCart" class="com.usst.app.front.action.FrontGroupBuyAction" method="addGroupGoodToCart"></action>
-		<!--添加组合商品到购物车 -->
+		<!--添加组合资料到购物车 -->
 		<action name="addGoodComposeToCart" class="com.usst.app.front.action.FrontGoodAction" method="addGoodComposeToCart"></action>
 		<!--公告详细信息页面 -->
 		<action name="oneNewsdetail" class="com.usst.app.front.action.InforAction" method="getNewsdetail">
@@ -199,7 +199,7 @@
 		</action>
 		<!-- 取消订单 -->
 		<action name="updateOrderState" class="com.usst.app.front.action.UserManageAction" method="updateOrderState"></action>
-		<!-- 跳转到待评价商品页面 -->
+		<!-- 跳转到待评价资料页面 -->
 		<action name="pingjiaTwo" class="com.usst.app.front.action.UserManageAction" method="pingjiaTwo">
 			<result name="pingjiaTwo">/WEB-INF/page/front/guanwang/pingjia2.jsp</result>
 		</action>
@@ -211,11 +211,11 @@
 		<action name="results" class="com.usst.app.front.action.UserManageAction" method="results">
 			<result name="results">/WEB-INF/page/front/guanwang/results.jsp</result>
 		</action>
-		<!-- 联盟点会员销售中心 -->
+		<!-- 联盟点学员销售中心 -->
 		<action name="lianmengSales" class="com.usst.app.front.action.UserManageAction" method="lianmengSales">
 			<result name="lianmengSales">/WEB-INF/page/front/guanwang/sales.jsp</result>
 		</action>
-		<!-- 联盟点会员销售分析 -->
+		<!-- 联盟点学员销售分析 -->
 		<action name="salesAnalysis" class="com.usst.app.front.action.UserManageAction" method="salesAnalysis">
 			<result name="salesAnalysis">/WEB-INF/page/front/guanwang/salesAnalysis.jsp</result>
 		</action>
@@ -253,11 +253,11 @@
 		<action name="ShoppingCar" class="com.usst.app.front.action.FrontGoodAction" method="myShoppingCar">
 			<result name="shoppingCar">/WEB-INF/page/front/guanwang/shoppingCart.jsp</result>
 		</action>
-		<!--删除购物车中的商品 -->
+		<!--删除购物车中的资料 -->
 		<action name="deleteGoodFromCar" class="com.usst.app.front.action.FrontGoodAction" method="deleteGoodFromCar"></action>
-		<!--清空购物车中的商品 -->
+		<!--清空购物车中的资料 -->
 		<action name="clearShoppingCar" class="com.usst.app.front.action.FrontGoodAction" method="clearShoppingCar"></action>
-		<!--修改购物车中的商品 -->
+		<!--修改购物车中的资料 -->
 		<action name="changeNum" class="com.usst.app.front.action.FrontGoodAction" method="changeNum"></action>
 		<!--判断购物车是否为空 -->
 		<action name="isNotEmptyCart" class="com.usst.app.front.action.FrontGoodAction" method="isNotEmptyCart"></action>
@@ -410,7 +410,7 @@
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 查询联盟点会员订单 -->
+		<!-- 查询联盟点学员订单 -->
 		<action name="saleUnionOrderJson" class="com.usst.app.front.action.UserManageAction" method="saleUnionOrderJson">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>

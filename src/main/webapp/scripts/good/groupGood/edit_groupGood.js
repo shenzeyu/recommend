@@ -79,7 +79,7 @@ function submitSaveForm(){
 			success : function(returnData){
 				if(returnData == 'true'){
 					alert('保存成功!');
-					window.parent.addTab('商品列表',ctx+'/groupGood!list.do');
+					window.parent.addTab('资料列表',ctx+'/groupGood!list.do');
 				}else{
 					alert('保存失败!');
 				}
@@ -158,19 +158,19 @@ function WarehousePosition(){
 function checkForm(){
 	var nameVal = $("#name").val();
 	if(nameVal == ''){
-		alert('请输入商品名!');
+		alert('请输入资料名!');
 		$("#name").focus();
 		return false;
 	}
 	var goodTypeNameVal = $("#goodTypeName").val();
 	if(goodTypeNameVal == ''){
-		alert('请选择商品类别!');
+		alert('请选择资料类别!');
 		 $("#goodTypeName").click();
 		return false;
 	}
 	var supplierName = $("#supplierName").val();
 	if(supplierName == ''){
-		alert('请选择商品的供应商!');
+		alert('请选择资料的供应商!');
 		 $("#supplierName").click();
 		return false;
 	}
@@ -183,7 +183,7 @@ function checkForm(){
 	var taxRate=$("#taxRate").val();
 	if(taxRate=='')
 	{
-		alert('请输入商品税率');
+		alert('请输入资料税率');
 		$("#taxRate").focus();
 		return false;
 	}
@@ -210,14 +210,14 @@ function taxRateFormmat()
 	var taxprice=((1.0+values)*priceVal).toFixed(2);
 	$("#taxPrice").val(taxprice);
 }
-//选择商品类别弹出窗
+//选择资料类别弹出窗
 function selectType(obj){
     var url = ctx+'/goodType!list.do?todo=show';
     var isInventory=$('#isInventory').val(); 
 	if(isInventory!=''||isInventory!=null){
 		var isInventory=$('#isInventory').val(); 
 		var isOk='';
-		if(isInventory==0){  //普通商品的类别
+		if(isInventory==0){  //普通资料的类别
 			isOk=0;
 		}else{               //团购、秒杀、抢购的类别
 			isOk=1;
@@ -232,13 +232,13 @@ function selectType(obj){
 		$(obj).focus();
 	}
 }
-//选择商品品牌
+//选择资料品牌
 function selectBrand(obj){
 	var obj = $(obj);
 	var url = ctx+'/groupGoodBrand!list.do?todo=show';
 	var isInventory=$('#isInventory').val(); 
 	var isOk='';
-	if(isInventory==0){  //普通商品的品牌
+	if(isInventory==0){  //普通资料的品牌
 		isOk=0;
 	}else{               //团购、秒杀、抢购的品牌
 		isOk=1;
@@ -385,14 +385,14 @@ function deleteWare(obj){
 	var trObj = $(obj).parent().parent();
 	$(trObj).remove();
 }
-//相关商品
+//相关资料
 function addGoodRelate(){
 	var dataArr = new Array();
 	dataArr = common.getGoods(true);
 	if(dataArr){
 		var html = '';
 		var goodId = $('#id').val();
-		//已经存在商品的id
+		//已经存在资料的id
 		var goodRelateIdStr = $('#goodRelateIdStr').val();
 		var goodRelateIds = new Array(); 
 		goodRelateIds = goodRelateIdStr.split(',');
@@ -424,20 +424,20 @@ function addGoodRelate(){
 					alert("不能关联自己")
 				}
 			}else{
-				alert('商品已存在，商品编号：'+dataArr[i].code);
+				alert('资料已存在，资料编号：'+dataArr[i].code);
 			}
 		}
 		$('#goodRelateList').append(html);
 	}
 }
-//组合商品
+//组合资料
 function addGoodCompose(){
 	var dataArr = new Array();
 	dataArr = common.getGoods(true);
 	if(dataArr){
 		var html = '';
 		var goodId = $('#id').val();
-		//已经存在商品的id
+		//已经存在资料的id
 		var goodComposeIdStr = $('#goodComposeIdStr').val();
 		var goodComposeIds = new Array(); 
 		goodComposeIds = goodComposeIdStr.split(',');
@@ -470,35 +470,35 @@ function addGoodCompose(){
 					alert("不能组合自己")
 				}
 			}else{
-				alert('商品已存在，商品编号：'+dataArr[i].code);
+				alert('资料已存在，资料编号：'+dataArr[i].code);
 			}
 		}
 		$('#goodComposeList').append(html);
 	}
 }
-//删除商品
+//删除资料
 function deleteGoodRelate(obj){
 	//获取父级元素
 	var parentObj = $(obj).parent().parent();
-	//获取关联商品id
+	//获取关联资料id
 	var relateGoodId = $(parentObj).find("input[name='goodRelateIdArr']").val();
-	//已经存在商品的id
+	//已经存在资料的id
 	var goodRelateIdStr = $('#goodRelateIdStr').val();
-	//去掉关联商品的id
+	//去掉关联资料的id
 	goodRelateIdStr = goodRelateIdStr.replace(relateGoodId,'');
 	$('#goodRelateIdStr').val(goodRelateIdStr);
 	
 	$(parentObj).remove();
 }
-//删除组合商品
+//删除组合资料
 function deleteGoodCompose(obj){
 	//获取父级元素
 	var parentObj = $(obj).parent().parent();
-	//获取组合商品id
+	//获取组合资料id
 	var composeGoodId = $(parentObj).find("input[name='goodComposeIdArr']").val();
-	//已经存在商品的id
+	//已经存在资料的id
 	var goodComposeIdStr = $('#goodComposeIdStr').val();
-	//去掉组合商品的id
+	//去掉组合资料的id
 	goodComposeIdStr = goodComposeIdStr.replace(composeGoodId,'');
 	$('#goodComposeIdStr').val(goodComposeIdStr);
 	
@@ -515,7 +515,7 @@ function selectSupplier(){
 	}
 }
 
-//判断是否限时抢购商品
+//判断是否限时抢购资料
 function ChekeisQgGood(){
     
     var names= "'yyyy-MM-dd'";
@@ -533,7 +533,7 @@ function ChekeisQgGood(){
    }
 
 }
-//改变商品类型
+//改变资料类型
 function changeIsInventory(values){
 	if(values != '' && values != null){
 		$('#isInventoryStr').val(values); 

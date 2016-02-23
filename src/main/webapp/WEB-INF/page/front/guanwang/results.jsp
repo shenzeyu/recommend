@@ -82,9 +82,9 @@ function ShowFLT(i) {
 <li><a href="${ctx }/orderManage.do">我的订单<span>(<samp>2</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款订单<span>(<samp>2</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消订单<span>(<samp>2</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货商品<span>(<samp>2</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货商品<span>(<samp>2</samp>)</span></a></li>
-<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价商品<span>(<samp>2</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货资料<span>(<samp>2</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货资料<span>(<samp>2</samp>)</span></a></li>
+<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价资料<span>(<samp>2</samp>)</span></a></li>
 </ul>
           </div>
         </div>
@@ -170,7 +170,7 @@ function ShowFLT(i) {
 <div class="apply_title4">
 <h1>提交申请</h1>
 <h2>客服审核</h2>
-<h3>商品处理</h3>
+<h3>资料处理</h3>
 <h4>完成</h4>
 <h5>客户确认</h5>
 </div> 
@@ -201,7 +201,7 @@ function ShowFLT(i) {
   <c:if test="${saleReturn.returnTime!=''}">
   	  <tr class="tablefont">
 	    <td  width="227" height="35" align="left" valign="middle"><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${saleReturn.returnTime }" /></td>
-	    <td  width="480" height="35" align="left" valign="middle">商品处理成功</td>
+	    <td  width="480" height="35" align="left" valign="middle">资料处理成功</td>
 	    <td  width="227" height="35" align="left" valign="middle">${saleReturn.modifierName }</td>
 	  </tr>
   </c:if>
@@ -222,7 +222,7 @@ function ShowFLT(i) {
 <div class="apply_title6">
 <table width="934" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td width="110" height="30" align="left" valign="middle" class="tablefont1">商品名称</td>
+    <td width="110" height="30" align="left" valign="middle" class="tablefont1">资料名称</td>
     <td width="824" align="left" valign="middle" class="tablefont">
     	<c:forEach items="${saleWareList}" var="good">
     		<span>${good.goodName }</span><br/>
@@ -240,10 +240,10 @@ function ShowFLT(i) {
     </td>
   </tr>
      <tr>
-    <td width="110" height="30" align="left" valign="middle" class="tablefont1">商品价格及优惠</td>
+    <td width="110" height="30" align="left" valign="middle" class="tablefont1">资料价格及优惠</td>
     <td width="824" align="left" valign="middle" class="tablefont">
     	<c:forEach items="${saleWareList}" var="good">
-			<span>商品价格￥${good.goodPrice }元</span>&nbsp;&nbsp;&nbsp;&nbsp;优惠￥0.0元<br/>
+			<span>资料价格￥${good.goodPrice }元</span>&nbsp;&nbsp;&nbsp;&nbsp;优惠￥0.0元<br/>
     	</c:forEach>
     </td>
   </tr>

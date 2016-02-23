@@ -35,7 +35,7 @@
 			</dynamic>
 		order by sort asc
 	</select>
-	<!-- 某一级分类所有商品 -->
+	<!-- 某一级分类所有资料 -->
 	<select id="GoodPrice_count_goodTypeOne_select" resultClass="java.lang.Integer" cacheModel="GoodPrice_cache">
 		select count(*) from good_price where good_id in (
 			select a.id from good a where a.good_type_id =#goodtypeId# and is_inventory='0'

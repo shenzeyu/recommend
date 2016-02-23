@@ -1,4 +1,4 @@
-// 删除购物车中的商品
+// 删除购物车中的资料
 function deleteGood(i){
 	if (confirm("您确定要删除吗?")){
 		var goodId = $("#id"+i).val();
@@ -46,15 +46,15 @@ function clearCar(){
 function changeNum(i){
 	var count = $("#count"+i).val();
 	if(checkNumber(count)){
-		var price = replaceStr($("#price"+i).text());	// 获取商品单价
+		var price = replaceStr($("#price"+i).text());	// 获取资料单价
 		var credits = $("#credits"+i).val();			// 获取单个积分
-		var newMoney = price * $("#count"+i).val();		// 计算单个商品的总金额
-		var newCredits = credits * $("#count"+i).val();	// 计算单个商品的总积分
+		var newMoney = price * $("#count"+i).val();		// 计算单个资料的总金额
+		var newCredits = credits * $("#count"+i).val();	// 计算单个资料的总积分
 		
 		$("#money"+i).text('￥'+newMoney.toFixed(2));
 		$("#allCredit"+i).text(newCredits);
-		countVal = $("#count"+i).val(); 	// 获取商品数量
-		goodId = $("#id"+i).val();			// 获取商品Id
+		countVal = $("#count"+i).val(); 	// 获取资料数量
+		goodId = $("#id"+i).val();			// 获取资料Id
 		$.ajax({
 		  type: "POST",
 		  async: false,
@@ -118,7 +118,7 @@ function replaceStr(str){
 	return str;
 }
 
-// 商品结算
+// 资料结算
 function jiesuan(){
 	var isOk = true;
 	var index = 0;
@@ -142,7 +142,7 @@ function jiesuan(){
 				if(returnData=='true'){
 					window.location.href = ctx+'/jiesuan.do';
 				}else{
-					alert('您的购物车是空的，请购买商品！');
+					alert('您的购物车是空的，请购买资料！');
 				}
 			},
 			error : function(){
@@ -150,7 +150,7 @@ function jiesuan(){
 		 	} 
 		});
 	}else{
-		alert('请输入订购商品的数量');
+		alert('请输入订购资料的数量');
 		$('#count'+index).focus();
 	}
 }
@@ -163,13 +163,13 @@ function changeNumJian(i){
 	
 	   var counts = --count;
 	
-		var price = replaceStr($("#price"+i).text());	// 获取商品单价
+		var price = replaceStr($("#price"+i).text());	// 获取资料单价
 		var credits = $("#credits"+i).val();			// 获取单个积分
-		var newMoney = price * counts;		// 计算单个商品的总金额
-		var newCredits = credits * counts;	// 计算单个商品的总积分
+		var newMoney = price * counts;		// 计算单个资料的总金额
+		var newCredits = credits * counts;	// 计算单个资料的总积分
 		var beforemoney = replaceStr($("#finalPrice").text());  //当前总金额
 	   	var finalPrice = Number(beforemoney) - Number(price);	
-	   	var beforeCount = $("#totalNum").text();      //当前商品数量
+	   	var beforeCount = $("#totalNum").text();      //当前资料数量
 	   	var totalNum = beforeCount - 1;
 
 		
@@ -179,8 +179,8 @@ function changeNumJian(i){
 		$("#allCredit"+i).text(newCredits);
 		$("#count"+i).val(counts);
 		$("#totalNum").text(totalNum);
-		countVal = $("#count"+i).val(); 	// 获取商品数量
-		goodId = $("#id"+i).val();			// 获取商品Id
+		countVal = $("#count"+i).val(); 	// 获取资料数量
+		goodId = $("#id"+i).val();			// 获取资料Id
 		$.ajax({
 		  type: "POST",
 		  async: false,
@@ -210,17 +210,17 @@ function changeNumJia(i){
 	
 	   
 	 
-		var price = replaceStr($("#price"+i).text());	// 获取商品单价
+		var price = replaceStr($("#price"+i).text());	// 获取资料单价
 
 		var credits = $("#credits"+i).text();			// 获取单个积分
 
-		var newMoney = price * counts;		// 计算单个商品的总金额
+		var newMoney = price * counts;		// 计算单个资料的总金额
 
-		var newCredits = credits * counts;	// 计算单个商品的总积分
+		var newCredits = credits * counts;	// 计算单个资料的总积分
 		
 	    var beforemoney = replaceStr($("#finalPrice").text());  //当前总金额		
 		var finalPrice = Number(beforemoney) + Number(price);	
-	    var beforeCount = $("#totalNum").text();      //当前商品数量
+	    var beforeCount = $("#totalNum").text();      //当前资料数量
 	   	var totalNum = Number(beforeCount) + 1;       
 		
 		$("#finalPrice").text('¥'+finalPrice.toFixed(2));
@@ -228,8 +228,8 @@ function changeNumJia(i){
 		//$("#credits"+i).text(newCredits);
 		$("#totalNum").text(totalNum);
 		$("#count"+i).val(counts);
-		countVal = $("#count"+i).val(); 	// 获取商品数量
-		goodId = $("#id"+i).val();			// 获取商品Id
+		countVal = $("#count"+i).val(); 	// 获取资料数量
+		goodId = $("#id"+i).val();			// 获取资料Id
 		$.ajax({
 		  type: "POST",
 		  async: false,

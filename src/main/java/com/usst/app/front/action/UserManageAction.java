@@ -264,7 +264,7 @@ public class UserManageAction extends BaseAction {
 			this.goodList2 = this.goodService.select("Good.Good_SY", good);
 
 			Advertise advertise = new Advertise();
-			advertise.setPlaceId("会员中心");
+			advertise.setPlaceId("学员中心");
 			this.advertiseList = this.advertiseService.getByPlaceAdvertiseList(advertise);
 			this.informationList = this.informationService.select(new Information());
 
@@ -345,7 +345,7 @@ public class UserManageAction extends BaseAction {
 			} else {
 				this.saleOrder.setData(null);
 			}
-			if ((this.saleOrder.getSearch() != null) && (!this.saleOrder.getSearch().equals("商品编号/订单号"))) {
+			if ((this.saleOrder.getSearch() != null) && (!this.saleOrder.getSearch().equals("资料编号/订单号"))) {
 				this.saleOrder.setSearchOrder("strs");
 				this.saleOrder.setCode(this.saleOrder.getSearch());
 			}
@@ -1349,7 +1349,7 @@ public class UserManageAction extends BaseAction {
 			} else {
 				this.saleOrder.setData(null);
 			}
-			if ((this.saleOrder.getSearch() != null) && (!this.saleOrder.getSearch().equals("商品编号/订单号"))) {
+			if ((this.saleOrder.getSearch() != null) && (!this.saleOrder.getSearch().equals("资料编号/订单号"))) {
 				this.saleOrder.setSearchOrder("strs");
 				this.saleOrder.setCode(this.saleOrder.getSearch());
 			}

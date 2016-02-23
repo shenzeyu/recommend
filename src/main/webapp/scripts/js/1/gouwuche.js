@@ -1,16 +1,16 @@
 /**
- * 添加商品到购物车
+ * 添加资料到购物车
  * @param {Object} id
  */
 function addGoodToCart(){
-	// 商品Id
+	// 资料Id
 	var wareId = $("#wareid").val();
 	var goodId = $("#goodid").val();
 	//var wareSpecificationVal = $("#selectSpecificationVal").val();
 	// 购买数量
 	var number = $("#changeNumber").val();
 	if(number == ''){
-		alert('请输入商品数量');
+		alert('请输入资料数量');
 		$("#changeNumber").focus();
 	}
 	if(wareId != ''){//&ware.wareSpecificationVal="+wareSpecificationVal
@@ -33,11 +33,11 @@ function addGoodToCart(){
 		 	}
 		});
 	}else{
-		alert('请选择商品规格');
+		alert('请选择资料规格');
 	}
 }
 
-//小计商品价格
+//小计资料价格
 function changeNumber(number){
 	var number = $(number).val();
 	//var price = $("#price").val();
@@ -52,7 +52,7 @@ function changeNumber(number){
 
 }
 
-//小计商品价格
+//小计资料价格
 function changeNumber(number){
 	var number = $(number).val();
 	//var price = $("#price").val();
@@ -82,7 +82,7 @@ function addNumber(){
  }
 }
 
-//减少商品数量
+//减少资料数量
 function reduceNumber(){
    var number = $('#changeNumber').val();
     if(number >=2){

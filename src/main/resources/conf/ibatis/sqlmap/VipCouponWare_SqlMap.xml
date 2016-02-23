@@ -65,7 +65,7 @@
 			(#id#,#sort#,#vipCouponId#,#vipCouponName#,#wareId#,#wareName#)
 	</insert>
 	
-	<!-- 删除会员购物卷货物 根据id-->
+	<!-- 删除学员购物卷货物 根据id-->
 	<delete id="VipCouponWare_delete">
 		delete from Vip_Coupon_Ware where vip_coupon_id = #vipCouponId#
 	</delete>

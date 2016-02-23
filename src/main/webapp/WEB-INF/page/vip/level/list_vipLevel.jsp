@@ -1,12 +1,12 @@
 <%--
-	会员充值列表页面
+	学员充值列表页面
 	@author 广州酷趣信息科技有限公司,lp
 	@since Nov 7, 2011 3:12:10 PM
  --%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-	<title>会员充值列表</title>
+	<title>学员充值列表</title>
 	<%@ include file="/commons/taglibs.jsp" %>
 	<%@ include file="/commons/meta.jsp" %>
 	

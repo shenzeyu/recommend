@@ -1,12 +1,12 @@
 <%--
-	会员充值列表页面
+	学员充值列表页面
 	@author 广州酷趣信息科技有限公司,lp
 	@since Oct 31, 2011 3:12:10 PM
  --%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-	<title>会员充值列表</title>
+	<title>学员充值列表</title>
 	<%@ include file="/commons/taglibs.jsp" %>
 	<%@ include file="/commons/meta.jsp" %>
 	<link rel="stylesheet" type="text/css" href="${ctx }/scripts/framework/easyui/themes/b2bBlue/easyui.css">
@@ -28,7 +28,7 @@
 			<tr>
 				<td class='gridtitle'>充值编号：</td>
 				<td class='gridbody'><input type="text" id="Code" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>会员名称：</td>
+				<td class='gridtitle'>学员名称：</td>
 				<td class='gridbody'><input type="text" id="customerName" onkeydown="checkKey()"/></td>
 				<td class='gridtitle'>总 计：</td>
 				<td class='gridbody'><input name="totalMoney" id="totalMoney" readonly="true"/></td>

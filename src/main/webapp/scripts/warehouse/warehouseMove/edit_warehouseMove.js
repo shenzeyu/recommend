@@ -54,7 +54,7 @@ $(document).ready(function(){
 function getToolBarOpt(){
 	var opt = [
 		{	
-			text:'添加商品',
+			text:'添加资料',
 	 		iconCls:'icon-add',
 	 		handler:function(){
 	 			addWareRow(true);
@@ -88,8 +88,8 @@ function getColumnsOpt(){
 		{field:'fwarehousePositionId',width:0,align:'left'},
 		{field:'swarehousePositionId',width:0,align:'left'},
 		{field:'fwarehousePositionName',title:'发货仓位',width:30,align:'left',editor:'fwarehousePositionName'},
-		{field:'code',title:'商品编号',width:25,align:'left'},
-		{field:'wareName',title:'调库商品',width:25,align:'left',editor:'fwareName'},
+		{field:'code',title:'资料编号',width:25,align:'left'},
+		{field:'wareName',title:'调库资料',width:25,align:'left',editor:'fwareName'},
 		{field:'swarehousePositionName',title:'收货仓位',width:30,align:'left',editor:'swarehousePositionName'},
 		{field:'moveNum',title:'调库数量',width:20,editor:{type:'moveNum',options:{precision:'0'}}},
 		{field:'priceOut',title:'调出单价',width:20,editor:{type:'priceOut',options:{precision:'2'}}},
@@ -199,7 +199,7 @@ function checkForm(){
 
 //获取一个新的空货物项
 function buildMoveWare(){
-	var warehouseMoveWare = {};//商品
+	var warehouseMoveWare = {};//资料
 	warehouseMoveWare.id = '';
 	warehouseMoveWare.fwarehousePositionName = '';
 	warehouseMoveWare.fwarehousePositionId = '';
@@ -218,10 +218,10 @@ function buildMoveWare(){
 	return warehouseMoveWare;
 }
 
-//添加商品空行
+//添加资料空行
 function addWareRow(more){
 	var lastEditRowIndex;
-	var warehouseMoveWare = buildMoveWare();//获取一个新的空商品项
+	var warehouseMoveWare = buildMoveWare();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',warehouseMoveWare);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;
@@ -560,7 +560,7 @@ function selectSPosition(obj){
 		alert('请选择收获仓库');
 	}
 }
-//选择发货商品
+//选择发货资料
 function selectFwareName(obj){
 	var row = getEditingRow();//当前编辑行
 	var rowData = row.rowData;
@@ -571,7 +571,7 @@ function selectFwareName(obj){
 		var dataArr = 
 			window.showModalDialog(url, '',"status:no;left:yes;scroll:yes;resizable:no;help:no;dialogWidth:800px;dialogHeight:600px");
 		if(dataArr && dataArr.length > 1){
-			alert('只能选择一个商品');
+			alert('只能选择一个资料');
 		}else if(dataArr && dataArr.length == 1 ){
 			var warehousePositionWare = dataArr[0];
 			if(warehousePositionWare != null){

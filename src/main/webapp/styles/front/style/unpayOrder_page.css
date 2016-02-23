@@ -61,7 +61,7 @@ color:#666;
 
 
 
-/*============================浏览本商品的客户还买了===================================*/
+/*============================浏览本资料的客户还买了===================================*/
 
 .lookproduct{ width:1200px; height:30px; border-bottom:#2791e3 solid 2px; position:relative; margin-top:45px; float:left; overflow:hidden;}
 .lookproduct samp{ float:left; padding-top:0px; height:30px;  background:url(../images/a14.jpg) no-repeat center bottom; color:#0a7cd4; font-size:18px; font-family:"微软雅黑"; }

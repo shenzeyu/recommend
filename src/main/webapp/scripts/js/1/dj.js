@@ -1,4 +1,4 @@
-// 推荐商品
+// 推荐资料
 function tabChange(obj,id)
 {
  var arrayli = obj.parentNode.getElementsByTagName("li"); //获取li数组
@@ -17,7 +17,7 @@ function tabChange(obj,id)
   }
  }
 }
-// 商品详情
+// 资料详情
 function spxq(obj,id)
 {
  var arrayli = obj.parentNode.getElementsByTagName("li"); //获取li数组
@@ -61,7 +61,7 @@ function pjsp(obj,id,showid,type,Totalid,pageid)
  
  
 }
-// 商品资讯
+// 资料资讯
 function spzx(obj,id)
 {
  var arrayli = obj.parentNode.getElementsByTagName("li"); //获取li数组

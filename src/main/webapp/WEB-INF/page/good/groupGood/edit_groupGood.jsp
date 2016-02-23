@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-	<title>编辑团购/抢购/秒杀商品</title>
+	<title>编辑团购/抢购/秒杀资料</title>
 	<%@ include file="/commons/meta.jsp" %>
 	<%@ include file="/commons/taglibs.jsp" %>
 	
@@ -36,7 +36,7 @@
 			    		<s:hidden name="groupgood.modifyTime" />
 			    		<s:hidden name="groupgood.state" />
 			    		<s:hidden name="imgIdStr" id="imgIdStr"/>
-			    		<input type="hidden" name="" id="isInventory" value="1"/><!-- 商品类型，添加商品是判断商品类型、商品品牌的类型 -->	
+			    		<input type="hidden" name="" id="isInventory" value="1"/><!-- 资料类型，添加资料是判断资料类型、资料品牌的类型 -->	
 			    		<input type="hidden" name="groupgood.warehousePositionId" id="warehousePositionId" value=""/>
 						<input type="hidden" name="groupgood.warehouseId" id="warehouseId" value=""/>					
 									
@@ -45,22 +45,22 @@
 								<table width="100%"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor">
 						    	  <tr></tr>
 						    	   <tr>
-										<td class='gridtitle' width="15%">商品编号:</td>
+										<td class='gridtitle' width="15%">资料编号:</td>
 										<td class='gridbody'>
 											<s:textfield name="groupgood.code" readonly="true"/>
 										</td>
-										<td class='gridtitle'>商品名称:</td>
+										<td class='gridtitle'>资料名称:</td>
 										<td class='gridbody'>
 											<s:textfield name="groupgood.name" id="name"/><font color="red">*</font>
 										</td>
 									</tr>
 									<tr>
-										<td  class='gridtitle'>商品类别:</td>
+										<td  class='gridtitle'>资料类别:</td>
 										<td class='gridbody'>
 											<s:textfield name="groupgood.goodTypeName" id="goodTypeName" onclick="selectType(this)" readonly="true"/><font color="red">*</font>
 											<s:hidden name="groupgood.goodTypeId" id="goodTypeId" />
 										</td>
-										<td  class='gridtitle'>商品品牌:</td>
+										<td  class='gridtitle'>资料品牌:</td>
 										<td class='gridbody'>
 											<s:textfield name="groupgood.brandName" id="brandName" onclick="selectBrand(this)" readonly="true"/>
 											<s:hidden name="groupgood.brandId" id="brandId" />
@@ -91,37 +91,37 @@
 									<tr></tr>
 									
 										<tr>
-								     		<td  class='gridtitle'>商品类型:</td>
+								     		<td  class='gridtitle'>资料类型:</td>
 											<td class='gridbody'>
 												<input type="hidden" id="isInventoryStr" name="groupgood.isInventory" value="${groupgood.isInventory }"/>
 										    	<c:if test="${groupgood.id==null}">
 										    		<select onchange="changeIsInventory(this.value)">
-											    		<option value="请选择商品类型">--请选择商品类型--</option>
-											    		<option value="1">团购商品</option>
-											    		<option value="2">抢购商品</option>
-											    		<option value="3">秒杀商品</option>
+											    		<option value="请选择资料类型">--请选择资料类型--</option>
+											    		<option value="1">团购资料</option>
+											    		<option value="2">抢购资料</option>
+											    		<option value="3">秒杀资料</option>
 											    	</select>
 										    	</c:if>
 										    	<c:if test="${groupgood.id!=null}">
 										    		<c:if test="${groupgood.isInventory=='1'}">
 										    			<select onchange="changeIsInventory(this.value)">
-												    		<option value="1" selected="selected">团购商品</option>
-												    		<option value="2">抢购商品</option>
-												    		<option value="3">秒杀商品</option>
+												    		<option value="1" selected="selected">团购资料</option>
+												    		<option value="2">抢购资料</option>
+												    		<option value="3">秒杀资料</option>
 												    	</select>
 										    		</c:if>
 										    		<c:if test="${groupgood.isInventory=='2'}">
 										    			<select onchange="changeIsInventory(this.value)">
-												    		<option value="1">团购商品</option>
-												    		<option value="2" selected="selected">抢购商品</option>
-												    		<option value="3">秒杀商品</option>
+												    		<option value="1">团购资料</option>
+												    		<option value="2" selected="selected">抢购资料</option>
+												    		<option value="3">秒杀资料</option>
 												    	</select>
 										    		</c:if>
 										    		<c:if test="${groupgood.isInventory=='3'}">
 										    			<select onchange="changeIsInventory(this.value)">
-												    		<option value="1">团购商品</option>
-												    		<option value="2">抢购商品</option>
-												    		<option value="3" selected="selected">秒杀商品</option>
+												    		<option value="1">团购资料</option>
+												    		<option value="2">抢购资料</option>
+												    		<option value="3" selected="selected">秒杀资料</option>
 												    	</select>
 										    		</c:if>
 										    	</c:if>
@@ -220,7 +220,7 @@
 									<s:hidden name="groupgood.warehousePositionName" id="warehousePositionName"></s:hidden>
 								</c:if>
 									<tr>
-										<td class='gridtitle'>上传商品缩略图:</td>
+										<td class='gridtitle'>上传资料缩略图:</td>
 										<td class='gridbody' colspan="3">
 											<a href="javascript:void(0);" onclick="upload.open(this,'Good')">上传</a>
 											<c:if test="${groupgood.pic != null && groupgood.pic != ''}">
@@ -243,13 +243,13 @@
 							<div title="详细信息" style="padding:10px;">
 								<table width="100%"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor">	    	
 									<tr>
-										<td  class='gridtitle'>商品简介:</td>
+										<td  class='gridtitle'>资料简介:</td>
 										<td class='gridbody'>
 											<s:textarea name="goodExtend.introBrief" id="introBrief" cols="60" rows="3"/>
 										</td>
 									</tr>
 									<tr>
-										<td  class='gridtitle'>商品详情:</td>
+										<td  class='gridtitle'>资料详情:</td>
 										<td class='gridbody' >
 											<textarea id="intro" name="goodExtend.intro" cols="60" rows="10">${goodExtend.intro}&nbsp;</textarea>
 										</td>
@@ -283,10 +283,10 @@
 								</table>
 							</div>
 							
-							<div title="商品种类属性设置" style="padding:10px;">
+							<div title="资料种类属性设置" style="padding:10px;">
 								<table width="100%"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor">	
 									<tr>
-										<td  class='gridtitle' width="20%">商品种类:</td>
+										<td  class='gridtitle' width="20%">资料种类:</td>
 										<td class='gridbody'>
 											<s:select name="goodKind" id="goodKind" list="goodKindList"  listValue="name" listKey="id"  
 											     value="groupgood.goodKindId" onchange="showAttr(this)" headerKey="00" headerValue="请选择种类"></s:select>  
@@ -325,12 +325,12 @@
 								</table>
 							</div>
 							
-							<div title="商品规格" style="padding:10px;">
+							<div title="资料规格" style="padding:10px;">
 								<c:if test="${goodSpecificationList == null}">
 								<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-add" onclick="showSpecification()">选择规格项</a>
 								<br><br>
-								说明： 1、没有规格则默认生成一个货品;2、编号为空则自动生成编号，以商品的编号+“-”+序号;<br><br>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、浮动金额是在商品销售价的基础上增加或减少;4、规格一旦设定不可更改，可另建商品。<br><br>
+								说明： 1、没有规格则默认生成一个货品;2、编号为空则自动生成编号，以资料的编号+“-”+序号;<br><br>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、浮动金额是在资料销售价的基础上增加或减少;4、规格一旦设定不可更改，可另建资料。<br><br>
 								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、<font color="red">库存总和请与“基本信息”中的‘初始数量’相等;</font>
 								</c:if>
 								<div id="wareList">
@@ -376,11 +376,11 @@
 								</div>
 								<c:if test="${goodSpecificationList != null}">
 								<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-add" onclick="showSpecification2()">增加规格项</a>
-								&nbsp;&nbsp;<font color="red">要增加的规格项库存需为0,否则可能造成该商品的期初数据不准确</font>
+								&nbsp;&nbsp;<font color="red">要增加的规格项库存需为0,否则可能造成该资料的期初数据不准确</font>
 								<div id="wareList2">
 												<br><br>
-												说明： 1、没有规格则默认生成一个货品;2、编号为空则自动生成编号，以商品的编号+“-”+序号;<br><br>
-												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、浮动金额是在商品销售价的基础上增加或减少;4、规格一旦设定不可更改，可另建商品。<br><br>
+												说明： 1、没有规格则默认生成一个货品;2、编号为空则自动生成编号，以资料的编号+“-”+序号;<br><br>
+												&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、浮动金额是在资料销售价的基础上增加或减少;4、规格一旦设定不可更改，可另建资料。<br><br>
 												
 										
 								
@@ -391,9 +391,9 @@
 							<div title="搜索引擎SEO优化" style="padding:10px;">
 								<table width="100%"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor">	  
 									<tr>
-										<td  class='gridtitle'>商品页面标题:</td>
+										<td  class='gridtitle'>资料页面标题:</td>
 										<td class='gridbody'>
-											<s:textfield name="goodExtend.seoTitle" id="seoTitle" size="60"/>(留空则默认显示商品名称)
+											<s:textfield name="goodExtend.seoTitle" id="seoTitle" size="60"/>(留空则默认显示资料名称)
 										</td>
 									</tr>
 									<tr>
@@ -411,11 +411,11 @@
 								</table>							
 							</div>
 							
-							<div title="商品相册" style="padding:10px;">
+							<div title="资料相册" style="padding:10px;">
 								<table width="100%"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor">	 
 									<c:forEach items="${goodPicList}" var="goodPic" varStatus="m"> 	
 									<tr>
-										<td  class='gridtitle'  width="10%">上传商品图片${m.index + 1}:</td>
+										<td  class='gridtitle'  width="10%">上传资料图片${m.index + 1}:</td>
 										<td class='gridbody'>
 											<a href="javascript:void(0);" onclick="upload.open(this,'GoodAlbum')">上传</a>
 											<c:if test="${goodPic.relativePath != null && goodPic.relativePath  != ''}">
@@ -432,7 +432,7 @@
 							
 							<!-- 
 							
-								<div title="相关商品" style="padding:10px;">
+								<div title="相关资料" style="padding:10px;">
 								<table width="80%"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor" style="margin-top: 10px;">
 									<thead>
 										<th width="10%">

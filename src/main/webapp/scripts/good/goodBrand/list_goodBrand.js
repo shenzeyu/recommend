@@ -93,7 +93,7 @@ function closePopWindow(){
 	$('#edit').window('close');
 }
 
-//编辑商品类别
+//编辑资料类别
 function editBrand(brandId,parentId,level){
 	var url = ctx+'/goodBrand!edit.do?1=1';
 	if(brandId){
@@ -107,7 +107,7 @@ function editBrand(brandId,parentId,level){
 	}
 	 //弹出框
 	$('#edit').dialog({
-		title:"商品品牌管理",
+		title:"资料品牌管理",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,
@@ -158,7 +158,7 @@ function realoadGrid(brandCode,brandName){
 	url = encodeURI(encodeURI(url));
 	 //弹出框
 	$('#search').dialog({
-		title:"商品品牌搜索",
+		title:"资料品牌搜索",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,
@@ -169,7 +169,7 @@ function realoadGrid(brandCode,brandName){
     $('#getBrand').attr('src',url);
     $('#search').window('open');
 }
-//删除商品品牌
+//删除资料品牌
 function deleteGoodsType(id,level){
 	if(confirm('您确定要删除吗？')){
 		$.ajax({
@@ -226,7 +226,7 @@ function selectBrandone(parentId){
 		return opt;
 	}
 }
-//获取选中商品品牌
+//获取选中资料品牌
 function selectBrand(brandId,brandName){
 	if(todo=='show'){
 		window.returnValue = {'brandId':brandId,'brandName':brandName};

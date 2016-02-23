@@ -95,7 +95,7 @@ function getToolBarOpt(){
 	if('' == todo && $(goodInserts).val()=='1'){
 		opt =[
 			{	
-				text:'添加商品',
+				text:'添加资料',
 			    iconCls:'icon-add',
 			    handler:function(){
 					editData('');
@@ -172,10 +172,10 @@ function dateFormat(date){
 function editData(id){
 	var url = ctx+'/groupGood!edit.do?1=1';
 	var isInventory=$('#isInventory').val(); 
-	var title = '添加商品';
+	var title = '添加资料';
 	if(id){
 		url += '&groupgood.id='+id;
-		var title = '编辑商品';
+		var title = '编辑资料';
 	}
 	if(isInventory!=''||isInventory!=null){
 		url+='&groupgood.isInventory='+isInventory;
@@ -239,7 +239,7 @@ function deleteGood(id){
 						alert('删除成功!');
 						reloadDataGrid();
 					}else if(returnData == 'orderGood'){
-						alert('该商品已被订购，不能删除，您可以下架该商品!');
+						alert('该资料已被订购，不能删除，您可以下架该资料!');
 					}
 				},
 				error : function(){
@@ -249,20 +249,20 @@ function deleteGood(id){
 	  }
 	}
 }
-//冻结、激活商品
+//冻结、激活资料
 function updateState(id,state){
 	var optInfo = '';
 	var succInfo = '';
 	var errorInfo = '';
 	
 	if('c'==state){
-		optInfo = '你要下架这个商品吗?';
-		succInfo = '商品已下架';
-		errorInfo = '商品下架失败';
+		optInfo = '你要下架这个资料吗?';
+		succInfo = '资料已下架';
+		errorInfo = '资料下架失败';
 	}else if('s'==state){
-		optInfo = '你要上架这个商品吗?';
-		succInfo = '商品已上架';
-		errorInfo = '商品上架失败';
+		optInfo = '你要上架这个资料吗?';
+		succInfo = '资料已上架';
+		errorInfo = '资料上架失败';
 	}
 	if(confirm(optInfo)){
 		$.ajax({
@@ -285,7 +285,7 @@ function updateState(id,state){
 		});
 	}
 }
-//选择商品类别弹出窗
+//选择资料类别弹出窗
 function selectType(obj){
 	var obj = $(obj);
 	var dataArr = window.showModalDialog(ctx+"/goodType!list.do?todo=show", '',"status:no;left:yes;scroll:yes;resizable:no;help:no;dialogWidth:800px;dialogHeight:600px");

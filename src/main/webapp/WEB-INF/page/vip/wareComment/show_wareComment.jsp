@@ -59,7 +59,7 @@
 						  </tr>
 						  <tr>
 						    <td class='gridbody'style="padding-left:50px" >
-						    	评论商品:&nbsp;&nbsp;${wareComment.goodName}
+						    	评论资料:&nbsp;&nbsp;${wareComment.goodName}
 						    </td>
 						  </tr>
 						  <tr>

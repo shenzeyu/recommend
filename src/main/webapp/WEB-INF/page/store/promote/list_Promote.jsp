@@ -27,7 +27,7 @@
 				<td class='gridbody'><input type="text" id="code" onkeydown="checkKey()" /></td>
 				<td class='gridtitle'>专题主题：</td>
 				<td class='gridbody'><input type="text" id="subject" onkeydown="checkKey()" /></td>
-				<td class='gridtitle'>所属商品类别</td>
+				<td class='gridtitle'>所属资料类别</td>
 				<td class='gridbody' colspan="10">
 					<s:textfield id="goodTypeName" onclick="selectType()"/>
 					<s:hidden id="goodTypeId" />

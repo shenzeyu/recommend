@@ -129,7 +129,7 @@ function editData(id){
 	if(id != ''){
 		url += '&warehouseInto.id='+id;
 		if(type =='0'){
-			title = '编辑商品入库单';
+			title = '编辑资料入库单';
 		}
 		if(type =='1'){
 			title = '编辑赠品入库单';
@@ -139,7 +139,7 @@ function editData(id){
 		}
 	}else{
 		if(type =='0'){
-			title = '新增商品入库单';
+			title = '新增资料入库单';
 		}
 		if(type =='1'){
 			title = '新增赠品入库单';

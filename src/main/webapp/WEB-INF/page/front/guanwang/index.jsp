@@ -124,21 +124,6 @@
         <li>4</li>     
   	</ul>  
 </div>
-	<!--[if !IE]>小图<![endif]-->
-        <div class="banner1">
-        	 <c:forEach items="${advertiseList}" var="promotionActivity">
-		          <c:if test="${promotionActivity.placeId=='首页促销1'}">
-		          		<h1 class="banner1_text"><a href="${promotionActivity.url}" target="_blank"><img src="${ctx}${promotionActivity.pic }" width="305" height="149"/></a></h1>
-		          </c:if>
-		           <c:if test="${promotionActivity.placeId=='首页促销2'}">
-		          		<h1 class="banner1_text1"><a href="${promotionActivity.url}" target="_blank"><img src="${ctx}${promotionActivity.pic }" width="305" height="149"/></a></h1>
-		          </c:if>
-		           <c:if test="${promotionActivity.placeId=='首页促销3'}">
-		          		<h1 class="banner1_text2"><a href="${promotionActivity.url}" target="_blank"><img src="${ctx}${promotionActivity.pic }" width="305" height="149"/></a></h1>
-		          </c:if>
-		     </c:forEach>  
-        </div>
-        <!--[if !IE]>小图结束<![endif]-->
       </div>
     </div>
   </div>
@@ -156,7 +141,6 @@
 	            <div class="tg01_text3">
 	            <div class="tg01_text301">
 	             <div class="tg01_text301_title"><a href="${ctx }/cpxq.do?good.id=${good.id }">${good.name }<span>${good.introBrief }</span></a></div>
-	              <div class="tg01_text301_title1"><span>¥${good.price }</span></div>
 	              </div>
 	            </div>
 	          </div>
@@ -197,7 +181,6 @@
 	    <c:forEach items="${goodList2}" var="good" begin="0" end="4">
 	    <li><a href="${ctx }/cpxq.do?good.id=${good.id }"><img src="${ctx}${good.pic }" /></a>
 	      <p><a href="${ctx }/cpxq.do?good.id=${good.id }">${good.name }<samp>${good.introBrief }</samp></a></p>
-	    <span>¥${good.price }</span></li>
 	    </c:forEach>
   
     

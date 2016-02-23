@@ -57,7 +57,7 @@ function getTableHeadOpt(){
 function getColumnsOpt(){
 	var opt = [
 		{field:'wareId',width:0,align:'left'},
-		{field:'goodName',title:'评论商品',width:25,align:'left'},
+		{field:'goodName',title:'评论资料',width:25,align:'left'},
 		{field:'content',title:'评论内容',width:25,align:'left'},
 		{field:'createTime',title:'评论时间',width:25,align:'left'},
 		{field:'level',title:'评论等级',width:25,align:'left',formatter:stateFormat}

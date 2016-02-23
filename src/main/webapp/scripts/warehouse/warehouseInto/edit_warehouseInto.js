@@ -54,7 +54,7 @@ $(document).ready(function(){
 function getToolBarOpt(){
 	var opt = [
 		{	
-			text:'添加商品',
+			text:'添加资料',
 	 		iconCls:'icon-add',
 	 		handler:function(){
 	 			addIntoWare(true);
@@ -85,8 +85,8 @@ function getColumnsOpt(){
 	var opt = [
 		{field:'wareId',width:0,align:'left'},
 		{field:'warehousePositionId',width:0,align:'left'},
-		{field:'code',title:'商品编号',width:20,align:'left'},
-		{field:'wareName',title:'商品名称',width:25,align:'left'},
+		{field:'code',title:'资料编号',width:20,align:'left'},
+		{field:'wareName',title:'资料名称',width:25,align:'left'},
 		{field:'warehousePositionName',title:'入库仓位',width:20,editor:'warehosePositionName'},
 		{field:'intoNum',title:'入库数量',width:20,editor:{type:'intoNum',options:{precision:'0'}}},
 		{field:'priceIn',title:'入库价格',width:20,editor:{type:'priceIn',options:{precision:'2'}}},
@@ -132,8 +132,8 @@ function submitSaveForm(){
 				var ware = wareArr[i];
 				var wareId = ware.wareId;
 				if(wareId && '' != wareId){
-					var wareIdHtml = '<input type="hidden" name="wareIdArr" value="'+wareId+'" />'; 							//商品id
-					var wareNameHtml = '<input type="hidden" name="wareNameArr" value="'+ware.wareName+'" />'; 						//商品名
+					var wareIdHtml = '<input type="hidden" name="wareIdArr" value="'+wareId+'" />'; 							//资料id
+					var wareNameHtml = '<input type="hidden" name="wareNameArr" value="'+ware.wareName+'" />'; 						//资料名
 					var warehousePositionIdHtml = '<input type="hidden" name="warehousePositionIdArr" value="'+ware.warehousePositionId+'" />'; //仓位id
 					var warehousePositionNameHtml = '<input type="hidden" name="warehousePositionNameArr" value="'+ware.warehousePositionName+'" />';//仓位名
 					var intoNumHtml = '<input type="hidden" name="intoNumArr" value="'+ware.intoNum+'" />'; 							//入库数量
@@ -142,13 +142,13 @@ function submitSaveForm(){
 					htmlAll += '<tr>'+ wareIdHtml + wareNameHtml  + warehousePositionIdHtml + warehousePositionNameHtml + intoNumHtml + priceInHtml + moneyInHtml + '</tr>'; 
 				}
 			}
-			var wareTable = $('#wareTable');//订单商品项数据区
+			var wareTable = $('#wareTable');//订单资料项数据区
 			wareTable.html(htmlAll);
 		}
 		var type = $('#type').val();
 		var title = '';
 		if(type == '0'){
-			title = '商品入库单';
+			title = '资料入库单';
 		}else if(type == '1'){
 			title = '赠品入库单';
 		}else if(type == '2'){
@@ -177,9 +177,9 @@ function checkForm(){
 	return true;
 }
 
-//获取一个新的空商品项
+//获取一个新的空资料项
 function buildIntoWare(){
-	var intoWare = {};//商品
+	var intoWare = {};//资料
 	intoWare.id = '';
 	intoWare.wareId = '';
 	intoWare.code = '';
@@ -192,10 +192,10 @@ function buildIntoWare(){
 	return intoWare;
 }
 
-//添加商品空行
+//添加资料空行
 function addGoodRow(more){
 	var lastEditRowIndex;
-	var intoWare = buildIntoWare();//获取一个新的空商品项
+	var intoWare = buildIntoWare();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',intoWare);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;
@@ -213,7 +213,7 @@ function addGoodRow(more){
 	return rowData;
 }
 
-//订单商品
+//订单资料
 function addIntoWare(more){
 	var dataArr = new Array();
 	dataArr = common.getWare(true);
@@ -222,10 +222,10 @@ function addIntoWare(more){
 		var dataLen = dataArr.length;
 		for(var i=0;i<dataLen;i++){
 			var data = dataArr[i];
-			var goodCode = data.code;//商品编码
-			var isExist = isGoodExist(goodCode);//商品是否已存在
+			var goodCode = data.code;//资料编码
+			var isExist = isGoodExist(goodCode);//资料是否已存在
 			if(isExist){
-				alert('商品已存在，商品编号:'+data.code);
+				alert('资料已存在，资料编号:'+data.code);
 			}else{
 				var rowData = {};		//增加的行对象数组
 				var row;				//行对象
@@ -258,17 +258,17 @@ function addIntoWare(more){
 				var row = rowData.row;
 				var rowIndex = rowData.rowIndex;
 				if(row){	//设置页面显示的值
-					row.wareId = data.id;//商品id
+					row.wareId = data.id;//资料id
 					row.code = data.code;
-					var goodName = data.goodName;//商品名称
+					var goodName = data.goodName;//资料名称
 					if(goodName){
 						row.wareName = goodName;
 					}
-					var goodTypeName = data.goodTypeName;//商品类别
+					var goodTypeName = data.goodTypeName;//资料类别
 					if(goodTypeName){
 						row.goodTypeName = goodTypeName;
 					}
-					var wareSpecificationVal = data.wareSpecificationVal;//商品规格
+					var wareSpecificationVal = data.wareSpecificationVal;//资料规格
 					if(wareSpecificationVal){
 						row.wareSpecificationVal = wareSpecificationVal;
 					}
@@ -396,7 +396,7 @@ function getEditingRow(){
 	
 	return editingRow;
 }
-//商品是否已存在
+//资料是否已存在
 function isGoodExist(goodCode){
 	var isExist = false;
 	var rows = $(gId).datagrid('getRows');//末行的下标

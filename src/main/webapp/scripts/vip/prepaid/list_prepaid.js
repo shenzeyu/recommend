@@ -61,7 +61,7 @@ function getTableHeadOpt(){
 function getColumnsOpt(){
 	var opt = [
 		{field:'code',title:'充值编号',width:25,align:'left'},
-		{field:'customerName',title:'会员名称',width:15,align:'left'},
+		{field:'customerName',title:'学员名称',width:15,align:'left'},
 		{field:'prepaidMoney',title:'充值金额',width:15,align:'left',formatter:prepaidMoneyFormat},
 		{field:'handlerName',title:'经手人',width:15,align:'left'},
 		{field:'state',title:'充值状态',width:15,align:'left',formatter:stateFormat},
@@ -101,7 +101,7 @@ function showData(id){
 	}
 	 //弹出框
 	$('#edit').dialog({
-		title:"会员充值管理",
+		title:"学员充值管理",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,
@@ -120,7 +120,7 @@ function showData(id){
     $('#edit').window('open');
 }
 
-//新增会员充值
+//新增学员充值
 function editData(id){
 	var url = ctx+'/prepaid!edit.do?1=1';
 	if(id != ''){
@@ -149,7 +149,7 @@ function editData(id){
     $('#edit').window('open');
 }
 
-//审核会员充值
+//审核学员充值
 function auditData(id){
 	var url = ctx+'/prepaid!edit.do?1=1';
 	if(id != ''){

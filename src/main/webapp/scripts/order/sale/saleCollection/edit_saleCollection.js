@@ -212,7 +212,7 @@ function checkForm(){
 
 //获取一个新的空项
 function buildCollectionItem(){
-	var collectionItem = {};//商品
+	var collectionItem = {};//资料
 	collectionItem.id = '';
 	collectionItem.orderId = '';
 	collectionItem.code = '';
@@ -258,7 +258,7 @@ function addCollectionItem(more){
 			for(var i=0;i<dataLen;i++){
 				var data = dataArr[i];
 				var code = data.code;//单据id编码
-				var isExist = isOrderExist(code);//商品是否已存在
+				var isExist = isOrderExist(code);//资料是否已存在
 				if(isExist){
 					alert('单据已存在，单据编号:'+data.code);
 				}else{

@@ -102,7 +102,7 @@ public class FrontGroupBuyAction extends BaseAction {
 		try {
 			this.goodExtend = this.goodExtendService.getByGoodId(this.groupgood.getId());
 		} catch (Exception e) {
-			logger.error("商品扩展信息出错", e);
+			logger.error("资料扩展信息出错", e);
 		}
 		this.advertiseList = this.advertiseService.getAdvertiseList();
 		this.informationList = this.informationService.select(new Information());

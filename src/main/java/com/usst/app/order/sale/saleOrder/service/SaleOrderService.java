@@ -376,11 +376,11 @@ public class SaleOrderService extends BaseService<SaleOrder> {
 
 			commentInfoCell.setColspan(8);
 			commentInfoCell.setVerticalAlignment(1);
-			commentInfoCell.addElement(new Paragraph("商品详细信息", fontChinese));
+			commentInfoCell.addElement(new Paragraph("资料详细信息", fontChinese));
 			orderGoodTable.addCell(commentInfoCell);
 
-			orderGoodTable.addCell(new PdfPCell(new Paragraph("商品编号", fontChinese)));
-			orderGoodTable.addCell(new PdfPCell(new Paragraph("商品名称", fontChinese)));
+			orderGoodTable.addCell(new PdfPCell(new Paragraph("资料编号", fontChinese)));
+			orderGoodTable.addCell(new PdfPCell(new Paragraph("资料名称", fontChinese)));
 			orderGoodTable.addCell(new PdfPCell(new Paragraph("类别", fontChinese)));
 			orderGoodTable.addCell(new PdfPCell(new Paragraph("规格 ", fontChinese)));
 			orderGoodTable.addCell(new PdfPCell(new Paragraph("单价", fontChinese)));

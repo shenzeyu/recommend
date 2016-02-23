@@ -85,7 +85,7 @@
 	
 
 	<!-- ly 开始-->
-		<!--首页显示商品-->
+		<!--首页显示资料-->
 		<sql id="Good_SY_select_where_clause">
 			<dynamic prepend="where">
 				<isNotEmpty prepend="and" property="id">
@@ -110,7 +110,7 @@
 				<isNotEmpty prepend="and" property="beginTime">
 					<![CDATA[abc.begin_time >= #beginTime#]]>
 				</isNotEmpty>-->
-				<!-- 团购未结束的商品 -->
+				<!-- 团购未结束的资料 -->
 				<isNotEmpty prepend="and" property="endhdTime">
 					<![CDATA[abc.end_time >= #endhdTime#]]>
 				</isNotEmpty>
@@ -139,7 +139,7 @@
 				</isEqual>
 			</dynamic>
 		</sql>		
-		<!--首页显示商品-->
+		<!--首页显示资料-->
 		<select id="Good_SY_select" resultMap="GoodtooResult" cacheModel="Good_cache">
 			select * from (
 				select ab.*,c.price money,c.area_id areas_id,c.property p_property,c.tag p_tag from (
@@ -160,7 +160,7 @@
 			</dynamic>
 		</select>
 		
-		<!-- 首页你感兴趣商品展示【查询用户行为】 -->
+		<!-- 首页你感兴趣资料展示【查询用户行为】 -->
 		<select id="Good_SY2_select" resultMap="GoodtooResult" cacheModel="Good_cache">
 			select * from (select ab.*,c.price money,c.area_id areas_id,c.property p_property,c.tag p_tag from ( 					
 			select a.*,b.intro_brief from (
@@ -170,7 +170,7 @@
 			LEFT JOIN good_price c on c.good_id=ab.id) abc  			 			
 			<include refid="Good_SY_select_where_clause"/> group by abc.id  		
 		</select>
-		<!-- 商品父类频道商品查询 -->
+		<!-- 资料父类频道资料查询 -->
 		<select id="Good_SYfuleipindao_select" resultMap="GoodtooResult" cacheModel="Good_cache">
 			select * from (
 				select ab.*,c.price money,c.area_id areas_id,c.property p_property,c.tag p_tag from (
@@ -194,7 +194,7 @@
 			</dynamic>
 		</select>
 		
-		<!-- 首页根据类别查询商品并按条件查询 -->
+		<!-- 首页根据类别查询资料并按条件查询 -->
 		<sql id="Good_SYgoodType_select_where_clause">
 			<dynamic prepend="where">
 				<isNotEmpty prepend="and" property="isInventory">
@@ -230,7 +230,7 @@
 				</isEqual>
 			</dynamic>		
 		</sql>
-		<!-- 首页根据类别查询商品并按条件查询 -->
+		<!-- 首页根据类别查询资料并按条件查询 -->
 		<select id="Good_SYgoodType_select" resultMap="GoodtooResult" cacheModel="Good_cache">
 			select * from (
 				select ab.*,c.price money,c.area_id areas_id,c.property p_property,c.tag p_tag from (
@@ -257,14 +257,14 @@
 		
 		
 		
-		<!-- 首页根据goodId查询商品的库存总量 -->
+		<!-- 首页根据goodId查询资料的库存总量 -->
 		<select id="Good_warehousecount_query_ToT" resultClass="java.lang.Integer" cacheModel="Good_cache">
 			select sum(ware_count) from warehouse_ware where ware_id in (
 				select id from ware where good_id=#id#
 			)
 		</select>
 		
-		<!-- 某一级分类所有商品 -->
+		<!-- 某一级分类所有资料 -->
 		<select id="Good_count_goodTypeOne_query_ToT" resultClass="java.lang.Integer" cacheModel="Good_cache">
 			select COUNT(*) from good where id in (
 				select id from good where good_type_id =#goodTypeId# 
@@ -275,7 +275,7 @@
 			) order by create_time desc
 		</select>
 		
-		<!-- 某二级分类所有商品 -->
+		<!-- 某二级分类所有资料 -->
 		<select id="Good_count_goodTypeTwo_query_ToT" resultClass="java.lang.Integer" cacheModel="Good_cache">
 			select COUNT(*) from good where id in (
 				select id from good where good_type_id =#goodTypeId#
@@ -344,7 +344,7 @@
 			</isNotNull>
 		</dynamic>
 	</sql>
-	<!-- 三级页面判断商品类型id是否为空的条件查询 -->
+	<!-- 三级页面判断资料类型id是否为空的条件查询 -->
 	<sql id="Good_proptbrandPage3_goodType_select_where_clause">
 		<isNotEmpty prepend="and" property="typeidPage">
 			good_type_id in (select id from good_type where parent_id=#typeidPage# or id=#typeidPage#)
@@ -471,16 +471,16 @@
 			<isNotEmpty prepend="and" property="commentCount">
 				comment_count = #commentCount#
 			</isNotEmpty>
-			<!-- 查询二级分类以下的商品 
+			<!-- 查询二级分类以下的资料 
 			<isNotEmpty prepend="and" property="propt">
 				good_type_id  in (select id from good_type where parent_id=#parentId#)
 			</isNotEmpty>  -->
-			<!-- 查询二级页面商品 -->
+			<!-- 查询二级页面资料 -->
 			<isNotEmpty prepend="and" property="typeId">
 				good_type_id =#typeId#
 					or good_type_id in  (select id from good_type where parent_id=#typeId#) and is_inventory='0' 
 			</isNotEmpty>
-			<!-- 查询三级页面商品 -->
+			<!-- 查询三级页面资料 -->
 			<isNotEmpty prepend="and" property="typeidPage3">
 				is_inventory ='0' and good_type_id in( 
 	   				select id from good_type where id =#typeidPage3# or parent_id =#typeidPage3#
@@ -568,7 +568,7 @@
 	</select>
 	
 	<!-- 前面太乱，没有注释，我写的查询从这里开始（ly）-->
-	<!--查询一级type包涵下所有的商品-->
+	<!--查询一级type包涵下所有的资料-->
 	<sql id="Good_sel_select_where_clause">
 		<dynamic prepend="where">
 			<isNotEmpty prepend="and" property="property">
@@ -605,7 +605,7 @@
 		<include refid="Good_sel_select_where_clause"/>
 		order by create_time desc
 	</select>
-	<!-- 查询客户是否买过这个商品 -->
+	<!-- 查询客户是否买过这个资料 -->
 	<select id="Good_select_buy_select" resultMap="GoodResult" cacheModel="Good_cache">
 	select * from good where id in (
 	 select good_id from ware where id in (
@@ -641,7 +641,7 @@
 			<isNotEmpty prepend="and" property="isNext">
 				is_next = #isNext#
 			</isNotEmpty>
-			<!-- 查询一级页面的商品 -->
+			<!-- 查询一级页面的资料 -->
 			<isNotEmpty prepend="and" property="searchType">
 				good_type_id in (
     			   select id from good_type where parent_id in (
@@ -656,14 +656,14 @@
 		order by code desc
 	</select>
 	
-	<!--根据三级商品类别Id查询订单商品-->
+	<!--根据三级资料类别Id查询订单资料-->
 	<select id="selectWhereType_select" resultMap="GoodResult" cacheModel="Good_cache">
 		select * from good where id in (select good_id from ware)
 			and good_type_id=#goodTypeId#		 
 		order by code desc
 	</select>
 	
-	<!-- 查询特殊商品 -->
+	<!-- 查询特殊资料 -->
 	<select id="Good_isInventory_select" resultMap="GoodResult" cacheModel="Good_cache">
 		select * from good where is_inventory = #isInventory# order by sort desc
 	</select>
@@ -678,7 +678,7 @@
 			</dynamic>
 		order by code desc
 	</select>
-	<!-- 根据商品Id数组进行in查询 -->
+	<!-- 根据资料Id数组进行in查询 -->
 	<select id="Good_by_ids_select" resultMap="GoodResult">
 		select * from good  
 			<dynamic prepend="where">
@@ -692,7 +692,7 @@
 		order by code desc
 	</select>
 	
-	<!-- 根据订单id获取订单商品 -->
+	<!-- 根据订单id获取订单资料 -->
 	<select id="Good_by_orderid_select" resultMap="GoodResult">
 		select * from good where id in (
 			select good_id from ware where id in (

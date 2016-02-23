@@ -35,7 +35,7 @@
 	<div class="register1">
 	<form action="" name="registerForm" id="registerForm" method="post">
 		<div class="register_left">
-	<div class="register01">e购商城会员注册</div>
+	<div class="register01">e购商城学员注册</div>
 	<div class="login0202_text1">
   <h1>登录账号：</h1>
   <h2><input onfocus="dlzh('zcyc1','','show')" onblur="dlzh('zcyc1','','hidden')" name="customer.code" type="text"  class="login0202_text1input" id="usercode" /></h2>

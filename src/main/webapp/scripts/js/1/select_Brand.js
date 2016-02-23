@@ -36,7 +36,7 @@ var goodTypeId=$('#goodTypeId').val();
 		},"json");
 }
 
-//查询推荐商品(取疯狂抢购)
+//查询推荐资料(取疯狂抢购)
 function selGood(){
 	var goodTypeId=$('#goodTypeId').val();
 	$.ajax({
@@ -107,7 +107,7 @@ function seleGood(){
 		},"json");
 }
 
-//商品展示
+//资料展示
 function Alltypegood(){
 	var goodTypeId=$('#goodTypeId').val();
 	var textHtmls="";
@@ -122,9 +122,9 @@ function Alltypegood(){
 			  charset:"utf-8",
 			  success : function(returnData){ 
 			 	var data = eval(returnData);//解析json数据
-			 	//第1个商品模块
+			 	//第1个资料模块
 			 	Lookgood1(data.rows[0].id,data.rows[0].name);
-			 	//第2个商品模块
+			 	//第2个资料模块
 			 	var v='';
 			 	$('#EJDH').empty();
 			 		var htmls="";
@@ -158,7 +158,7 @@ function Alltypegood(){
 		},"json");
 }
 
-//编辑第一个商品模块
+//编辑第一个资料模块
 function Lookgood1(goodTypeId,goodTypeName){
 	$.ajax({
 			  type: "POST",
@@ -195,7 +195,7 @@ function Lookgood1(goodTypeId,goodTypeName){
 		},"json");
 }
 
-//编辑第二个商品模块
+//编辑第二个资料模块
 function Lookgood2(goodTypeId,goodTypeName,a){
 var textHtml="";
 	$.ajax({

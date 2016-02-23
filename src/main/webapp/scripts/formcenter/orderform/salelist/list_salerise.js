@@ -129,7 +129,7 @@ function clickRow(id,name){
 	}
 }
 
-//选择商品类别弹出窗
+//选择资料类别弹出窗
 function selectType(obj){
 	var obj = $(obj);
 	var dataArr = window.showModalDialog(ctx+"/goodType!list.do?todo=show", '',"status:no;left:yes;scroll:yes;resizable:no;help:no;dialogWidth:800px;dialogHeight:600px");

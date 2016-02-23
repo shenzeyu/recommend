@@ -99,7 +99,7 @@
 						    </td>
 						  </tr>
 						  <tr>
-							<td class='gridtitle'>允许兑换的会员等级</td>
+							<td class='gridtitle'>允许兑换的学员等级</td>
 							<td class='gridbody' colspan="5">
 								<c:forEach items="${vipLevelList}" var="vipLevel">
            						<input type="checkbox" name="vipLevelIdArr"  value="${vipLevel.id}" 
@@ -130,7 +130,7 @@
 						
 						<div class="clearfloat"></div>
 						<div>
-							<table id="giftGoodTable" style="display: none;"></table><%-- 促销商品 --%>
+							<table id="giftGoodTable" style="display: none;"></table><%-- 促销资料 --%>
 						    <table id="dataGrid" ></table>
 						</div>
 						<div class="clear"></div><br>

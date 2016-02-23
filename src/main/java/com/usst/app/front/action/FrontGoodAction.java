@@ -605,7 +605,7 @@ public class FrontGoodAction extends BaseAction {
 		try {
 			this.goodExtend = this.goodExtendService.getByGoodId(this.good.getId());
 		} catch (Exception e) {
-			logger.error("商品扩展信息出错", e);
+			logger.error("资料扩展信息出错", e);
 		}
 		try {
 			Double groupPrice = Double.valueOf(0.0D);
@@ -629,7 +629,7 @@ public class FrontGoodAction extends BaseAction {
 			getRequest().setAttribute("goodComposeSize", Integer.valueOf(this.goodComposeList.size()));
 			getRequest().setAttribute("goodSpecificationnumber", Integer.valueOf(this.list1.size()));
 		} catch (Exception e) {
-			logger.error("获取商品组合出错", e);
+			logger.error("获取资料组合出错", e);
 		}
 		if (loginMan != null) {
 			if (this.browse == null) {
@@ -1824,7 +1824,7 @@ public class FrontGoodAction extends BaseAction {
 			getRequest().setAttribute("goodRelateSize", Integer.valueOf(this.goodRelateList.size()));
 		} catch (Exception e) {
 			e.printStackTrace();
-			logger.error("获取相关商品", e);
+			logger.error("获取相关资料", e);
 		}
 		if ((pageInfo.getCount() > 0) && (pageInfo.getCount() % pageSize != 0)) {
 			pageInfo.setPageCount(pageInfo.getCount() / pageSize + 1);
@@ -1914,7 +1914,7 @@ public class FrontGoodAction extends BaseAction {
 			}
 			getRequest().setAttribute("goodRelateSize", Integer.valueOf(this.goodRelateList.size()));
 		} catch (Exception e) {
-			logger.error("获取相关商品", e);
+			logger.error("获取相关资料", e);
 		}
 		if ((pageInfo.getCount() > 0) && (pageInfo.getCount() % pageSize != 0)) {
 			pageInfo.setPageCount(pageInfo.getCount() / pageSize + 1);
@@ -2034,7 +2034,7 @@ public class FrontGoodAction extends BaseAction {
 						this.resultTree = jsarry;
 					}
 				} catch (Exception e) {
-					logger.error("获取商品类别出错", e);
+					logger.error("获取资料类别出错", e);
 				}
 			}
 			if (this.good.getBrandId() != null) {
@@ -2062,7 +2062,7 @@ public class FrontGoodAction extends BaseAction {
 						this.resultTree = jsarry;
 					}
 				} catch (Exception e) {
-					logger.error("获取商品品牌出错", e);
+					logger.error("获取资料品牌出错", e);
 				}
 			}
 		}
@@ -2079,7 +2079,7 @@ public class FrontGoodAction extends BaseAction {
 					this.resultTree = jsarry;
 				}
 			} catch (Exception e) {
-				logger.error("获取关联商品出错", e);
+				logger.error("获取关联资料出错", e);
 			}
 			try {
 				this.goodComposeList = this.goodComposeService.getGoodComposeByGoodId(this.good.getId());
@@ -2093,7 +2093,7 @@ public class FrontGoodAction extends BaseAction {
 					}
 				}
 			} catch (Exception e) {
-				logger.error("获取组合商品出错", e);
+				logger.error("获取组合资料出错", e);
 			}
 		}
 		return "success";
@@ -2147,7 +2147,7 @@ public class FrontGoodAction extends BaseAction {
 				this.advertise.setPlace("二级页小方块");
 			}
 			if (this.advertise.getPlace().equals("spxqgg")) {
-				this.advertise.setPlace("商品详情广告");
+				this.advertise.setPlace("资料详情广告");
 			}
 		}
 		this.advertiseList = this.advertiseService.getByPlaceAdvertiseList(this.advertise);
@@ -2209,7 +2209,7 @@ public class FrontGoodAction extends BaseAction {
 					}
 				}
 			} catch (Exception e) {
-				logger.error("抢购商品更新出错！", e);
+				logger.error("抢购资料更新出错！", e);
 			}
 		}
 		this.good.setIsInventory("2");

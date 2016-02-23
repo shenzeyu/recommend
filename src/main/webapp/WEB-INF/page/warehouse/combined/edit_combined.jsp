@@ -77,8 +77,8 @@
 						      <s:textfield id="warehouseName" name="combined.warehouseName" onclick="selectWarehouse()" cssClass="inputTextBorder" readonly="true" />
 						    </td>
 						    <td class='gridtitle'>
-						   	 	<c:if test="${combined.type == '0'}">组合商品</c:if>
-						   	 	<c:if test="${combined.type == '1'}">拆分商品</c:if>
+						   	 	<c:if test="${combined.type == '0'}">组合资料</c:if>
+						   	 	<c:if test="${combined.type == '1'}">拆分资料</c:if>
 						    </td>
 						    <td class='gridbody'>
 						      <s:hidden id="wareId" name="combined.wareId"/>

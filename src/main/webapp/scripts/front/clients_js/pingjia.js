@@ -46,7 +46,7 @@ function submitSaveComment(){
 					window.close();
 				}else if(returnDatas=='errorBuy'){
 					$("#content").val('');
-					document.getElementById("remakeDIV").innerHTML="<font color='red'>您还未购买此商品，请购买后再进行品论。</font>";
+					document.getElementById("remakeDIV").innerHTML="<font color='red'>您还未购买此资料，请购买后再进行品论。</font>";
 					return false;
 				}else if(returnDatas=='false'){
 					alert("保存失败！");
@@ -119,7 +119,7 @@ function submitSaveMessge1(){
       }
     }
     
-    if(type=='商品咨询'){
+    if(type=='资料咨询'){
     	type=0;
     }else if(type=='配送/支付'){
     	type=1;
@@ -170,7 +170,7 @@ function submitSaveMessge2(){
       }
     }
     
-    if(type=='商品咨询'){
+    if(type=='资料咨询'){
     	type=0;
     }else if(type=='配送/支付'){
     	type=1;
@@ -222,7 +222,7 @@ function submitSaveMessge3(){
       }
     }
     
-    if(type=='商品咨询'){
+    if(type=='资料咨询'){
     	type=0;
     }else if(type=='配送/支付'){
     	type=1;
@@ -273,7 +273,7 @@ function submitSaveMessge4(){
       }
     }
     
-    if(type=='商品咨询'){
+    if(type=='资料咨询'){
     	type=0;
     }else if(type=='配送/支付'){
     	type=1;
@@ -312,7 +312,7 @@ function submitSaveMessge4(){
 	
 //加入收藏
 function addGoodToFavorite(goodId){
-    // 商品Id
+    // 资料Id
 	if(goodId != ''){
 		var url = ctx +"/addGoodToFavorite.do?favorite.goodId="+goodId;
 		$.ajax({
@@ -327,7 +327,7 @@ function addGoodToFavorite(goodId){
 					alert("请先登录");
 					window.location.href = ctx+'/frontLogin.do';
 				}else if(returnData=='error'){
-					alert("您已经收藏过该商品，不用再收藏了！");
+					alert("您已经收藏过该资料，不用再收藏了！");
 					return;
 				}else{
 					alert('加入收藏失败!');
@@ -338,7 +338,7 @@ function addGoodToFavorite(goodId){
 		 	}
 		});
 	}else{
-		alert('你选择的商品不存在 ');
+		alert('你选择的资料不存在 ');
 	}
 }	
 

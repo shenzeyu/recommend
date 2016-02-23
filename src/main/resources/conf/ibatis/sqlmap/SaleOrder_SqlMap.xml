@@ -116,7 +116,7 @@
 		<include refid="SaleOrder_query_select_where_clause"/>
 	</select>
 	
-	<!-- 查询未评论的商品 -->
+	<!-- 查询未评论的资料 -->
 	<select id="SaleOrder_comment_select" resultMap="SaleOrderResult">
 		select * from sale_order where id in (
 			select sale_id from sale_ware where ware_id in (

@@ -81,7 +81,7 @@
 						    </td>
 						  </tr>
 						    <tr>
-						    <td class='gridtitle'>所属商品类别</td>
+						    <td class='gridtitle'>所属资料类别</td>
 						    <td class='gridbody' colspan="10">
 						    	<s:textfield name="promote.goodTypeName" id="goodTypeName" onclick="selectType()" readonly="true"/>
 								<s:hidden name="promote.goodTypeId" id="goodTypeId" />
@@ -142,7 +142,7 @@
 						
 						<div class="clearfloat"></div>
 						<div>
-							<table id="promoteGoodTable" style="display: none;"></table><%-- 促销商品 --%>
+							<table id="promoteGoodTable" style="display: none;"></table><%-- 促销资料 --%>
 						    <table id="dataGrid" ></table>
 						</div>
 						<div class="clear"></div><br>

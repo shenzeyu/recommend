@@ -97,7 +97,7 @@ function getToolBarOpt(){
 	if($(goodInserts).val()=='1')
 	{
 			 opt = [{
-		     text:'新增商品大类',
+		     text:'新增资料大类',
 		     iconCls:'icon-add',
 		     handler:function(){
 		         editGoodType('','','1');
@@ -147,7 +147,7 @@ function closePopWindow(){
 	$('#edit').window('close');
 }
 
-//编辑商品类别
+//编辑资料类别
 function editGoodType(typeId,parentId,level){
 	var url = ctx+'/goodType/edit.html?1=1'; 
 	if(typeId){
@@ -166,7 +166,7 @@ function editGoodType(typeId,parentId,level){
 	
 	 //弹出框
 	$('#edit').dialog({
-		title:"商品类别管理",
+		title:"资料类别管理",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,
@@ -186,7 +186,7 @@ function editGoodType(typeId,parentId,level){
     $('#edit').window('open');
 }
 
-//删除商品类别
+//删除资料类别
 function deleteGoodsType(id,level){
 	if(confirm('您确定要删除吗？')){
 		$.ajax({
@@ -211,7 +211,7 @@ function deleteGoodsType(id,level){
 }
 
 
-//获取选中商品的下级分类
+//获取选中资料的下级分类
 function selectType(typeId,typeName){
 	if(todo=='show'){
 		window.returnValue = {'typeId':typeId,'typeName':typeName};
@@ -253,7 +253,7 @@ function realoadGrid(goodCode,goodName){
 	url = encodeURI(encodeURI(url));
 	 //弹出框
 	$('#search').dialog({
-		title:"商品类别搜索",
+		title:"资料类别搜索",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,
@@ -316,7 +316,7 @@ function checkForm(){
 	var nameObj = $("#typeName");
 	var deliveryObj= $("#deliveryName");
 	if(''==nameObj.val()){
-		alert('请输入商品类别名称！');
+		alert('请输入资料类别名称！');
 		nameObj.focus();
 		return false;
 	}

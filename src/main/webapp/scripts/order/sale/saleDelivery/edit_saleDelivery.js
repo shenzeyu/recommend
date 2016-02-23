@@ -54,7 +54,7 @@ $(document).ready(function(){
 function getToolBarOpt(){
 	opt = [
 		{	
-			text:'添加商品',
+			text:'添加资料',
 	 		iconCls:'icon-add',
 	 		handler:function(){
 				addSaleWare(true);
@@ -86,8 +86,8 @@ function getColumnsOpt(){
 	var opt = [
 		{field:'wareId',width:0,align:'left'},
 		{field:'warehousePositionId',width:0,align:'left'},
-		{field:'code',title:'商品编号',width:20,align:'left'},
-		{field:'name',title:'商品名称',width:25,align:'left'},
+		{field:'code',title:'资料编号',width:20,align:'left'},
+		{field:'name',title:'资料名称',width:25,align:'left'},
 		{field:'goodTypeName',title:'类别',width:20,align:'left'},
 		{field:'wareSpecificationVal',title:'规格',width:20,align:'left'},
 		{field:'warehousePositionName',title:'发货仓位',width:25,align:'left',editor:'warehousePositionName'},
@@ -156,7 +156,7 @@ function taxPriceFormat(rowIndex,rowData,value)
 	}
 	return taxPrice;
 }
-//格式化单项商品总金额
+//格式化单项资料总金额
 function moneyFormat(rowIndex,rowData,value){
 	var money = rowData.money;
 	if(money){
@@ -165,7 +165,7 @@ function moneyFormat(rowIndex,rowData,value){
 	return money;
 }
 
-//格式化单项商品含税总金额
+//格式化单项资料含税总金额
 function taxMoneyFormat(rowIndex,rowData,value){
 	var taxMoney = rowData.taxMoney;
 	if(taxMoney){
@@ -187,7 +187,7 @@ function submitSaveForm(){
 				var ware = wareArr[i];
 				var wareId = ware.wareId;
 				if(wareId && '' != wareId){
-					var wareIdHtml = '<input type="hidden" name="wareIdArr" value="'+wareId+'" />'; 						//商品id
+					var wareIdHtml = '<input type="hidden" name="wareIdArr" value="'+wareId+'" />'; 						//资料id
 					var numberHtml = '<input type="hidden" name="orderNumberArr" value="'+ware.orderNumber+'" />'; 				//订购数量
 					var priceHtml = '<input type="hidden" name="goodPriceArr" value="'+ware.goodPrice+'" />'; 					//价格
 					var moneyHtml = '<input type="hidden" name="moneyArr" value="'+ware.money+'" />'; 							//总价
@@ -197,7 +197,7 @@ function submitSaveForm(){
 					htmlAll += '<tr>'+ wareIdHtml + numberHtml + priceHtml + moneyHtml + priceDiscountHtml + warehousePositionIdHtml + warehousePositionNameHtml +'</tr>'; 
 				}
 			}
-			var wareTable = $('#wareTable');//订单商品项数据区
+			var wareTable = $('#wareTable');//订单资料项数据区
 			wareTable.html(htmlAll);
 		}
 		var options = {
@@ -242,9 +242,9 @@ function checkForm(){
 	return true;
 }
 
-//获取一个新的空订单商品项
+//获取一个新的空订单资料项
 function buildSaleWare(){
-	var saleWare = {};//商品
+	var saleWare = {};//资料
 	saleWare.id = '';
 	saleWare.wareId = '';
 	saleWare.code = '';
@@ -261,10 +261,10 @@ function buildSaleWare(){
 	return saleWare;
 }
 
-//添加商品空行
+//添加资料空行
 function addGoodRow(more){
 	var lastEditRowIndex;
-	var saleWare = buildSaleWare();//获取一个新的空商品项
+	var saleWare = buildSaleWare();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',saleWare);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;
@@ -282,7 +282,7 @@ function addGoodRow(more){
 	return rowData;
 }
 
-//订单商品
+//订单资料
 function addSaleWare(more){
 	var dataArr = new Array();
 	dataArr = common.getWare(true);
@@ -291,10 +291,10 @@ function addSaleWare(more){
 		var dataLen = dataArr.length;
 		for(var i=0;i<dataLen;i++){
 			var data = dataArr[i];
-			var goodCode = data.code;//商品编码
-			var isExist = isGoodExist(goodCode);//商品是否已存在
+			var goodCode = data.code;//资料编码
+			var isExist = isGoodExist(goodCode);//资料是否已存在
 			if(isExist){
-				alert('商品已存在，商品编号:'+data.code);
+				alert('资料已存在，资料编号:'+data.code);
 			}else{
 				var rowData = {};		//增加的行对象数组
 				var row;				//行对象
@@ -327,39 +327,39 @@ function addSaleWare(more){
 				var row = rowData.row;
 				var rowIndex = rowData.rowIndex;
 				if(row){	//设置页面显示的值
-					row.wareId = data.id;//商品id
+					row.wareId = data.id;//资料id
 					row.code = data.code;
-					var goodName = data.goodName;//商品名称
+					var goodName = data.goodName;//资料名称
 					if(goodName){
 						row.name = goodName;
 					}
-					var goodTypeName = data.goodTypeName;//商品类别
+					var goodTypeName = data.goodTypeName;//资料类别
 					if(goodTypeName){
 						row.goodTypeName = goodTypeName;
 					}
-					var wareSpecificationVal = data.wareSpecificationVal;//商品规格
+					var wareSpecificationVal = data.wareSpecificationVal;//资料规格
 					if(wareSpecificationVal){
 						row.wareSpecificationVal = wareSpecificationVal;
 					}
-					var goodPrice = data.price;//商品价格
+					var goodPrice = data.price;//资料价格
 					if(goodPrice){
 						row.goodPrice = goodPrice;
 					}
-					var taxRate=data.taxRate; //商品税率
+					var taxRate=data.taxRate; //资料税率
 					if(taxRate)
 					{
 						row.taxRate=taxRate;
 					}
-					var taxPrice=data.taxPrice;//商品含税单价
+					var taxPrice=data.taxPrice;//资料含税单价
 					if(taxPrice)
 					{
 						row.taxPrice=taxPrice;
 					}
-					var money = data.money;//商品总价
+					var money = data.money;//资料总价
 					if(money){
 						row.money = money;
 					}
-					var goodStcok=data.stock;//商品库存(商品初始数+商品进货数)
+					var goodStcok=data.stock;//资料库存(资料初始数+资料进货数)
 					if(goodStcok)
 					{
 						row.goodStcok=goodStcok;
@@ -481,7 +481,7 @@ function reEdit(rowIndex){
 	$(gId).datagrid('endEdit',rowIndex);
 	$(gId).datagrid('beginEdit',rowIndex);	
 }
-//刷新商品总金额、订单总金额
+//刷新资料总金额、订单总金额
 function flushMoney(yes){
 	var orderMoney = 0;
 	var rows = $(gId).datagrid('getRows');//末行的下标
@@ -600,7 +600,7 @@ function getEditingRow(){
 	
 	return editingRow;
 }
-//商品是否已存在
+//资料是否已存在
 function isGoodExist(goodCode){
 	var isExist = false;
 	var rows = $(gId).datagrid('getRows');//末行的下标

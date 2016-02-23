@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-	<title>编辑商品包装</title>
+	<title>编辑资料包装</title>
 	<%@ include file="/commons/meta.jsp" %>
 	<%@ include file="/commons/taglibs.jsp" %>
 	
@@ -39,13 +39,13 @@
 			    		<div class="easyui-tabs" fit="true" plain="true" style="height:350px;width:300px;">
 								<table width="100%"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor">
 						    	   <tr>
-										<td class='gridtitle' width="15%">商品包装编号:</td>
+										<td class='gridtitle' width="15%">资料包装编号:</td>
 										<td class='gridbody'>
 											<s:textfield name="packaging.code" disabled="true"/>
 										</td>
 									</tr>
 									<tr>	
-										<td class='gridtitle' width="15%">商品包装名称:</td>
+										<td class='gridtitle' width="15%">资料包装名称:</td>
 										<td class='gridbody'>
 											<s:textfield name="packaging.name" id="name" />
 										</td>
@@ -75,7 +75,7 @@
 						    			</td>
 									</tr>
 									<tr>
-										<td class='gridtitle'>上传商品缩略图:</td>
+										<td class='gridtitle'>上传资料缩略图:</td>
 										<td class='gridbody' colspan="5">
 											<a href="javascript:void(0);" onclick="upload.open(this,'Packaging')">选择图片</a>
 											<c:if test="${packaging.pic != null && packaging.pic != ''}">

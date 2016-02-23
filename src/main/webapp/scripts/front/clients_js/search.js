@@ -21,7 +21,7 @@ function chgbPrice(){
 }
 
 
-//改变被选中商品属性的css
+//改变被选中资料属性的css
 function upstyle(obj,i,value,str){  //参数value的值即为选择的属性值
 	document.getElementsByName(str)[0].id="";  
 	var arrVal='';
@@ -98,7 +98,7 @@ function changeSort(values){
 	}
 }
 
-//商品以图片形式展示
+//资料以图片形式展示
 function shoptypeGoods(aa,bb,cc,pageIndex){    
 	var typeid=$('#typeid').val();  //用于第一次访问
 	var url='';  
@@ -184,7 +184,7 @@ function shoptypeGoods(aa,bb,cc,pageIndex){
 }
 
 
-//商品以列表形式展示
+//资料以列表形式展示
 function shoptypeGoods2(aa,bb,cc,pageIndex){    
 	var typeid=$('#typeid').val();  //用于第一次访问
 	var url='';  
@@ -282,7 +282,7 @@ function shoptypeGoods2(aa,bb,cc,pageIndex){
 
 //加入收藏
 function addGoodToFavorite(goodId){
-    // 商品Id
+    // 资料Id
 	if(goodId != ''){
 		var url = ctx +"/addGoodToFavorite.do?favorite.goodId="+goodId;
 		$.ajax({
@@ -296,7 +296,7 @@ function addGoodToFavorite(goodId){
 				}else if(returnData=='frontLogin'){
 					ShowDiv('MyDiv','fade');
 				}else if(returnData=='error'){
-					alert('您已经收藏过此商品，不用再收藏!');
+					alert('您已经收藏过此资料，不用再收藏!');
 				}else{
 					alert('加入收藏失败!');
 				}
@@ -306,12 +306,12 @@ function addGoodToFavorite(goodId){
 		 	}
 		});
 	}else{
-		alert('你选择的商品不存在 ');
+		alert('你选择的资料不存在 ');
 	}
 }
 
 
-//添加商品到购物车
+//添加资料到购物车
  function addGoodToCart(id){
 	if(id != ''){
 		var url = ctx +"/addGoodseewareToCart.do?good.id="+id;
@@ -370,7 +370,7 @@ function shoppingCar(){
 		});
 }
 
-// 删除购物车中的商品
+// 删除购物车中的资料
 function deleteGood(wareId){
 	if (confirm("您确定要删除吗?")){
 		$.ajax({

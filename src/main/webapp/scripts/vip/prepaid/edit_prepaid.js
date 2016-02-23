@@ -50,7 +50,7 @@ function checkForm(){
 	}
 	return true;
 }
-//选择会员
+//选择学员
 function selectCustomer(){
 	var data = common.getCustomer();
 	if(data){

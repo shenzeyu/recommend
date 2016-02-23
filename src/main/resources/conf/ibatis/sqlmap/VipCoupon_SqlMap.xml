@@ -116,7 +116,7 @@
 		select SUM(money) from vip_coupon where customer_id=#customerId# and state='s'
 	</select>
 
-	<!--  增加会员购物卷  -->
+	<!--  增加学员购物卷  -->
 	<insert id="VipCoupon_insert">
 		insert into Vip_Coupon 
 			(id,code,remark,name,creator_id,creator_name,
@@ -132,7 +132,7 @@
 			 )
 	</insert>
 	
-	<!--  修改会员购物卷 根据id -->
+	<!--  修改学员购物卷 根据id -->
 	<update id="VipCoupon_update">
 		update Vip_Coupon set
 			money = #money#,
@@ -154,7 +154,7 @@
 		where id = #id#
 	</update>
 	
-	<!-- 删除会员购物卷 根据id-->
+	<!-- 删除学员购物卷 根据id-->
 	<delete id="VipCoupon_delete">
 		delete from Vip_Coupon where id = #id#
 	</delete>

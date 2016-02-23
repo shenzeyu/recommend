@@ -54,7 +54,7 @@ $(document).ready(function(){
 function getToolBarOpt(){
 	var opt = [
 		{	
-			text:'添加商品',
+			text:'添加资料',
 	 		iconCls:'icon-add',
 	 		handler:function(){
 	 			addCombinedWare(true);
@@ -89,8 +89,8 @@ function getColumnsOpt(){
 	}
 	var opt = [
 		{field:'wareId',width:0,align:'left'},
-		{field:'code',title:'商品编号',width:20,align:'left'},
-		{field:'wareName',title:'商品名称',width:25,align:'left'},
+		{field:'code',title:'资料编号',width:20,align:'left'},
+		{field:'wareName',title:'资料名称',width:25,align:'left'},
 		{field:'wareCount',title:countName,width:20,editor:{type:'wareCount',options:{precision:'0'}}}
 	];
 	return opt;
@@ -129,21 +129,21 @@ function submitSaveForm(){
 				var ware = wareArr[i];
 				var wareId = ware.wareId;
 				if(wareId && '' != wareId){
-					var wareIdHtml = '<input type="hidden" name="wareIdArr" value="'+wareId+'" />'; 				//商品id
-					var wareNameHtml = '<input type="hidden" name="wareNameArr" value="'+ware.wareName+'" />'; 		//商品名
+					var wareIdHtml = '<input type="hidden" name="wareIdArr" value="'+wareId+'" />'; 				//资料id
+					var wareNameHtml = '<input type="hidden" name="wareNameArr" value="'+ware.wareName+'" />'; 		//资料名
 					var wareCountHtml = '<input type="hidden" name="wareCountArr" value="'+ware.wareCount+'" />'; 	//数量
 					htmlAll += '<tr>'+ wareIdHtml + wareNameHtml  + wareCountHtml + '</tr>'; 
 				}
 			}
-			var wareTable = $('#wareTable');//订单商品项数据区
+			var wareTable = $('#wareTable');//订单资料项数据区
 			wareTable.html(htmlAll);
 		}
 		var type = $('#type').val();
 		var title = '';
 		if(type == '0'){
-			title = '商品组装单';
+			title = '资料组装单';
 		}else if(type == '1'){
-			title = '商品拆分单';
+			title = '资料拆分单';
 		}
 		var options = {
 			url : ctx+'/combined!save.do',
@@ -173,16 +173,16 @@ function checkForm(){
 	return true;
 }
 
-//获取一个新的空商品项
+//获取一个新的空资料项
 function buildCombinedWare(){
-	var combinedWare = {};//商品
+	var combinedWare = {};//资料
 	return combinedWare;
 }
 
-//添加商品空行
+//添加资料空行
 function addGoodRow(more){
 	var lastEditRowIndex;
-	var combinedWare = buildCombinedWare();//获取一个新的空商品项
+	var combinedWare = buildCombinedWare();//获取一个新的空资料项
 	if(more){
 		$(gId).datagrid('appendRow',combinedWare);
 		lastEditRowIndex = $(gId).datagrid('getRows').length-1;
@@ -200,7 +200,7 @@ function addGoodRow(more){
 	return rowData;
 }
 
-//订单商品
+//订单资料
 function addCombinedWare(more){
 	var dataArr = new Array();
 	var type = $('#type').val();
@@ -220,9 +220,9 @@ function addCombinedWare(more){
 		var dataLen = dataArr.length;
 		for(var i=0;i<dataLen;i++){
 			var data = dataArr[i];
-			var goodCode = '';//商品编码
-			var wareId = '';//商品id
-			var wareName = '';//商品名称
+			var goodCode = '';//资料编码
+			var wareId = '';//资料id
+			var wareName = '';//资料名称
 			if(type == '0'){
 				goodCode = data.wareCode;
 				wareId = data.wareId;
@@ -232,9 +232,9 @@ function addCombinedWare(more){
 				wareId = data.id;
 				wareName = data.goodName;
 			}
-			var isExist = isGoodExist(goodCode);//商品是否已存在
+			var isExist = isGoodExist(goodCode);//资料是否已存在
 			if(isExist){
-				alert('商品已存在，商品编号:'+goodCode);
+				alert('资料已存在，资料编号:'+goodCode);
 			}else{
 				var rowData = {};		//增加的行对象数组
 				var row;				//行对象
@@ -267,7 +267,7 @@ function addCombinedWare(more){
 				var row = rowData.row;
 				var rowIndex = rowData.rowIndex;
 				if(row){	//设置页面显示的值
-					row.wareId = wareId;//商品id
+					row.wareId = wareId;//资料id
 //					alert(wareId)
 					row.code = goodCode;
 					row.wareName = wareName;
@@ -336,7 +336,7 @@ function getEditingRow(){
 	
 	return editingRow;
 }
-//商品是否已存在
+//资料是否已存在
 function isGoodExist(goodCode){
 	var isExist = false;
 	var rows = $(gId).datagrid('getRows');//末行的下标
@@ -380,7 +380,7 @@ function selectWarehouse(){
 	}
 }
 
-//要拆分或组合的商品
+//要拆分或组合的资料
 function selectCombinedWare(){
 	var warehouseId = $('#warehouseId').val();
 	var type = $('#type').val();

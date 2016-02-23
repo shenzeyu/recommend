@@ -67,9 +67,9 @@ function ShowFLT(i) {
 <li><a href="${ctx }/orderManage.do">我的订单<span>(<samp>${total }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款订单<span>(<samp>${payment }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消订单<span>(<samp>${cancelOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1" id="<c:if test="${deliveryState=='1' }">visited</c:if>">已发货商品<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0" id="<c:if test="${deliveryState=='0' }">visited</c:if>">未发货商品<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
-<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价商品<span>(<samp>${commentOrder}</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1" id="<c:if test="${deliveryState=='1' }">visited</c:if>">已发货资料<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0" id="<c:if test="${deliveryState=='0' }">visited</c:if>">未发货资料<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
+<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价资料<span>(<samp>${commentOrder}</samp>)</span></a></li>
 </ul>
           </div>
         </div>
@@ -131,15 +131,15 @@ function ShowFLT(i) {
 <div class="coupon_right">
 <div class="courht">
 <div class="courht_title">
-<span><c:if test="${deliveryState=='1'}">已发货商品</c:if><c:if test="${deliveryState=='0'}">未发货商品</c:if></span>
+<span><c:if test="${deliveryState=='1'}">已发货资料</c:if><c:if test="${deliveryState=='0'}">未发货资料</c:if></span>
 </div>
-<!--[if !IE]>已发货商品列表<![endif]-->
+<!--[if !IE]>已发货资料列表<![endif]-->
 <div class="courht_text2">
 <div class="table">
 <table width="962" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td width="96" height="32" align="center" valign="middle">订单号</td>
-    <td width="300" align="center" valign="middle">商品</td>
+    <td width="300" align="center" valign="middle">资料</td>
     <td width="95" align="center" valign="middle">收货人</td>
     <td width="100" align="center" valign="middle">购买价格</td>
     <td width="100" align="center" valign="middle">返现</td>
@@ -206,9 +206,9 @@ function ShowFLT(i) {
 </div>
 </div>
 <!--[if !IE]>列表结束<![endif]-->
-<!--[if !IE]>您可能感兴趣的商品<![endif]-->
+<!--[if !IE]>您可能感兴趣的资料<![endif]-->
 <div class="courht_title1">
-<span>您可能感兴趣的商品</span>
+<span>您可能感兴趣的资料</span>
 <samp>今日为您推荐</samp></div>
 <div class="courht_photo">
 <div class="photolist02">
@@ -231,7 +231,7 @@ function ShowFLT(i) {
 </div><!--[if !IE]>右侧结束<![endif]-->
 </div>
 </div>
-<!--[if !IE]>已发货商品结束<![endif]-->
+<!--[if !IE]>已发货资料结束<![endif]-->
  <%@ include file="/WEB-INF/page/front/guanwang/bottom.jsp"%> 
   </div>
 </body>

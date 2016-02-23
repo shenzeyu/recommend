@@ -32,7 +32,7 @@
 	<div class="register1">
 	<form action="" name="registerForm" id="registerForm" method="post">
 		<div class="register_left">
-	<div class="register01">壹万店会员注册</div>
+	<div class="register01">壹万店学员注册</div>
 	<div class="login0202_text1">
   <h1>登录账号：</h1>
   <h2><input name="customer.code" type="text"  class="login0202_text1input" id="usercode"/></h2>

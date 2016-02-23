@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <html>
 <head>
-	<title>商品包装列表</title>
+	<title>资料包装列表</title>
 	<%@ include file="/commons/taglibs.jsp" %>
 	<%@ include file="/commons/meta.jsp" %>
 	
@@ -27,7 +27,7 @@
 			<tr>
 				<td class='gridtitle'>编号：</td>
 				<td class='gridbody'><input type="text" id="code" onkeydown="checkKey()"/></td>
-				<td class='gridtitle'>商品包装名称：</td>
+				<td class='gridtitle'>资料包装名称：</td>
 				<td class='gridbody'><input type="text" id="name" onkeydown="checkKey()"/></td>
 				<td class='gridtitle'>
 					<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-search" onclick="searchData()">搜索</a>&nbsp;&nbsp;&nbsp;

@@ -77,15 +77,15 @@
 	<bean id="CustomerAction" class="com.usst.app.customer.action.CustomerAction"
 		autowire="byName">
 	</bean>
-	<!-- 商品类别 -->
+	<!-- 资料类别 -->
 	<bean id="GoodTypeAction" class="com.usst.app.good.goodType.action.GoodTypeAction"
 		autowire="byName">
 	</bean>
-	<!-- 商品信息 -->
+	<!-- 资料信息 -->
 	<bean id="GoodAction" class="com.usst.app.good.good.action.GoodAction"
 		autowire="byName">
 	</bean>
-	<!-- 商品信息 -->
+	<!-- 资料信息 -->
 	<bean id="GroupgoodAction" class="com.usst.app.good.groupgood.action.GroupgoodAction"
 		autowire="byName">
 	</bean>
@@ -93,19 +93,19 @@
 	<bean id="WareAction" class="com.usst.app.good.ware.action.WareAction"
 		autowire="byName">
 	</bean>
-	<!-- 商品种类 -->
+	<!-- 资料种类 -->
 	<bean id="GoodKindAction" class="com.usst.app.good.goodKind.action.GoodKindAction"
 		autowire="byName">
 	</bean>
-	<!-- 商品种类属性值 -->
+	<!-- 资料种类属性值 -->
 	<bean id="GoodKindValAction" class="com.usst.app.good.goodKind.action.GoodKingValAction"
 		autowire="byName">
 	</bean>
-	<!-- 商品属性 -->
+	<!-- 资料属性 -->
 	<bean id="GoodAttrAction" class="com.usst.app.good.goodAttr.action.GoodAttrAction"
 		autowire="byName">
 	</bean>
-	<!-- 商品收藏 -->
+	<!-- 资料收藏 -->
 	<bean id="FavoriteAction" class="com.usst.app.good.favorite.action.FavoriteAction"
 		autowire="byName">
 	</bean>
@@ -239,7 +239,7 @@
 		autowire="byName">
 	</bean>
 
-	<!-- 会员管理 -->
+	<!-- 学员管理 -->
 	<bean id="PrepaidAction" class="com.usst.app.vip.prepaid.action.PrepaidAction"
 		autowire="byName" />
 	<bean id="VipCouponAction" class="com.usst.app.vip.coupon.action.VipCouponAction"
@@ -258,7 +258,7 @@
 		autowire="byName">
 	</bean>
 
-	<!-- 商品包装 -->
+	<!-- 资料包装 -->
 	<bean id="PackagingAction" class="com.usst.app.store.packaging.action.PackagingAction"
 		autowire="byName">
 	</bean>
@@ -299,7 +299,7 @@
 	<bean id="GiftGoodAction" class="com.usst.app.store.gift.action.GiftGoodAction"
 		autowire="byName">
 	</bean>
-	<!--会员评论 -->
+	<!--学员评论 -->
 	<bean id="WareCommentAction" class="com.usst.app.vip.wareComment.action.WareCommentAction"
 		autowire="byName">
 	</bean>

@@ -29,10 +29,10 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <form action="" name="saveComment" id="saveComment" method="post">
 	<div class="content">
 <div class="coupon">
-<div  class="orderDetails"><samp><a href="#">我的在线学院</a></samp><span>></span><span class="ordys"><a href="#">待评价商品</a></span><span>></span><span class="ordys"><a href="#">发表评论</a></span></div>
+<div  class="orderDetails"><samp><a href="#">我的在线学院</a></samp><span>></span><span class="ordys"><a href="#">待评价资料</a></span><span>></span><span class="ordys"><a href="#">发表评论</a></span></div>
 <!--[if !IE]>产品评价<![endif]-->
 <div class="photocomment">
-<h1>欢迎您发表原创，与商品质量有关，对其他用户有参考价值的商品评价!</h1><br/><h2>如果您发表的内容与商品本身质量无关，评价将被删除！</h2>
+<h1>欢迎您发表原创，与资料质量有关，对其他用户有参考价值的资料评价!</h1><br/><h2>如果您发表的内容与资料本身质量无关，评价将被删除！</h2>
 </div>
 <div class="photocomment1">
 <h1>*</h1>评论
@@ -59,7 +59,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 </div>
 <div class="photocomment3">
 <h1><textarea name="wareComment.content" id="content" cols="" rows="" class="photocomment3textare"></textarea></h1>
-<h2><span>必填，长度在5-200字之间</span><samp>填写您对此商品的使用心得，例如该商品或某功能为您带来的帮助，或使用过程中遇到的问题
+<h2><span>必填，长度在5-200字之间</span><samp>填写您对此资料的使用心得，例如该资料或某功能为您带来的帮助，或使用过程中遇到的问题
 
 等，最多可输入200字。</samp></h2>
 </div>

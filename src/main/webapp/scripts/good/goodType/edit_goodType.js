@@ -68,7 +68,7 @@ function checkForm(){
 	var nameObj = $("#typeName");
 	var deliveryObj= $("#deliveryName");
 	if(''==nameObj.val()){
-		alert('请输入商品类别名称！');
+		alert('请输入资料类别名称！');
 		nameObj.focus();
 		return false;
 	}

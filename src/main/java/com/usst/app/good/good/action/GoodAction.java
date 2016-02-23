@@ -72,6 +72,7 @@ public class GoodAction extends BaseAction {
 	private Good good;
 	private GoodExtend goodExtend;
 	private List<Good> goodList;
+	private List<GoodType> goodTypeList;
 	private GoodType goodType;
 	private String imgIdStr;
 	private List<GoodPrice> goodPriceList;
@@ -229,6 +230,10 @@ public class GoodAction extends BaseAction {
 		if (this.good == null) {
 			this.good = new Good();
 		}
+		GoodType goodtype = new GoodType();
+		goodtype.setLevel(Integer.valueOf(1));
+		goodtype.setIsInventories("0");
+		this.goodTypeList = this.goodTypeService.queryTypeTree(goodtype);
 		this.goodKindList = this.goodKindService.select(new GoodKind());
 		this.goodPriceList = new ArrayList();
 		this.goodPicList = new ArrayList();
@@ -327,7 +332,7 @@ public class GoodAction extends BaseAction {
 				}
 				getRequest().setAttribute("goodAttrIdStr", goodAttrIdStr);
 			} catch (Exception e) {
-				logger.error("获取商品属性出错", e);
+				logger.error("获取资料属性出错", e);
 			}
 			try {
 				this.goodPicList = this.fileUploadService.getFileUploadByGoodId(this.good.getId());
@@ -337,7 +342,7 @@ public class GoodAction extends BaseAction {
 			try {
 				this.goodRelateList = this.goodRelateService.getGoodRelateByGoodId(this.good.getId());
 			} catch (Exception e) {
-				logger.error("获取关联商品出错", e);
+				logger.error("获取关联资料出错", e);
 			}
 			String goodRelateIdStr = "";
 			if (this.goodRelateList != null) {
@@ -650,65 +655,8 @@ public class GoodAction extends BaseAction {
 						}
 					}
 				}
-			} else {
-				Ware ware = this.wareService.getWareById(this.good.getId());
-				if (ware == null) {
-					if ((this.wareList != null) && (this.wareList.size() == 1)) {
-						((Ware) this.wareList.get(0)).setStock(Integer.valueOf(this.good.getInitialNum().intValue()));
-						this.wareService.insert((Base) this.wareList.get(0));
-						this.goodService.update(this.good);
-					} else {
-						ware = new Ware();
-						ware.setCode(this.good.getCode());
-						ware.setGoodId(this.good.getId());
-						ware.setStock(Integer.valueOf(this.good.getInitialNum().intValue()));
-						ware.setPriceDiscount(Double.valueOf(0.0D));
-						ware.setSort(Integer.valueOf(1));
-						this.wareService.insert(ware);
-					}
-					if (stop) {
-						this.warehousePositionWare = new WarehousePositionWare();
-						this.warehousePositionWare.setWarehousePositionId(this.good.getWarehousePositionId());
-						this.warehousePositionWare.setWarehousePositionName(this.good.getWarehousePositionName());
-						this.warehousePositionWare.setWareId(ware.getId());
-						this.warehousePositionWare.setWareName(this.good.getName());
-						this.warehousePositionWare.setWareCount(this.good.getInitialNum().intValue());
-						this.warehousePositionWare.setWarehouseId(this.good.getWarehouseId());
-						this.warehousePositionWare.setWarehouseName(this.good.getWarehouseName());
-						this.warehousePositionWare.setSort(Integer.valueOf(1));
-						this.warehousePositionWareService.insert(this.warehousePositionWare);
-
-						this.warehouseIntoWare = new WarehouseIntoWare();
-						this.warehouseIntoWare.setWarehousePositionId(this.good.getWarehousePositionId());
-						this.warehouseIntoWare.setWarehousePositionName(this.good.getWarehousePositionName());
-						this.warehouseIntoWare.setWareId(ware.getId());
-						this.warehouseIntoWare.setWareName(this.good.getName());
-						this.warehouseIntoWare.setIntoNum(this.good.getInitialNum().intValue());
-						this.warehouseIntoWare.setPriceIn(this.good.getPurchasePrice());
-						Double moneyIn = Double.valueOf(0.0D);
-						if (this.warehouseIntoWare.getPriceIn() != null) {
-							moneyIn = Double.valueOf(this.warehouseIntoWare.getIntoNum()
-									* this.warehouseIntoWare.getPriceIn().doubleValue());
-						} else {
-							moneyIn = Double.valueOf(this.warehouseIntoWare.getIntoNum() * 1.0D);
-						}
-						this.warehouseIntoWare.setMoneyIn(moneyIn);
-						this.warehouseIntoWare.setSort(Integer.valueOf(1));
-						this.warehouseIntoWareService.insert(this.warehouseIntoWare);
-
-						this.warehouseWare = new WarehouseWare();
-						this.warehouseWare.setWarehouseId(this.good.getWarehouseId());
-						this.warehouseWare.setWarehouseName(this.good.getWarehouseName());
-						this.warehouseWare.setWareId(ware.getId());
-						this.warehouseWare.setWareName(this.good.getName());
-						this.warehouseWare.setWareCount(this.good.getInitialNum().intValue());
-						this.warehouseWare.setAverageCostInventory(this.good.getPurchasePrice());
-						this.warehouseWare.setTotalCostInventory(moneyIn);
-						this.warehouseWare.setSort(Integer.valueOf(1));
-						this.warehouseWareService.insert(this.warehouseWare);
-					}
-				}
-			}
+			} 
+			
 			if (StringUtils.isNotBlank(this.imgIdStr)) {
 				String[] imgIdArr = this.imgIdStr.split(",");
 				for (int i = 0; i < imgIdArr.length; i++) {
@@ -1106,7 +1054,7 @@ public class GoodAction extends BaseAction {
 	}
 
 	public String AllTypeGoodjson() {
-		logger.info("开始根据类别和类别等级查询商品!");
+		logger.info("开始根据类别和类别等级查询资料!");
 		List<Good> resultList = null;
 		if (this.good == null) {
 			this.good = new Good();
@@ -1119,14 +1067,14 @@ public class GoodAction extends BaseAction {
 			this.good.setBeginSaleTime(new Date());
 			resultList = this.goodService.select("Good.Good_sel", this.good);
 		} catch (Exception e) {
-			logger.error("根据类别和类别等级查询商品出错", e);
+			logger.error("根据类别和类别等级查询资料出错", e);
 		}
 		if (resultList == null) {
 			resultList = new ArrayList();
 		}
 		this.jsonMap = new HashMap();
 		this.jsonMap.put("rows", resultList);
-		logger.info("根据类别和类别等级查询商品成功!");
+		logger.info("根据类别和类别等级查询资料成功!");
 		return "success";
 	}
 
@@ -1139,7 +1087,7 @@ public class GoodAction extends BaseAction {
 			resultList = this.goodTypeService.select("GoodType.GoodType", this.goodType);
 			this.goodType = ((GoodType) this.goodTypeService.getModel(this.goodType.getParentId()));
 		} catch (Exception e) {
-			logger.error("根据类别和类别等级查询商品出错", e);
+			logger.error("根据类别和类别等级查询资料出错", e);
 		}
 		if (resultList == null) {
 			resultList = new ArrayList();

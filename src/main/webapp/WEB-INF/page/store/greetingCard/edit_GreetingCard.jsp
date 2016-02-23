@@ -44,7 +44,7 @@
 										<td class='gridbody'>
 											<s:textfield name="greetingCard.code" disabled="true"/>
 										</td> 
-										<td class='gridtitle' width="15%">赠送会员:</td>
+										<td class='gridtitle' width="15%">赠送学员:</td>
 										<td class='gridbody'>
 										    <s:hidden name="greetingCard.customerId" id="customerId"/>
 											<s:textfield name="greetingCard.customerName" id="customerName"  onclick="selectCustomer()"/>

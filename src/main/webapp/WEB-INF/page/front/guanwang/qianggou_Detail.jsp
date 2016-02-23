@@ -102,7 +102,7 @@ con.style.display=i==cursel?"block":"none";
     <h1><input name="" type="button" class="details01_text0203btn1" onclick="window.open('shoppingCart.html')"/></h1>
   </div>
   </div>
-  <div class="details01_text0204">提示： 1.此款商品可以使用<a href="#">分期付款</a>进行支付&nbsp;&nbsp;&nbsp;2.此商品支持<a href="#">上门安装</a>服务</div>
+  <div class="details01_text0204">提示： 1.此款资料可以使用<a href="#">分期付款</a>进行支付&nbsp;&nbsp;&nbsp;2.此资料支持<a href="#">上门安装</a>服务</div>
   </div>
   </div>
     <!--[if !IE]>右侧结束<![endif]-->
@@ -113,8 +113,8 @@ con.style.display=i==cursel?"block":"none";
   <div class="photoRecommend02">
   <span>
   1）请您注册成为壹万店用户且登陆成功后再参与抢购活动；<br />
-2）只有在活动时间内通过抢购页面将抢购商品加入购物车并结算方可享受抢购价； <br />
-3）如果已经获得抢购资格的顾客没有在规定的时间内完成支付或者将购物车中对应抢购商品删除，视同放弃此抢购商品的购买资格。
+2）只有在活动时间内通过抢购页面将抢购资料加入购物车并结算方可享受抢购价； <br />
+3）如果已经获得抢购资格的顾客没有在规定的时间内完成支付或者将购物车中对应抢购资料删除，视同放弃此抢购资料的购买资格。
   
   </span>
    
@@ -133,21 +133,21 @@ con.style.display=i==cursel?"block":"none";
 	   <div id="Tab2">
 <div class="Menubox">
 <ul>
-<li id="one1" onclick="secBoard('one',1,6)"  >商品详情</li>
+<li id="one1" onclick="secBoard('one',1,6)"  >资料详情</li>
 <li id="one2" onclick="secBoard('one',2,6)" >规格参数</li>
 <li id="one3" onclick="secBoard('one',3,6)">包装清单</li>
-<li id="one4" onclick="secBoard('one',4,6)"  class="hover">商品评价</li>
-<li id="one5" onclick="secBoard('one',5,6)" >商品咨询</li>
+<li id="one4" onclick="secBoard('one',4,6)"  class="hover">资料评价</li>
+<li id="one5" onclick="secBoard('one',5,6)" >资料咨询</li>
 <li id="one6" onclick="secBoard('one',6,6)">售后服务</li>
 </ul>
 
 </div>
 <div class="Contentbox">
-<!--[if !IE]>商品详情<![endif]-->
+<!--[if !IE]>资料详情<![endif]-->
 <div id="con_one_1" style="display:none">
-<div class="itemDetails">商品详情单页</div>
+<div class="itemDetails">资料详情单页</div>
 </div>
-<!--[if !IE]>商品详情结束<![endif]-->
+<!--[if !IE]>资料详情结束<![endif]-->
 <!--[if !IE]>规格参数单页<![endif]-->
 <div id="con_one_2" style="display:none">
 <div class="itemDetails">规格参数单页</div>
@@ -158,7 +158,7 @@ con.style.display=i==cursel?"block":"none";
 <div class="itemDetails">包装清单</div>
 </div>
 <!--[if !IE]>包装清单结束<![endif]-->
-<!--[if !IE]>商品平价<![endif]-->
+<!--[if !IE]>资料平价<![endif]-->
 <div id="con_one_4"  >
 <div class="evaluation">
 <div class="evaluation01">
@@ -191,7 +191,7 @@ con.style.display=i==cursel?"block":"none";
 <h3>5分</h3>
 </div>
 </div>
-<!--[if !IE]>商品平价列表<![endif]-->
+<!--[if !IE]>资料平价列表<![endif]-->
 <div class="evaluation03">
 <h1>我在壹万店购买过</h1>
 <h2><input name="" type="button"  class="evaluation03btn" onclick="window.open('pingjia.html')"/></h2>
@@ -809,7 +809,7 @@ con.style.display=i==cursel?"block":"none";
 </div>
 </div>
 </div>
-<!--[if !IE]>商品平价列表结束<![endif]-->
+<!--[if !IE]>资料平价列表结束<![endif]-->
  <!--[if !IE]>分页<![endif]-->
           <div class="paging1">
             <div class="paging">
@@ -837,19 +837,19 @@ con.style.display=i==cursel?"block":"none";
           </div>
 		  <!--[if !IE]>分页结束<![endif]-->
 </div>
-<!--[if !IE]>商品咨询<![endif]-->
+<!--[if !IE]>资料咨询<![endif]-->
 <div id="con_one_5" style="display:none">
 <div class="consulting">
 提示:因厂家更改产品包装、产地或者更换随机附件等没有任何提前通知，且每位咨询者购买情况、提问时间等不同，为此以下回复信息仅供参考！
 若由此给您带来不便请多多谅解，谢谢！
 </div>
-<!--[if !IE]>商品咨询列表开始<![endif]-->
+<!--[if !IE]>资料咨询列表开始<![endif]-->
 <div class="consulting1">
 <div id="Tab4">
 <div class="Menubox4">
 <ul>
 <li id="four1" onclick="secBoard('four',1,4)"  class="hover">全部咨询</li>
-<li id="four2" onclick="secBoard('four',2,4)" >商品咨询</li>
+<li id="four2" onclick="secBoard('four',2,4)" >资料咨询</li>
 <li id="four3" onclick="secBoard('four',3,4)">配送/支付</li>
 <li id="four4" onclick="secBoard('four',4,4)">发票/安装保修</li>
 </ul>
@@ -861,7 +861,7 @@ con.style.display=i==cursel?"block":"none";
 <div class="consulting1_text01">
 <span>咨询分类：</span>
 <ul>
-<li><h1><input name="" type="radio" value=""/></h1><h2>商品咨询</h2></li>
+<li><h1><input name="" type="radio" value=""/></h1><h2>资料咨询</h2></li>
 <li><h1><input name="" type="radio" value=""/></h1><h2>配送/支付</h2></li>
 <li><h1><input name="" type="radio" value=""/></h1><h2>发票/安装保修</h2></li>
 </ul>
@@ -942,13 +942,13 @@ con.style.display=i==cursel?"block":"none";
 </div>
 <!--[if !IE]>咨询列表结束<![endif]-->
 </div>
-<!--[if !IE]>商品咨询列表<![endif]-->
+<!--[if !IE]>资料咨询列表<![endif]-->
 <div id="con_four_2" style="display:none">
 <div class="consulting1_text">
 <div class="consulting1_text01">
 <span>咨询分类：</span>
 <ul>
-<li><h1><input name="" type="radio" value=""/></h1><h2>商品咨询</h2></li>
+<li><h1><input name="" type="radio" value=""/></h1><h2>资料咨询</h2></li>
 <li><h1><input name="" type="radio" value=""/></h1><h2>配送/支付</h2></li>
 <li><h1><input name="" type="radio" value=""/></h1><h2>发票/安装保修</h2></li>
 </ul>
@@ -1035,7 +1035,7 @@ con.style.display=i==cursel?"block":"none";
 <div class="consulting1_text01">
 <span>咨询分类：</span>
 <ul>
-<li><h1><input name="" type="radio" value=""/></h1><h2>商品咨询</h2></li>
+<li><h1><input name="" type="radio" value=""/></h1><h2>资料咨询</h2></li>
 <li><h1><input name="" type="radio" value=""/></h1><h2>配送/支付</h2></li>
 <li><h1><input name="" type="radio" value=""/></h1><h2>发票/安装保修</h2></li>
 </ul>
@@ -1122,7 +1122,7 @@ con.style.display=i==cursel?"block":"none";
 <div class="consulting1_text01">
 <span>咨询分类：</span>
 <ul>
-<li><h1><input name="" type="radio" value=""/></h1><h2>商品咨询</h2></li>
+<li><h1><input name="" type="radio" value=""/></h1><h2>资料咨询</h2></li>
 <li><h1><input name="" type="radio" value=""/></h1><h2>配送/支付</h2></li>
 <li><h1><input name="" type="radio" value=""/></h1><h2>发票/安装保修</h2></li>
 </ul>
@@ -1234,7 +1234,7 @@ con.style.display=i==cursel?"block":"none";
           </div>
 		  <!--[if !IE]>分页结束<![endif]-->
 </div>
-<!--[if !IE]>商品咨询结束<![endif]-->
+<!--[if !IE]>资料咨询结束<![endif]-->
 <!--[if !IE]>售后服务<![endif]-->
 <div id="con_one_6" style="display:none">
 <div class="itemDetails">售后服务单页</div>

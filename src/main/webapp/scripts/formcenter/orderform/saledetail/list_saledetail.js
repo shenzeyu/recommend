@@ -61,8 +61,8 @@ function getColumnsOpt(){
 	var opt = [
 		{field:'createTime',title:'日期',width:20,align:'left',formatter:createTimeFormat},
 		{field:'orderCode',title:'订单编号',width:15,align:'left'},
-		{field:'goodCode',title:'商品编号',width:15,align:'left'},
-		{field:'goodName',title:'商品名',width:40,align:'left'},
+		{field:'goodCode',title:'资料编号',width:15,align:'left'},
+		{field:'goodName',title:'资料名',width:40,align:'left'},
 		{field:'goodPrice',title:'单价',width:15,align:'left'},
 		{field:'unit',title:'单位',width:15,align:'left'},
 		{field:'orderNumber',title:'数量',width:15,align:'left'},

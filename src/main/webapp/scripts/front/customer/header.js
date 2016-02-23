@@ -9,7 +9,7 @@ function seturl(){
 	$("#geturl").val(url);
 }
 
-//根据搜索类型进行搜索(默认才、搜索类型为商品)
+//根据搜索类型进行搜索(默认才、搜索类型为资料)
 function selectType(){ 
 	var shoptypeName=$('#shoptypeName').val();
 	var url = ctx + '/shoptype.do';

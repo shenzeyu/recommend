@@ -103,7 +103,7 @@
 		order by modify_time desc,level,sort
 	</select>
 	
-	<!-- 结算取商品配送方式 -->
+	<!-- 结算取资料配送方式 -->
 	<select id="GoodType_jiesuan_select" resultMap="GoodTypeInfoResult" cacheModel="GoodType_cache">
 		select * from good_type where id in(select good_type_id from good where id in( 						
 			select good_id from ware where id in 
@@ -198,7 +198,7 @@
 	</select>
 	
 	
-	<!-- 查询商品类别数目 -->
+	<!-- 查询资料类别数目 -->
 	<select id="GoodType_count_select" resultClass="java.lang.Integer" cacheModel="GoodType_cache">
 		select max(sort) from good_type
 	</select>

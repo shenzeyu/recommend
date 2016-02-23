@@ -46,7 +46,7 @@ $(document).ready(function(){
    	
     //弹出框
 	$('#edit').dialog({
-		title:"商品种类",
+		title:"资料种类",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,

@@ -35,7 +35,7 @@
  	$('#changeNumber').val(subtractionVal);
  }
  
-//查询商品评价
+//查询资料评价
 function goodEvaluation(type,pageIndex){
 	$('#apptypes').val('wareComment');
 	$('#wareCommenttype').val(type);
@@ -126,7 +126,7 @@ function goodEvaluation(type,pageIndex){
 		});
 }
 
-//查询商品咨询信息
+//查询资料咨询信息
 function goodmession(type,pageIndex){
 	$('#apptypes').val('getGoodMessage');
 	$('#wareCommenttype').val(type);
@@ -243,16 +243,16 @@ function dateValid(){
 }
 
  
- //添加商品到购物车
+ //添加资料到购物车
  function addGroupGoodToCart(id){
-	// 商品Id
+	// 资料Id
 	var wareId = $("#wareId").val();
 	var goodId = $("#goodId").val();
 	var wareSpecificationVal = $("#selectSpecificationVal").val();
 	// 购买数量
 	var number = $("#changeNumber").val();
 	if(number == ''||number<1){
-		alert('请输入商品数量');
+		alert('请输入资料数量');
 		$("#changeNumber").focus();
 		return;
 	}
@@ -306,11 +306,11 @@ function dateValid(){
 		 	}
 		});
 	}else{
-		alert('请选择商品规格');
+		alert('请选择资料规格');
 	}
 }
 
-//查询规格商品
+//查询规格资料
 function selectWareId(id){
 	var goodSpecificationnumber=$('#goodSpecificationnumber').val();
 	var selectSpecificationVal="";
@@ -322,7 +322,7 @@ function selectWareId(id){
 				selectSpecificationVal+=",";
 			}
 		}else{
-			alert("请选择商品规格");
+			alert("请选择资料规格");
 			return;
 		}	
 	}
@@ -390,7 +390,7 @@ function shoppingCar(){
 		});
 }
 
-// 删除购物车中的商品
+// 删除购物车中的资料
 function deleteGood(wareId){
 	if (confirm("您确定要删除吗?")){
 		$.ajax({

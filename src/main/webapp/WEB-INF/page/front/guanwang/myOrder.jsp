@@ -68,9 +68,9 @@ function ShowFLT(i) {
 <li><a href="${ctx }/orderManage.do" id="visited">我的订单<span>(<samp>${total }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款订单<span>(<samp>${payment }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消订单<span>(<samp>${cancelOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货商品<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货商品<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
-<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价商品<span>(<samp>${commentOrder}</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货资料<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货资料<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
+<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价资料<span>(<samp>${commentOrder}</samp>)</span></a></li>
 </ul>
           </div>
         </div>
@@ -142,8 +142,8 @@ function ShowFLT(i) {
 		<option value="1">所有订单</option>
 	</select>
 </h1>
-<!-- 商品编号/订单号 -->
-<h2><span><input name="" type="text" id="search"  class="applyfirstinput" onblur="if(this.value=='') {this.value='商品编号/订单号';}" onfocus="if(this.value=='商品编号/订单号') {this.value='';}" value="商品编号/订单号"/></span><samp><input name="" type="button"  class="applyfirstbtn" onclick="saleOrderJson('')"/></samp></h2>
+<!-- 资料编号/订单号 -->
+<h2><span><input name="" type="text" id="search"  class="applyfirstinput" onblur="if(this.value=='') {this.value='资料编号/订单号';}" onfocus="if(this.value=='资料编号/订单号') {this.value='';}" value="资料编号/订单号"/></span><samp><input name="" type="button"  class="applyfirstbtn" onclick="saleOrderJson('')"/></samp></h2>
 </div>
 <!--[if !IE]>待付款订单列表<![endif]-->
 <div class="courht_text2">
@@ -151,7 +151,7 @@ function ShowFLT(i) {
 <table width="962" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td width="100" height="32" align="center" valign="middle">订单号</td>
-    <td width="293" align="center" valign="middle">商品</td>
+    <td width="293" align="center" valign="middle">资料</td>
     <td width="95" align="center" valign="middle">收货人</td>
     <td width="116" align="center" valign="middle">金额（元）</td>
     <td width="110" align="center" valign="middle">下单时间</td>
@@ -226,9 +226,9 @@ function ShowFLT(i) {
 </div>
 </div>
 <!--[if !IE]>列表结束<![endif]-->
-<!--[if !IE]>您可能感兴趣的商品<![endif]-->
+<!--[if !IE]>您可能感兴趣的资料<![endif]-->
 <div class="courht_title1">
-<span>您可能感兴趣的商品</span>
+<span>您可能感兴趣的资料</span>
 </div>
 			<div class="courht_photo">
 				<div class="photolist02">

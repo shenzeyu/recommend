@@ -93,7 +93,7 @@
 		<include refid="SaleWare_query_select_where_clause"/>
 		order by sort asc
 	</select>
-	<!-- 根据订单Id查询商品 -->
+	<!-- 根据订单Id查询资料 -->
 	<select id="SaleWare_select" resultMap="SaleWareResult" cacheModel="SaleWare_cache">
 		select * from sale_ware
 		<include refid="SaleWare_query_select_where_clause"/>

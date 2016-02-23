@@ -43,7 +43,7 @@
 							</tr>
 							<!-- 
 								<tr>
-								<td class='gridtitle'>会员卡号</td>
+								<td class='gridtitle'>学员卡号</td>
 								<td class='gridbody' >
 									<input name="customer.cardNumber" id="cardNumber" value="${customer.cardNumber}" />&nbsp;<font color="red">*</font>
 								</td>
@@ -72,13 +72,13 @@
 									<input type="radio" name="customer.sex" value="m" <c:if test="${customer.sex == 'm'}">checked="checked"</c:if>>男&nbsp;&nbsp;
 									<input type="radio" name="customer.sex" value="w" <c:if test="${customer.sex == 'w'}">checked="checked"</c:if>>女 
 								</td>
-								<td class='gridtitle'>会员类型</td>
+								<td class='gridtitle'>学员类型</td>
 								<td class='gridbody'>
 									<select>
-										<option value=""> -- 请选择会员类型  -- </option>
-										<option value="普通会员" <c:if test="${customer.type=='普通会员'}">selected="selected"</c:if> >普通会员</option>
-										<option value="联盟店会员" <c:if test="${customer.type=='联盟店会员'}">selected="selected"</c:if> >联盟店会员</option>
-										<option value="企业会员" <c:if test="${customer.type=='企业会员'}">selected="selected"</c:if> >企业会员</option> 
+										<option value=""> -- 请选择学员类型  -- </option>
+										<option value="普通学员" <c:if test="${customer.type=='普通学员'}">selected="selected"</c:if> >普通学员</option>
+										<option value="联盟店学员" <c:if test="${customer.type=='联盟店学员'}">selected="selected"</c:if> >联盟店学员</option>
+										<option value="企业学员" <c:if test="${customer.type=='企业学员'}">selected="selected"</c:if> >企业学员</option> 
 									</select>									
 								</td>
 							</tr>
@@ -108,10 +108,10 @@
 								<td class='gridbody'>
 									<s:textfield name="customer.zipCode" id="zipCode" />
 								</td>
-								<td class='gridtitle'>会员等级</td>
+								<td class='gridtitle'>学员等级</td>
 								<td class='gridbody'>
 									<s:select list="vipLevelList"  listValue="name" listKey="id" name="customer.vipLevelId" id="vipLevelId"
-             							headerKey="" headerValue=" -- 请选择会员  -- " value="customer.vipLevelId"></s:select>
+             							headerKey="" headerValue=" -- 请选择学员  -- " value="customer.vipLevelId"></s:select>
 								</td>
 							</tr>
 	

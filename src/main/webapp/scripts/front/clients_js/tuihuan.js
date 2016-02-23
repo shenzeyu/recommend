@@ -1,11 +1,11 @@
 
 $(document).ready(function(){
-  //回调查询商品的方法
+  //回调查询资料的方法
   saleReturnJson();
 });
 
 
-//显示退货商品数据
+//显示退货资料数据
 function saleReturnJson(){   
 	var time=$('#createTime').val()
 	var search=$('#search').val();

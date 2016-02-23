@@ -69,7 +69,7 @@ function getColumnsOpt(){
 	var opt = [
 		{field:'name',title:'优惠劵名称',width:25,align:'left'},
 		{field:'id',title:'优惠劵号',width:35,align:'left'},
-		{field:'customerName',title:'使用会员',width:15,align:'left'},
+		{field:'customerName',title:'使用学员',width:15,align:'left'},
 		{field:'money',title:'面值',width:15,align:'left',formatter:moneyFormat},
 		{field:'minBuy',title:'最低消费金额',width:15,align:'left',formatter:minBuyFormat},
 		{field:'startTime',title:'开始日期',width:20,align:'left',formatter:startTimeFormat},

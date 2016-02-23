@@ -82,9 +82,9 @@ function ShowFLT(i) {
 <li><a href="${ctx }/orderManage.do">我的订单<span>(<samp>${total }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款订单<span>(<samp>${payment }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消订单<span>(<samp>${cancelOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货商品<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
-<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货商品<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
-<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价商品<span>(<samp>${commentOrder}</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货资料<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货资料<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
+<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价资料<span>(<samp>${commentOrder}</samp>)</span></a></li>
 </ul>
           </div>
         </div>
@@ -164,7 +164,7 @@ function ShowFLT(i) {
 			<option value="1">所有订单</option>
 		</select>
 	</h1>
-<h2><span><input name="" type="text" id="search"  class="applyfirstinput" onblur="if(this.value=='') {this.value='商品编号/订单号';}" onfocus="if(this.value=='商品编号/订单号') {this.value='';}" value="商品编号/订单号"/></span><samp><input name="" type="button"  class="applyfirstbtn" onclick="saleReturnJson()"/></samp></h2>
+<h2><span><input name="" type="text" id="search"  class="applyfirstinput" onblur="if(this.value=='') {this.value='资料编号/订单号';}" onfocus="if(this.value=='资料编号/订单号') {this.value='';}" value="资料编号/订单号"/></span><samp><input name="" type="button"  class="applyfirstbtn" onclick="saleReturnJson()"/></samp></h2>
 </div>
 <!--[if !IE]>申请退换货列表<![endif]-->
 <div class="courht_text2">
@@ -172,7 +172,7 @@ function ShowFLT(i) {
 <table width="962" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td width="110" height="32" align="center" valign="middle">订单</td>
-    <td width="345" align="center" valign="middle">商品</td>
+    <td width="345" align="center" valign="middle">资料</td>
     <td width="302" align="center" valign="middle"></td>
     <td width="90" align="center" valign="middle">下单时间</td>
     <td width="115"  align="center" valign="middle">操作</td>
@@ -188,17 +188,17 @@ function ShowFLT(i) {
 </div>
 <div class="applyfirst2">返修/退换货申请常见问题</div>
 <div class="applyfirst3">
-1. “申请”按钮若为灰色，可能是因为订单尚未完成或该商品正在翻修/退换货中；<br />
+1. “申请”按钮若为灰色，可能是因为订单尚未完成或该资料正在翻修/退换货中；<br />
 2. 查看<span><a href="#">返修/退换货流程；</a></span><br />
 3. 查看<span><a href="#">返修/退换货政策；</a></span></div>
 <div class="applyfirst2">退换货须知</div>
 <div class="applyfirst3">
-1. 7天无理由退换货的：消费者凭发票自开具发票之日起算，商品、外包装及配件完好无损并未使用，不影响二次销售的，需顾客承担商品往返的运费。（不属于7天内 无质  量问题退换货的产品：手机、相机、显示器、内存、主板、显卡、硬盘、CPU等、电池、线缆、光存储、办公设备等附件耗材、空调、厨卫产品）<br />
+1. 7天无理由退换货的：消费者凭发票自开具发票之日起算，资料、外包装及配件完好无损并未使用，不影响二次销售的，需顾客承担资料往返的运费。（不属于7天内 无质  量问题退换货的产品：手机、相机、显示器、内存、主板、显卡、硬盘、CPU等、电池、线缆、光存储、办公设备等附件耗材、空调、厨卫产品）<br />
 2. 自开具发票之日起，7天内有质量问题，客户可选择退货、换货、维修；15天内，客户可选择换
 货、维修；符合国家“三包”法所规定的其它功能性故障造成的退换货。<br />
-3. 商品损坏：A公司配送到客户家，客户签收前发现商品损坏；B快递物流配送的，客户必须当场验
-货签收（也可以签收后当场验货，必须与派送员完成验收工作），商品有问题时拒收并及时联系销售员，必须在快递单备注栏注明“物流快递损坏退回”等字样。<br />
-4. 商品因质量问题需退换货的，顾客必须提供厂家出具有效的商品质量鉴定单，鉴定商品属质量问题符合退换货条件的方可办理退换货手续；不符合退换货条件的特殊顾客需办理退换货时，将由我公司相关部门进行审核后告知是否可进行退换货。
+3. 资料损坏：A公司配送到客户家，客户签收前发现资料损坏；B快递物流配送的，客户必须当场验
+货签收（也可以签收后当场验货，必须与派送员完成验收工作），资料有问题时拒收并及时联系销售员，必须在快递单备注栏注明“物流快递损坏退回”等字样。<br />
+4. 资料因质量问题需退换货的，顾客必须提供厂家出具有效的资料质量鉴定单，鉴定资料属质量问题符合退换货条件的方可办理退换货手续；不符合退换货条件的特殊顾客需办理退换货时，将由我公司相关部门进行审核后告知是否可进行退换货。
 
 </div>
 </div>
@@ -212,7 +212,7 @@ function ShowFLT(i) {
 <table width="962" border="0" cellspacing="0" cellpadding="0" align="center">
   <tr>
     <td width="160" height="32" align="center" valign="middle">订单</td>
-    <td width="340" align="center" valign="middle">商品</td>
+    <td width="340" align="center" valign="middle">资料</td>
     <td width="78" align="center" valign="middle"></td>
     <td width="140" align="center" valign="middle">申请时间</td>
     <td width="125"  align="center" valign="middle">状态</td>

@@ -85,14 +85,14 @@
 			</result>
 		</action>
 		
-		<!-- 商品类别 -->
+		<!-- 资料类别 -->
 		<action name="GoodType_json" class="com.usst.app.good.goodType.action.GoodTypeAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 商品品牌 -->
+		<!-- 资料品牌 -->
 		<action name="GoodBrand_json" class="com.usst.app.good.goodBrand.action.GoodBrandAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
@@ -105,7 +105,7 @@
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 商品信息-->
+		<!-- 资料信息-->
 		<action name="Good_json" class="com.usst.app.good.good.action.GoodAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
@@ -119,35 +119,35 @@
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 商品种类 -->
+		<!-- 资料种类 -->
 		<action name="GoodKind_json" class="com.usst.app.good.goodKind.action.GoodKindAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 商品种类属性值 -->
+		<!-- 资料种类属性值 -->
 		<action name="GoodKingVal_json" class="com.usst.app.good.goodKind.action.GoodKingValAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 商品规格 -->
+		<!-- 资料规格 -->
 		<action name="GoodSpecification_json" class="com.usst.app.good.goodSpecification.action.GoodSpecificationAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 商品规格值 -->
+		<!-- 资料规格值 -->
 		<action name="GoodSpecificationVal_json" class="com.usst.app.good.goodSpecification.action.GoodSpecificationValAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 商品属性 -->
+		<!-- 资料属性 -->
 		<action name="GoodAttr_json" class="com.usst.app.good.goodAttr.action.GoodAttrAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
@@ -338,7 +338,7 @@
 			</result>	
 		</action>
 		
-		<!-- 会员管理 -->
+		<!-- 学员管理 -->
 		<action name="Prepaid_json" class="com.usst.app.vip.prepaid.action.PrepaidAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
@@ -396,7 +396,7 @@
 				<param name="excludeNullProperties">true</param>
 			</result>	
 		</action>
-		<!-- 商品包装 -->
+		<!-- 资料包装 -->
 		<action name="Packaging_json" class="com.usst.app.store.packaging.action.PackagingAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
@@ -463,7 +463,7 @@
 				<param name="excludeNullProperties">true</param>
 			</result>	
 		</action>
-		<!-- 会员评论 -->
+		<!-- 学员评论 -->
 		<action name="WareComment_json" class="com.usst.app.vip.wareComment.action.WareCommentAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
@@ -492,7 +492,7 @@
 				<param name="excludeNullProperties">true</param>
 			</result>
 		</action>
-		<!-- 团购商品信息-->
+		<!-- 团购资料信息-->
 		<action name="GroupGood_json" class="com.usst.app.good.groupgood.action.GroupgoodAction">
 			<result name="success" type="json">
 				<param name="root">jsonMap</param>
@@ -591,19 +591,19 @@
 			<result name="list_supplier">/WEB-INF/page/baseInfo/supplier/list_supplier.jsp</result>
 			<result name="edit_supplier">/WEB-INF/page/baseInfo/supplier/edit_supplier.jsp</result>
 		</action>
-		<!-- 商品类别 -->
+		<!-- 资料类别 -->
 		<action name="goodType" class="com.usst.app.good.goodType.action.GoodTypeAction">
 			<result name="list_goodType">/WEB-INF/page/good/goodType/list_goodType.jsp</result>
 			<result name="edit_goodType">/WEB-INF/page/good/goodType/edit_goodType.jsp</result>
 			<result name="find_goodType">/WEB-INF/page/good/goodType/find_goodType.jsp</result>
 		</action>
-			<!-- 商品类别 -->
+			<!-- 资料类别 -->
 		<action name="groupgoodType" class="com.usst.app.good.groupgoodType.action.GroupGoodTypeAction">
 			<result name="list_goodType">/WEB-INF/page/good/groupgoodType/list_groupgoodType.jsp</result>
 			<result name="edit_goodType">/WEB-INF/page/good/goodType/edit_goodType.jsp</result>
 			<result name="find_goodType">/WEB-INF/page/good/goodType/find_goodType.jsp</result>
 		</action>
-		<!-- 商品品牌 -->
+		<!-- 资料品牌 -->
 		<action name="goodBrand" class="com.usst.app.good.goodBrand.action.GoodBrandAction">
 			<result name="list_goodBrand">/WEB-INF/page/good/goodBrand/list_goodBrand.jsp</result>
 			<result name="edit_goodBrand">/WEB-INF/page/good/goodBrand/edit_goodBrand.jsp</result>
@@ -614,7 +614,7 @@
 			<result name="edit_groupgoodBrand">/WEB-INF/page/good/goodBrand/edit_groupgoodBrand.jsp</result>
 			<result name="find_goodBrand">/WEB-INF/page/good/goodBrand/find_goodBrand.jsp</result>
 		</action>
-		<!-- 商品信息-->
+		<!-- 资料信息-->
 		<action name="good" class="com.usst.app.good.good.action.GoodAction">
 			<result name="list_good">/WEB-INF/page/good/good/list_good.jsp</result>
 			<result name="edit_good">/WEB-INF/page/good/good/edit_good.jsp</result>
@@ -622,27 +622,27 @@
 			<result name="upload_excel">/WEB-INF/page/good/good/excelFile_upload.jsp</result>
 			<result name="edit_excelDate">/WEB-INF/page/good/good/excelFile_good.jsp</result>
 		</action>
-		<!-- 商品种类 -->
+		<!-- 资料种类 -->
 		<action name="goodKind" class="com.usst.app.good.goodKind.action.GoodKindAction">
 			<result name="list_goodKind">/WEB-INF/page/good/goodKind/list_goodKind.jsp</result>
 			<result name="edit_goodKind">/WEB-INF/page/good/goodKind/edit_goodKind.jsp</result>
 		</action>
-		<!-- 商品种类属性值 -->
+		<!-- 资料种类属性值 -->
 		<action name="goodKingVal" class="com.usst.app.good.goodKind.action.GoodKingValAction">
 			<result name="list_goodKingVal">/WEB-INF/page/good/goodKind/list_goodKingVal.jsp</result>
 			<result name="edit_goodKingVal">/WEB-INF/page/good/goodKind/edit_goodKingVal.jsp</result>
 		</action>
-		<!-- 商品规格 -->
+		<!-- 资料规格 -->
 		<action name="goodSpecification" class="com.usst.app.good.goodSpecification.action.GoodSpecificationAction">
 			<result name="list_goodSpecification">/WEB-INF/page/good/goodSpecification/list_goodSpecification.jsp</result>
 			<result name="edit_goodSpecification">/WEB-INF/page/good/goodSpecification/edit_goodSpecification.jsp</result>
 		</action>
-		<!-- 商品规格值 -->
+		<!-- 资料规格值 -->
 		<action name="goodSpecificationVal" class="com.usst.app.good.goodSpecification.action.GoodSpecificationValAction">
 			<result name="list_goodSpecificationVal">/WEB-INF/page/good/goodSpecification/list_goodSpecificationVal.jsp</result>
 			<result name="edit_goodSpecificationVal">/WEB-INF/page/good/goodSpecification/edit_goodSpecificationVal.jsp</result>
 		</action>
-		<!-- 商品属性 -->
+		<!-- 资料属性 -->
 		<action name="goodAttr" class="com.usst.app.good.goodAttr.action.GoodAttrAction">
 			<result name="list_goodAttr">/WEB-INF/page/good/goodAttr/list_goodAttr.jsp</result>
 			<result name="edit_goodAttr">/WEB-INF/page/good/goodAttr/edit_goodAttr.jsp</result>
@@ -735,7 +735,7 @@
 			<result name="edit_magazine">/WEB-INF/page/store/magazine/edit_Magazine.jsp</result>
 		</action>
 		
-		<!-- 会员管理  -->
+		<!-- 学员管理  -->
 		<action name="prepaid" class="com.usst.app.vip.prepaid.action.PrepaidAction">
 			<result name="list_prepaid">/WEB-INF/page/vip/prepaid/list_prepaid.jsp</result>
 			<result name="edit_prepaid">/WEB-INF/page/vip/prepaid/edit_prepaid.jsp</result>
@@ -778,7 +778,7 @@
 			<result name="list_information">/WEB-INF/page/store/information/list_Information.jsp</result>
 			<result name="edit_information">/WEB-INF/page/store/information/edit_Information.jsp</result>
 		</action>
-		<!-- 商品包装  -->
+		<!-- 资料包装  -->
 		<action name="packaging" class="com.usst.app.store.packaging.action.PackagingAction">
 			<result name="list_packaging">/WEB-INF/page/store/packaging/list_Packaging.jsp</result>
 			<result name="edit_packaging">/WEB-INF/page/store/packaging/edit_Packaging.jsp</result>
@@ -814,7 +814,7 @@
 			<result name="list_gift">/WEB-INF/page/store/gift/list_gift.jsp</result>
 			<result name="edit_gift">/WEB-INF/page/store/gift/edit_gift.jsp</result>
 		</action>
-		<!-- 会员评论 -->					
+		<!-- 学员评论 -->					
 		<action name="wareComment" class="com.usst.app.vip.wareComment.action.WareCommentAction">
 			<result name="list_wareComment">/WEB-INF/page/vip/wareComment/list_wareComment.jsp</result>
 			<result name="show_wareComment">/WEB-INF/page/vip/wareComment/show_wareComment.jsp</result>
@@ -835,7 +835,7 @@
 		<action name="saledetail" class="com.usst.app.formcenter.orderform.saledetail.SaledetailAction">
 			<result name="list_saledetail">/WEB-INF/page/formcenter/orderform/saledetail/list_saledetail.jsp</result>
 		</action>
-		<!-- 团购商品 -->
+		<!-- 团购资料 -->
 		<action name="groupGood" class="com.usst.app.good.groupgood.action.GroupgoodAction">
 			<result name="list_groupGood">/WEB-INF/page/good/groupGood/list_groupGood.jsp</result>
 			<result name="edit_groupGood">/WEB-INF/page/good/groupGood/edit_groupGood.jsp</result>

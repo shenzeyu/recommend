@@ -39,7 +39,7 @@ function deletePic(obj){
 function checkForm(){
 	var subjectVal = $("#name").val();
 	if(subjectVal == ''){
-		alert('请输入商品包装名称!');
+		alert('请输入资料包装名称!');
 		$("#name").focus();
 		return false;
 	}
@@ -77,7 +77,7 @@ function submitSaveForm(){
 		success : function(returnData){
 			if(returnData == 'true'){
 				alert('保存成功!');
-				window.parent.addTab('商品包装列表',ctx+'/packaging!list.do');
+				window.parent.addTab('资料包装列表',ctx+'/packaging!list.do');
 			}else{
 				alert('保存失败!');
 			}

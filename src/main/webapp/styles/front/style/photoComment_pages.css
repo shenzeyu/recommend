@@ -3,13 +3,13 @@
 
 
 
-/*============================待评价商品===================================*/
+/*============================待评价资料===================================*/
 
 .box{ width:100%; margin:0 auto;}
 .content{ width:1200px; margin:0 auto;}
 .coupon{ idth:1200px; float:left; padding-top:15px;}
 
-/*******************商品评价******************************/
+/*******************资料评价******************************/
 
 .orderDetails{ width:1200px; float:left;  color:#0a7cd4; font-size:18px;   font-family:"微软雅黑"; height:32px; line-height:28px; border-bottom:#2a8fdf solid 2px;}
 .orderDetails span{  color:#606060; font-size:18px;  font-family:"微软雅黑"; padding-left:10px; padding-right:10px;}

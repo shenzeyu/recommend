@@ -1,7 +1,7 @@
 <%@page language="java" pageEncoding="UTF-8" contentType="text/html; charset=UTF-8" %>
 <html>
 <head>
-	<title>商品类别添加</title>
+	<title>资料类别添加</title>
 	<%@ include file="/commons/meta.jsp" %>
 	<%@ include file="/commons/taglibs.jsp" %>
 	
@@ -38,7 +38,7 @@
 				    	
 				    	<table width="100%px"  border="0" cellpadding="0" cellspacing="1" class="gdcn-table-bgcolor">
 				    	   <tr>
-								<td class='gridtitle' width="10%">商品类别编号：</td>
+								<td class='gridtitle' width="10%">资料类别编号：</td>
 								<td class='gridbody'>
 									<c:if test="${goodType.level == '1'}">
 										<input name="code" value="${goodType.code }" id="code" onchange="isCodeExist()"/>(编号为空则自动生成)
@@ -50,14 +50,14 @@
 							</tr>
 							<c:if test="${parentName!=null}">
 					    	<tr>
-								<td class='gridtitle'>商品父类：</td>
+								<td class='gridtitle'>资料父类：</td>
 								<td class='gridbody'>					
 									<input type="text" id="parentName" name="parentName" disabled="disabled" maxlength="20" value="${parentName}"/>
 								</td>
 							</tr>
 							</c:if>
 							<tr>
-								<td class='gridtitle'>商品类别名称：</td>
+								<td class='gridtitle'>资料类别名称：</td>
 								<td class='gridbody'>
 									<input name="name" id="typeName" maxlength="30" value="${goodType.name }"/>&nbsp;<font color="red">*</font>
 								</td>
@@ -75,7 +75,7 @@
 							</c:if>
 							<c:if test="${goodType.level=='1'}">
 							<tr>
-								<td class='gridtitle'>是否是选号商品类别：</td>
+								<td class='gridtitle'>是否是选号资料类别：</td>
 								<td class='gridbody'>
 									&nbsp;&nbsp;
 									是<input type="radio" name="isInventories" id="isInventories" value="1" <c:if test="${goodType.isInventories == '1'}">checked="checked"</c:if>/> 

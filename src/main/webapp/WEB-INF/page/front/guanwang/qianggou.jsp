@@ -64,7 +64,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 		   </c:if>		   
 	</c:forEach>
 	<c:if test="${fn:length(goodList) == 0}">
-		 <li><h4>暂无抢购商品</h4></li>
+		 <li><h4>暂无抢购资料</h4></li>
 	</c:if>
 	</ul>
 	</div>
@@ -95,7 +95,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 		    
 	</c:forEach>
 	<c:if test="${fn:length(goodList) == 0}">
-		<li><h4>暂无抢购商品</h4></li>
+		<li><h4>暂无抢购资料</h4></li>
 	</c:if>
 	</ul>
 	</div>

@@ -68,7 +68,7 @@
 	</cacheModel> 	
 	
 	<!-- ly 开始-->
-		<!--首页显示团购商品-->
+		<!--首页显示团购资料-->
 		<sql id="Groupgood_SY_select_where_clause">
 			<dynamic prepend="where">
 				<isNotEmpty prepend="and" property="id">
@@ -118,7 +118,7 @@
 			 group by a.id order by sort
 		</select>
 		
-		<!-- 首页根据goodId查询商品的库存总量 -->
+		<!-- 首页根据goodId查询资料的库存总量 -->
 		<select id="Groupgood_warehousecount_query_ToT" resultClass="java.lang.Integer" cacheModel="Groupgood_cache">
 			select sum(ware_count) from warehouse_ware where ware_id in (
 				select id from ware where groupgood_id=#id#
@@ -278,7 +278,7 @@
 	</select>
 	
 	<!-- 前面太乱，没有注释，我写的查询从这里开始（ly）-->
-	<!--查询一级type包涵下所有的商品-->
+	<!--查询一级type包涵下所有的资料-->
 	<sql id="Groupgood_sel_select_where_clause">
 		<dynamic prepend="where">
 			<isNotEmpty prepend="and" property="property">
@@ -348,7 +348,7 @@
 		order by code desc
 	</select>
 	
-	<!--根据三级商品类别Id查询订单商品-->
+	<!--根据三级资料类别Id查询订单资料-->
 	<select id="selectWhereType_select" resultMap="GroupgoodResult" cacheModel="Groupgood_cache">
 		select * from group_good where id in (select good_id from ware)
 			and good_type_id=#goodTypeId#		 
@@ -364,7 +364,7 @@
 			</dynamic>
 		order by code desc
 	</select>
-	<!-- 根据商品Id数组进行in查询 -->
+	<!-- 根据资料Id数组进行in查询 -->
 	<select id="Groupgood_by_ids_select" resultMap="GroupgoodResult">
 		select * from group_good  
 			<dynamic prepend="where">

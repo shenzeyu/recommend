@@ -45,7 +45,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
    </div>
    <div class="user2_right">
    <div class="user2_right01">如何成为企业客户？</div>
-    <div class="user2_right02">如果您为企业批量采购商品,请在线填写如下资料，我们会第一时间和您联系。</div>
+    <div class="user2_right02">如果您为企业批量采购资料,请在线填写如下资料，我们会第一时间和您联系。</div>
 	<!--[if !IE]>表单填写<![endif]-->
 	<div class="user2_right03">
 	<h1>联系人姓名：</h1>

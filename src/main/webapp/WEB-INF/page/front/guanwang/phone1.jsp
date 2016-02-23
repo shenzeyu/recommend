@@ -67,9 +67,9 @@ function ShowFLT(i) {
 <li><a href="myOrder.html" id="visited">我的订单<span>(<samp>2</samp>)</span></a></li>
 <li><a href="payOrder.html" >待付款订单<span>(<samp>2</samp>)</span></a></li>
 <li><a href="#" >已取消订单<span>(<samp>2</samp>)</span></a></li>
-<li><a href="shippedGoods.html" >已发货商品<span>(<samp>2</samp>)</span></a></li>
-<li><a href="#" >未发货商品<span>(<samp>2</samp>)</span></a></li>
-<li id="bor"><a href="pingjia2.html" >待评价商品<span>(<samp>2</samp>)</span></a></li>
+<li><a href="shippedGoods.html" >已发货资料<span>(<samp>2</samp>)</span></a></li>
+<li><a href="#" >未发货资料<span>(<samp>2</samp>)</span></a></li>
+<li id="bor"><a href="pingjia2.html" >待评价资料<span>(<samp>2</samp>)</span></a></li>
 </ul>
 </div>
 </div>

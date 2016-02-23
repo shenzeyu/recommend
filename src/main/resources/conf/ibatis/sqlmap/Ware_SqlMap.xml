@@ -62,7 +62,7 @@
 			</isNotEmpty>
 		</dynamic>		
 	</sql>
-	<!-- 首页根据wareId查询商品的库存总量 -->
+	<!-- 首页根据wareId查询资料的库存总量 -->
 	<select id="Ware_warehousecount_query_ToT" resultClass="java.lang.Integer" cacheModel="Ware_cache">
 		select sum(ware_count) from warehouse_ware where ware_id = #id#
 	</select>
@@ -115,7 +115,7 @@
 		select * from ware where id in (
 			select ware_id from sale_ware where sale_id=#saleId#)
 	</select>
-	<!-- 按照商品的规格查询商品的库存 -->
+	<!-- 按照资料的规格查询资料的库存 -->
 	<select id="Ware_count_specification_select" resultClass="java.lang.Integer" cacheModel="Ware_cache">
 		select SUM(stock) from ware where id in (
 			select ware_id from ware_specification_val where good_specification_val_id in (

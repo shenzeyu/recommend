@@ -65,7 +65,7 @@
 						  </tr>
 						  <tr>
 						    <td class='gridbody'style="padding-left:50px" >
-						    	咨询商品:&nbsp;&nbsp;${message.goodName}
+						    	咨询资料:&nbsp;&nbsp;${message.goodName}
 						    </td>
 						  </tr>
 						  <tr>

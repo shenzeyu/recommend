@@ -61,7 +61,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
         <div class="seacher">
           <div class="seacher01">
             <div class="input01">
-              <input name="" type="text" class="input" value="搜索家电商品" />
+              <input name="" type="text" class="input" value="搜索家电资料" />
             </div>
             <div class="btn01">
               <input name="" type="button" class="btn02" />
@@ -79,11 +79,11 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
         <div class="subMenu1_title" >
           <div class="topnav" >
             <div class="MNav" onmouseout="changeDiv('layer','none')" onmouseover="changeDiv('layer','block')">
-              <h1 class="t1" ><a href="Category.html" target="_parent">全部商品分类</a></h1>
+              <h1 class="t1" ><a href="Category.html" target="_parent">全部资料分类</a></h1>
               <h1 class="t2">
                 <input name="" type="button" class="tnav_btn" />
               </h1>
-              <!--[if !IE]>点击全部商品出现的弹出层<![endif]-->
+              <!--[if !IE]>点击全部资料出现的弹出层<![endif]-->
               <div  id="layer" style="z-index:9999; display:none;">
                   <div id="warp1000">
                   <div id="allsort">
@@ -491,7 +491,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
                   </div>
                 </div>
               </div>  
-                <!--[if !IE]>点击全部商品出现的弹出层结束<![endif]-->
+                <!--[if !IE]>点击全部资料出现的弹出层结束<![endif]-->
             </div>
           </div>
         

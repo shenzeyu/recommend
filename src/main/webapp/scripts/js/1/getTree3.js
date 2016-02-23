@@ -187,7 +187,7 @@ function saveconditions(pageIndex){
 		  	  $('#dfedd').empty();
 		  	  $('#goodLists').empty();
 		  	  
-		  	  $('#totle').append("<span>共<strong>"+data.count+"</strong>个商品</span>" );
+		  	  $('#totle').append("<span>共<strong>"+data.count+"</strong>个资料</span>" );
 		  	  $('#pageIndex').val(data.pageIndex);
 		  	  
 		  	  textHtml="全部结果&nbsp;&gt;&nbsp;<strong>"+returnData.goodTypeName+"</strong>";
@@ -195,7 +195,7 @@ function saveconditions(pageIndex){
 		  	  
 		  	  if(returnData.rows.length>0){
 		  	  
-		  	  textHtml="<h1>"+returnData.goodTypeName+"<strong>找到"+returnData.rows.length+"件相关商品</strong></h1>";
+		  	  textHtml="<h1>"+returnData.goodTypeName+"<strong>找到"+returnData.rows.length+"件相关资料</strong></h1>";
 		  	  $('#dnf2').append(textHtml);
 		  	  
 		  	  textHtml="<span class='text'>";
@@ -227,7 +227,7 @@ function saveconditions(pageIndex){
 		      });
 		      }
 		      if(returnData.rows.length==0){
-		      	textHtml="<h3 align='center'><font color='red'>没有找到您要搜索的商品</font></h3>";
+		      	textHtml="<h3 align='center'><font color='red'>没有找到您要搜索的资料</font></h3>";
 		      }
 		      $('#goodLists').append(textHtml);
 		      	var pageIndex = $('#pageIndex').val();

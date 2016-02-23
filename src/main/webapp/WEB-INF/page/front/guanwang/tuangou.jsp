@@ -43,7 +43,7 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
   <div class="content">
    <!--[if !IE]>热门团购<![endif]-->
   <div class="limitbuy">
-   <div class="limitbuy01"><span>秒杀商品</span></div>
+   <div class="limitbuy01"><span>秒杀资料</span></div>
     <!--[if !IE]>整个团购<![endif]-->
     <div class="hotbuy">
 	 <!--[if !IE]>左侧<![endif]-->

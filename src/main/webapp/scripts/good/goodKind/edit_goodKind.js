@@ -51,7 +51,7 @@ function checkForm(){
 //	}
 	var goodtypeId=$('#goodtypeId').val();
 	if(goodtypeId=='0'){
-		alert('请为此种类匹配商品类型');
+		alert('请为此种类匹配资料类型');
 		goodtypeId.focus();
 		return false;
 	}	

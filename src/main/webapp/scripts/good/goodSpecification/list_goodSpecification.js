@@ -48,7 +48,7 @@ $(document).ready(function(){
    	
     //弹出框
 	$('#edit').dialog({
-		title:"商品规格",
+		title:"资料规格",
 		iconCls:'icon-edit',
 	    modal:true,
 	    draggable:true,

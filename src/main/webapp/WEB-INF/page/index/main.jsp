@@ -37,17 +37,14 @@
 	            <c:if test="${not empty powerMap['customer'] }">
 		            <div class="ban1">
 		            	<div class="pic"><img src="${ctx }/Images/index/peo3.gif" width="21" height="18" /></div>
-		                <div class="font4">会员管理</div>
+		                <div class="font4">学员管理</div>
 		            </div>
 		            <div class="submenu">
 		            	<ul>
-		            		<li><a href="javascript:void(0)" onclick="addTab('会员列表','${ctx}/customers!list.do')">会员列表</a></li>
-		                	<li><a href="javascript:void(0)" onclick="addTab('会员充值','${ctx}/prepaid!list.do')">会员充值</a></li>
+		            		<li><a href="javascript:void(0)" onclick="addTab('学员列表','${ctx}/customers!list.do')">学员列表</a></li>
 		                	<li><a href="javascript:void(0)" onclick="addTab('咨询管理','${ctx}/message!list.do?message.state=c')">咨询管理</a></li>
-		                    <li><a href="javascript:void(0)" onclick="addTab('会员评论','${ctx}/wareComment!list.do')">会员评论</a></li>
-		                	<li><a href="javascript:void(0)" onclick="addTab('会员等级','${ctx}/vipLevel!list.do')">会员等级</a></li>
-		                	<li><a href="javascript:void(0)" onclick="addTab('会员优惠卷','${ctx}/vipCoupon!list.do')">会员优惠卷</a></li>
-		                	<li style="display:none;"><a href="javascript:void(0)" onclick="addTab('会员提现申请','${ctx}/applyToCash!list.do')">会员提现申请</a></li>
+		                    <li><a href="javascript:void(0)" onclick="addTab('学员评论','${ctx}/wareComment!list.do')">学员评论</a></li>
+		                	<li><a href="javascript:void(0)" onclick="addTab('学员等级','${ctx}/vipLevel!list.do')">学员等级</a></li>
 		               </ul>
 		            </div>		            
 	            </c:if>
@@ -55,51 +52,20 @@
 	            <c:if test="${not empty powerMap['good'] }">
 		            <div class="ban1">
 		            	<div class="pic"><img src="${ctx }/formImg/303.gif" width="21" height="18" /></div>
-		                <div class="font4">商品管理</div>
+		                <div class="font4">学习资料管理</div>
 		            </div>
 		            <div class="submenu">
 		            	<ul>
-		            		<li><a href="javascript:void(0)" onclick="addTab('商品列表','${ctx}/good!list.do')">商品列表</a></li>		            	
-							<li><a href="javascript:void(0)" onclick="addTab('商品类别','${ctx}/goodType!list.do?goodType.isInventory=0')">商品类别</a></li>		            	
-							<li><a href="javascript:void(0)" onclick="addTab('商品品牌','${ctx}/goodBrand!list.do?goodBrand.isInventory=0')">商品品牌</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('商品种类','${ctx}/goodKind!list.do')">商品种类</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('商品规格','${ctx}/goodSpecification!list.do')">商品规格</a></li>
-		                </ul>
-		            </div>		            
-	            </c:if>
-	            <c:if test="${not empty powerMap['order'] }">
-		            <div class="ban1">
-		            	<div class="pic"><img src="${ctx }/formImg/202.gif" width="21" height="18" /></div>
-		                <div class="font4">销售管理</div>
-		            </div>
-		            <div class="submenu">
-		            	<ul>
-		            			<li><a href="javascript:void(0)" onclick="addTab('销售订单','${ctx}/saleOrder!list.do')">销售订单</a></li>
-		            			<li><a href="javascript:void(0)" onclick="addTab('销售出货单','${ctx}/saleDelivery!list.do')">销售出货单</a></li>
-		            			<li><a href="javascript:void(0)" onclick="addTab('销售收款单','${ctx}/saleCollection!list.do')">销售收款单</a></li>
-		            			<li><a href="javascript:void(0)" onclick="addTab('销售退货单','${ctx}/saleReturn!list.do')">销售退货单</a></li>
-		                </ul>
-		            </div>		            
-	            </c:if>
-	            
-	            
-	             <c:if test="${not empty powerMap['warehouse'] }">
-		            <div class="ban1">
-		            	<div class="pic"><img src="${ctx }/formImg/icon_36.gif" width="21" height="18" /></div>
-		                <div class="font4">仓库管理</div>
-		            </div>
-		            <div class="submenu">
-		            	<ul>
-		               		<li><a href="javascript:void(0)" onclick="addTab('仓库信息','${ctx}/warehouse!list.do')">仓库信息</a></li>
-		               		<li><a href="javascript:void(0)" onclick="addTab('库存报表','${ctx}/warehouseWare!list.do')">库存报表</a></li>
-		               		<li><a href="javascript:void(0)" onclick="addTab('商品入库单','${ctx}/warehouseInto!list.do?warehouseInto.type=2')">商品入库单</a></li>	
+		            		<li><a href="javascript:void(0)" onclick="addTab('资料列表','${ctx}/good!list.do')">资料列表</a></li>		            	
+							<li><a href="javascript:void(0)" onclick="addTab('资料类别','${ctx}/goodType!list.do?goodType.isInventory=0')">资料类别</a></li>		            	
+							<li><a href="javascript:void(0)" onclick="addTab('资料规格','${ctx}/goodSpecification!list.do')">资料规格</a></li>
 		                </ul>
 		            </div>		            
 	            </c:if>	
 	            <c:if test="${not empty powerMap['market'] }">
 		            <div class="ban1">
 		            	<div class="pic"><img src="${ctx }/formImg/icon_16.gif" width="21" height="18" /></div>
-		                <div class="font4">营销活动</div>
+		                <div class="font4">学员活动</div>
 		            </div>
 		            <div class="submenu">
 		            	<ul>
@@ -119,55 +85,9 @@
 		            	<ul>         	
 							<li><a href="javascript:void(0)" onclick="addTab('公告管理','${ctx}/information!list.do?information.type=0')">公告管理</a></li>
 							<li><a href="javascript:void(0)" onclick="addTab('新闻管理','${ctx}/information!list.do?information.type=1')">新闻管理</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('资讯管理','${ctx}/information!list.do?information.type=2')">购物资讯</a></li>
 		                </ul>
 		            </div>		            
 	            </c:if>
-	            <c:if test="${not empty powerMap['mall'] }">
-		            <div class="ban1">
-		            	<div class="pic"><img src="${ctx }/formImg/icon_56.gif" width="21" height="18" /></div>
-		                <div class="font4">学院设置</div>
-		            </div>
-		            <div class="submenu">
-		            	<ul>         	
-							<li><a href="javascript:void(0)" onclick="addTab('购物指南','${ctx}/information!list.do?information.type=3')">购物指南</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('商品配送','${ctx}/information!list.do?information.type=4')">商品配送</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('支付方式','${ctx}/information!list.do?information.type=5')">支付方式</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('售后服务','${ctx}/information!list.do?information.type=6')">售后服务</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('规则设置','${ctx}/information!list.do?information.type=9')">规则设置</a></li>
-	                		<li><a href="javascript:void(0)" onclick="addTab('关于家电网','${ctx}/information!list.do?information.type=7')">关于我们</a></li>
-		                </ul>
-		            </div>		            
-	            </c:if>	 	 
-	            
-	            <c:if test="${not empty powerMap['baseinfo'] }">
-		            <div class="ban1">
-		            	<div class="pic"><img src="${ctx }/formImg/icon_47.gif" width="21" height="18" /></div>
-		                <div class="font4">基本信息</div>
-		            </div>
-		            <div class="submenu">
-		            	<ul>
-							<li><a href="javascript:void(0)" onclick="addTab('地区信息','${ctx}/area!list.do')">地区信息</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('支付方式','${ctx}/payment!list.do')">支付方式</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('配送方式','${ctx}/delivery!list.do')">配送方式</a></li>
-							<li><a href="javascript:void(0)" onclick="addTab('现金银行','${ctx}/bankAccount!list.do')">现金银行</a></li>
-							<li style="display:none;"><a href="javascript:void(0)" onclick="addTab('数据字典','${ctx}/Dictionary!list.do')">数据字典</a></li>
-		                </ul>
-		            </div>
-		        </c:if>
-		        
-		        <!-- 报表中心 -->
-		        <c:if test="${not empty powerMap['formcenter'] }">
-		            <div class="ban1">
-		            	<div class="pic"><img src="${ctx }/formImg/Chart.gif" width="21" height="18" /></div>
-		                <div class="font4">报表中心</div>
-		            </div>
-		            <div class="submenu">
-		            	<ul>
-		            		<li><a href="javascript:void(0)" onclick="addTab('销售管理报表','${ctx}/showlist!list.do?type=order')">销售管理报表</a></li>
-		                </ul>
-		            </div>
-		        </c:if>
 	            
 	            
 		        <!-- 流量统计 -->

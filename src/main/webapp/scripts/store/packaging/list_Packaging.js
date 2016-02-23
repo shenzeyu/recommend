@@ -112,7 +112,7 @@ function showPic1(obj){
 function getColumnsOpt(){
 	var opt = [
 		{field:'code',title:'编号',width:10,align:'left'},
-		{field:'name',title:'商品包装名称',width:20,align:'left'},
+		{field:'name',title:'资料包装名称',width:20,align:'left'},
 		{field:'packagingFee',title:'包装费用',width:15,align:'left'},
 		{field:'minForFree',title:'免费额度',width:15,align:'left'},
 		{field:'state',title:'数据状态',width:10,align:'left',formatter:stateFormat},
@@ -178,10 +178,10 @@ function dateFormat(date){
 //编辑数据
 function editData(id){
 	var url = ctx+'/packaging!edit.do';
-	var title = '添加商品包装';
+	var title = '添加资料包装';
 	if(id){
 		url += '?packaging.id='+id;
-		var title = '编辑商品包装';
+		var title = '编辑资料包装';
 	}
 	window.parent.addTab(title,url);
 }

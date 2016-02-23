@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-	<title>商品品牌添加</title>
+	<title>资料品牌添加</title>
 	<%@ include file="/commons/meta.jsp" %>
 	<%@ include file="/commons/taglibs.jsp" %>
 	
