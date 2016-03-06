@@ -51,14 +51,6 @@
         </div>
         <div class="foot_text0202">
           <ul>
-            <li id="ftpy">支付方式</li>
-              <li><a href="">银行卡支付</a></li>
-              <li><a href="">支付宝支付</a></li>
-              <li><a href="">微信支付</a></li>
-          </ul>
-        </div>
-        <div class="foot_text0202">
-          <ul>
             <li id="ftpy">网站服务</li>
               <li><a href="">课程需求</a></li>
               <li><a href="">免费体验</a></li>

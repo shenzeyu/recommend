@@ -427,7 +427,6 @@ public class GoodAction extends BaseAction {
 			} else {
 				String id = this.goodService.makeId();
 				this.good.setId(id);
-				this.good.setTotalNum(String.valueOf((int) this.good.getInitialNum().doubleValue()));
 
 				this.goodService.insertGood(this.good);
 

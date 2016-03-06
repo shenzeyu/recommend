@@ -35,7 +35,7 @@
 	<div class="register1">
 	<form action="" name="registerForm" id="registerForm" method="post">
 		<div class="register_left">
-	<div class="register01">e购商城学员注册</div>
+	<div class="register01">上理在线学院学员注册</div>
 	<div class="login0202_text1">
   <h1>登录账号：</h1>
   <h2><input onfocus="dlzh('zcyc1','','show')" onblur="dlzh('zcyc1','','hidden')" name="customer.code" type="text"  class="login0202_text1input" id="usercode" /></h2>
@@ -100,7 +100,7 @@
 	</div>
 	</form>
 	<div class="register_right">
-	<div class="register02_right02">已有e购商城账号，请直接<a href="${ctx }/frontLogin.do">登录</a></div>
+	<div class="register02_right02">已有账号，请直接<a href="${ctx }/frontLogin.do">登录</a></div>
 	<div class="register02_right01">其他登录方式</div>
 	<div class="register02_right01"><a href="#"><img src="${ctx}/Images/images/lon1.jpg" border="0" alt="QQ登录" /></a></div>
 <!--	<span id="qqLoginBtn"></span> -->

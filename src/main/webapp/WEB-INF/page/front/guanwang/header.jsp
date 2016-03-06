@@ -623,8 +623,8 @@ function changeDiv(tag,method){document.getElementById(tag).style.display = meth
 <div class="Popuplogin0202_text2">
 <h1>
 <span>还不是上理在线学院用户？ </span><br />
-现在免费注册上理在线学院学员，便能立即享受便宜又放心的<br />
-购物乐趣! <samp><a href="javascript:void(0);" onclick="zhuce()">学员注册</a></samp></h1>
+现在免费注册上理在线学院学员，便能立即享受学习的乐趣
+ <samp><a href="javascript:void(0);" onclick="zhuce()">学员注册</a></samp></h1>
 </div>
 </div>
 </div>
