@@ -79,19 +79,28 @@ function ShowFLT(i) {
                  ></samp></A></div>
           <div class="couponleft_text02" id=LM1>
             <ul>
+<<<<<<< Updated upstream
 <li><a href="${ctx }/orderManage.do" id="visited">我的订单<span>(<samp>${total }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款订单<span>(<samp>${payment }</samp>)</span></a></li>
 <li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消订单<span>(<samp>${cancelOrder }</samp>)</span></a></li>
 <li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已发货资料<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
 <li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未发货资料<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
 <li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价资料<span>(<samp>${commentOrder}</samp>)</span></a></li>
+=======
+<li><a href="${ctx }/orderManage.do" id="visited">我的课程<span>(<samp>${total }</samp>)</span></a></li>
+<li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=0">待付款课程<span>(<samp>${payment }</samp>)</span></a></li>
+<li><a href="${ctx }/paymentOrder.do?saleOrder.iscancel=1">已取消课程<span>(<samp>${cancelOrder }</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=1">已完成课程<span>(<samp>${deliveryOrder }</samp>)</span></a></li>
+<li><a href="${ctx }/shippedGoods.do?saleOrder.deliveryState=0">未开始课程<span>(<samp>${deliveryOrder2 }</samp>)</span></a></li>
+<li id="bor"><a href="${ctx }/pingjiaTwo.do" >待评价课程<span>(<samp>${commentOrder}</samp>)</span></a></li>
+>>>>>>> Stashed changes
 </ul>
           </div>
         </div>
-		 <!--[if !IE]>交易中心<![endif]-->
+		 <!--[if !IE]>课程中心<![endif]-->
          <c:if test="${customer.type == '1'}">
          	 <div class="couponleft_text">
-	          <div class="couponleft_text01"><A onclick="javascript:ShowFLT(2)" href="javascript:void(null)" ><span>销售中心</span><samp><IMG id="pic2" 
+	          <div class="couponleft_text01"><A onclick="javascript:ShowFLT(2)" href="javascript:void(null)" ><span>课程中心</span><samp><IMG id="pic2" 
 	                  height=14 src="${ctx }/Images/images/bit07.gif" width=14
 	                 ></samp></A></div>
 	          <div class="couponleft_text02" id=LM2 >
@@ -102,9 +111,9 @@ function ShowFLT(i) {
 	          </div>
 	        </div>
          </c:if>
-        <!--[if !IE]>交易中心<![endif]-->
+        <!--[if !IE]>课程中心<![endif]-->
         <div class="couponleft_text">
-          <div class="couponleft_text01"><A onclick="javascript:ShowFLT(3)" href="javascript:void(null)" ><span>交易中心</span><samp><IMG id="pic3" 
+          <div class="couponleft_text01"><A onclick="javascript:ShowFLT(3)" href="javascript:void(null)" ><span>课程中心</span><samp><IMG id="pic3" 
                   height=14 src="${ctx }/Images/images/bit07.gif" width=14
                  ></samp></A></div>
           <div class="couponleft_text02" id=LM3 >
@@ -114,14 +123,14 @@ function ShowFLT(i) {
             </ul>
           </div>
         </div>
-        <!--[if !IE]>客户服务<![endif]-->
+        <!--[if !IE]>交流与讨论<![endif]-->
         <div class="couponleft_text">
-          <div class="couponleft_text01"><A onclick="javascript:ShowFLT(4)" href="javascript:void(null)" ><span>客户服务</span><samp><IMG id="pic4" 
+          <div class="couponleft_text01"><A onclick="javascript:ShowFLT(4)" href="javascript:void(null)" ><span>交流与讨论</span><samp><IMG id="pic4" 
                   height=14 src="${ctx }/Images/images/bit07.gif" width=14
                  ></samp></A></div>
           <div class="couponleft_text02" id=LM4>
             <ul>
-              <li><a href="${ctx }/tuihuan.do">返修/退换货</a></li>
+              <li><a href="${ctx }/tuihuan.do">练习/提问</a></li>
 <li><a href="${ctx }/myMessage.do">我的咨询</a></li>
 <li id="bor"><a href="${ctx }/myComment.do" >我的评价</a></li>
             </ul>

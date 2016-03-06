@@ -35,7 +35,11 @@
 	<div class="register1">
 	<form action="" name="registerForm" id="registerForm" method="post">
 		<div class="register_left">
+<<<<<<< Updated upstream
 	<div class="register01">上理在线学院学员注册</div>
+=======
+	<div class="register01">上理在线学院会员注册</div>
+>>>>>>> Stashed changes
 	<div class="login0202_text1">
   <h1>登录账号：</h1>
   <h2><input onfocus="dlzh('zcyc1','','show')" onblur="dlzh('zcyc1','','hidden')" name="customer.code" type="text"  class="login0202_text1input" id="usercode" /></h2>
@@ -44,7 +48,7 @@
   <h5 id="zcyc11" style="display: none;"><span><img src="${ctx}/Images/images/pass9.jpg" /></span></h5>
   </div>
    <div class="login0202_text1">
-  <h1>密&nbsp;&nbsp;&nbsp;&nbsp;码：</h1>
+  <h1>密&nbsp;&nbsp;码：</h1>
   <h2><input onfocus="mmzh('acyc2','','show')" onblur="mmzh('zcyc2','','hidden')" name="customer.pwd" type="password"  class="login0202_text1input" id="userpwd"/></h2>
   <h3>*</h3>
   <h4 id="zcyc2" style="display:none;">6-24位字符，由字母，数字，下划线组成！</h4>
@@ -100,7 +104,11 @@
 	</div>
 	</form>
 	<div class="register_right">
+<<<<<<< Updated upstream
 	<div class="register02_right02">已有账号，请直接<a href="${ctx }/frontLogin.do">登录</a></div>
+=======
+	<div class="register02_right02">已有上理在线学院账号，请直接<a href="${ctx }/frontLogin.do">登录</a></div>
+>>>>>>> Stashed changes
 	<div class="register02_right01">其他登录方式</div>
 	<div class="register02_right01"><a href="#"><img src="${ctx}/Images/images/lon1.jpg" border="0" alt="QQ登录" /></a></div>
 <!--	<span id="qqLoginBtn"></span> -->

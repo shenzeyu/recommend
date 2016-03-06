@@ -79,6 +79,7 @@ function logout(){
   <div class="login01">
   <div class="login01_text">
   <div class="login01_text01">
+<<<<<<< Updated upstream
   <span>行货正品</span>
   全部资料保证行货正品，您可放心购物
   </div>
@@ -89,10 +90,22 @@ function logout(){
    <div class="login01_text01">
   <span>当日发货</span>
   资料购买后当天发货，部分地区24小时内到货
+=======
+  <span>权威课程</span>
+  权威专业认证讲师精心呈现课程
+  </div>
+  <div class="login01_text01">
+  <span>职业规划</span>
+  量身制定循序渐进的课程学习计划
   </div>
    <div class="login01_text01">
-  <span>七天包退</span>
-  购买七天之内可无理由退货
+  <span>免费课程</span>
+  即点即学的免费课程
+>>>>>>> Stashed changes
+  </div>
+   <div class="login01_text01">
+  <span>项目实战</span>
+  实时交互的在线编程练习
   </div>
   </div>
   </div>
@@ -101,7 +114,11 @@ function logout(){
   <div class="login0201"><img src="${ctx}/Images/images/y4.jpg" /></div>
   <div class="login0202">
      <form action="" id="loginForm" name="loginForm" method="post">
+<<<<<<< Updated upstream
 	  <div class="login0202_text">e购商城学员登录</div>
+=======
+	  <div class="login0202_text">上理在线学院会员登录</div>
+>>>>>>> Stashed changes
 	  <div class="login0202_text1" style="padding-top: 15px; height: 50px;">
 	  <h1>账号：</h1>
 	  	  <h2><input style="color:#CCC" name="customer.code" id="codesY" type="text"  class="login0202_text1input" onfocus="dlbh()" onblur="sqbh()"  value="昵称/邮箱/已注册手机"  /></h2>
@@ -119,10 +136,15 @@ function logout(){
      </form>
   <div class="login0202_text3">
   <div class="login0202_text301">
- <samp>还不是e购商城用户？</samp></div>
+ <samp>还不是上理在线学院用户？</samp></div>
  <div class="login0202_text302">
+<<<<<<< Updated upstream
 现在免费注册e购商城学员，便能立即享<br />受便宜又放心的购物乐趣!
 <span><a href="${ctx }/zhuce.do">学员注册</a></span>  
+=======
+现在免费注册上理在线学院会员，便能立即享<br />受免费在线课程!
+<span><a href="${ctx }/zhuce.do">会员注册</a></span>  
+>>>>>>> Stashed changes
 </div>
   </div>
   <div class="login0202_text4">
