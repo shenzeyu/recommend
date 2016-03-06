@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:jsp="http://java.sun.com/xml/ns/javaee/jsp"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<description>网上学习系统</description>
+	<distributable />
+	<!-- Spring ApplicationContext配置文件的路径,可使用通配符，多个路径用;号分隔此参数用于后面的Spring-Context 
+		loader -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath*:spring/applicationContext*.xml</param-value>
+	</context-param>
+
+	<!-- 编码过滤器 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<description>编码过滤器</description>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<!-- 后台过滤器 -->
+	<filter>
+		<filter-name>SystemFilter</filter-name>
+		<filter-class>com.usst.recommendsystem.common.SystemFilter</filter-class>
+		<init-param>
+			<description>后台忽略过滤的url</description>
+			<param-name>adminIgnoreUrl</param-name>
+			<param-value>/SysLogin!login.do,/SysLogin!logout.do,/FileUpload!save.do</param-value>
+		</init-param>
+		<init-param>
+			<param-name>adminLoginUrl</param-name>
+			<param-value>/SysLogin!login.do</param-value>
+		</init-param>
+		<init-param>
+			<description>前台忽略过滤的url</description>
+			<param-name>frontIgnoreUrl</param-name>
+			<param-value>/index.do,/getPromotionBrands.do,/zhuce.do,/registers.do,/login.do,/frontLogin.do,/shoptype.do,/getSecondGoods.do,/addGoodToFavorite.do,/getFirstLevelPage.do,/getGoodTypelist.do,/customersManage.do,/pingjia.do,/wareCommentSave.do,/cpxq.do,/getWareSpecification.do,/addGoodToCart.do,/addGoodComposeToCart.do,/getGroupById.do,/getgoodComment.do,/getGoodMessage.do,/oneNewsdetail.do,/groupgoodDetail.do,/productPage2Json.do,/addGroupGoodToCart.do,/ShoppingCar.do,/deleteGoodFromCar,/clearShoppingCar.do,/changeNum.do,/isNotEmptyCart.do,/infor.do,/passwordSuccess.do,/updateOrderState.do,/selectAdddress.do,/tuihuan.do,/application.do,/checkEmail.do,/XGSpecification.do,/alipaynotify.do,/alipayreturn.do,/receive.do,/loginOut.do,/getSecondGoods.do,/infor.do,/checkCodes.do,/checkCodes.do,addGoodseewareToCart.do,getshoppingcar.do,/messageSave.do,/customersManage.do,/productPage3Json.do,/validationLogin.do,/jiesuan.do,/selectCityJson.do,/verifyCode.do,/checkUser.do,/information1.do,/checkEmai.do,/loginV.do,/changeImage.do,/miaosha.do,/qianggou.do,/tuangou.do,/brand.do,/brand_json.do,/frontedit.do,/newnews.do,/selectGoodStock.do
+         </param-value>
+		</init-param>
+		<init-param>
+			<param-name>frontLoginUrl</param-name>
+			<param-value>/</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SystemFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<!-- 后台session监听器 -->
+	<listener>
+		<listener-class>com.usst.recommendsystem.common.AdminSessionListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+	</listener>
+
+	<!-- spring 加载监听器 -->
+	<listener>
+		<listener-class>com.usst.recommendsystem.common.ServletContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>Dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>classpath:spring/applicationContext-springmvc.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Dispatcher</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<!-- session超时定义,单位为分钟 -->
+	<session-config>
+		<session-timeout>120</session-timeout><!-- 2小时 -->
+	</session-config>
+
+	<!-- 默认首页定义 -->
+	<welcome-file-list>
+<!-- 		<welcome-file>index.jsp</welcome-file> -->
+		<welcome-file>welcome.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- Error Page定义 -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/commons/error.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>404</error-code>
+		<location>/commons/404.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>403</error-code>
+		<location>/commons/403.jsp</location>
+	</error-page>
+
+</web-app>
